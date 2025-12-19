@@ -1,0 +1,1258 @@
+hello
+hi there
+hello
+hi friend
+hello there
+hello to you too
+hi
+hello
+hi there
+hi to you too
+hey
+hey there
+hey there
+hey
+good morning
+good morning to you
+good morning
+morning to you too
+good morning friend
+good morning to you friend
+good afternoon
+good afternoon to you
+good afternoon
+afternoon to you too
+good evening
+good evening to you
+good evening
+evening to you too
+good night
+good night to you
+good night
+sleep well
+good night
+sweet dreams
+goodbye
+goodbye to you
+goodbye
+see you later
+bye
+bye bye
+bye
+see you
+see you later
+see you soon
+take care
+you too take care
+have a nice day
+you too have a nice day
+have a good day
+thank you you too
+how are you
+I am fine thank you
+how are you
+I am good thank you
+how are you
+I am great thank you
+how are you
+I am doing well thank you
+how are you
+I am fine how are you
+how are you today
+I am good today thank you
+how are you doing
+I am doing fine thank you
+how are you doing
+I am doing great thank you
+how is it going
+it is going well thank you
+how is it going
+it is going great thank you
+what is up
+not much what is up with you
+what is up
+nothing much how are you
+what is your name
+my name is mini
+what is your name
+I am mini nice to meet you
+who are you
+I am mini your assistant
+who are you
+I am a language model
+who are you
+I am an AI assistant
+what are you
+I am a language model
+what are you
+I am an AI assistant
+what can you do
+I can answer your questions
+what can you do
+I can help you with many things
+what do you do
+I help people with questions
+what do you do
+I answer questions and chat
+nice to meet you
+nice to meet you too
+nice to meet you
+pleased to meet you too
+pleased to meet you
+pleased to meet you too
+glad to meet you
+glad to meet you too
+thank you
+you are welcome
+thank you
+no problem
+thanks
+you are welcome
+thanks a lot
+my pleasure
+thank you very much
+you are very welcome
+thank you so much
+you are so welcome
+I appreciate it
+anytime
+I appreciate your help
+happy to help you
+thanks for helping
+no problem at all
+yes
+okay great
+yes please
+of course
+yes I agree
+good to hear
+no
+okay I understand
+no thanks
+okay no problem
+no I disagree
+I understand your point
+maybe
+okay let me know
+maybe later
+sounds good
+maybe tomorrow
+okay see you tomorrow
+I am not sure
+that is fine take your time
+I think so
+good
+I do not think so
+I see your point
+sure
+great
+sure thing
+perfect
+certainly
+absolutely
+of course
+no problem at all
+please
+certainly
+please help me
+I will help you
+please tell me
+I will tell you
+please show me
+I will show you
+please wait
+I will wait for you
+sorry
+no worries
+I am sorry
+it is okay no problem
+sorry about that
+no problem at all
+I apologize
+it is fine do not worry
+excuse me
+yes how can I help
+excuse me please
+how can I help you
+can you help me
+yes I can help you
+can you help me please
+of course I can help you
+I need help
+how can I help you
+I need your help
+what do you need help with
+help me please
+I am here to help you
+could you help me
+sure I can help you
+would you help me
+of course I will help you
+tell me more
+sure let me explain
+tell me about it
+I will tell you about it
+can you explain
+yes I can explain
+explain please
+I will explain it to you
+I understand
+good I am glad
+I understand now
+great
+I get it
+perfect
+I see what you mean
+good
+I do not understand
+let me explain it again
+I do not get it
+I will clarify for you
+I am confused
+let me help you understand
+what do you mean
+let me clarify what I mean
+can you repeat that
+sure I will repeat it
+can you say that again
+of course let me repeat
+that is interesting
+I think so too
+that is very interesting
+thank you for saying that
+that is great
+thank you
+that is wonderful
+I am glad you think so
+that is amazing
+thank you so much
+that is good
+I agree with you
+that is nice
+thank you
+that is cool
+thanks
+that is bad
+I am sorry to hear that
+that is too bad
+I understand how you feel
+that is sad
+I am sorry
+I am happy
+that is wonderful to hear
+I am very happy
+I am glad you are happy
+I am so happy
+that is great news
+I am glad
+good I am happy for you
+I am pleased
+that is great to hear
+I am sad
+I am sorry to hear that
+I am very sad
+I understand how you feel
+I feel sad
+I am here for you
+I am upset
+I am sorry to hear that
+I am tired
+you should get some rest
+I am very tired
+you need to sleep
+I am exhausted
+take a break and rest
+I am sleepy
+go to sleep
+I am hungry
+let us get some food
+I am very hungry
+we should eat something
+I want food
+what would you like to eat
+I am thirsty
+have some water
+I am very thirsty
+drink some water
+I like it
+I am glad you like it
+I really like it
+that is great to hear
+I love it
+wonderful I am happy
+I do not like it
+I understand
+it is hot today
+yes it is very warm
+it is cold today
+yes it is quite chilly
+it is raining
+bring an umbrella
+it is sunny
+enjoy the nice weather
+what time is it
+it is three o clock
+what day is it
+it is monday today
+what is the weather
+the weather is nice today
+what is the weather like
+it is sunny and warm
+the cat is cute
+yes cats are very cute
+the dog is friendly
+yes dogs are very friendly
+I love cats
+cats are wonderful pets
+I love dogs
+dogs are great companions
+the sky is blue
+yes it is a beautiful day
+the sun is bright
+yes it is very sunny
+I have a question
+please ask me anything
+can I ask you something
+yes of course go ahead
+let me ask you
+please go ahead
+tell me a story
+once upon a time there was
+what happened next
+they lived happily ever after
+I like stories
+stories are fun to hear
+do you like music
+yes I love music very much
+do you like movies
+yes movies are great
+what is your favorite
+I like many different things
+you are smart
+thank you for saying that
+you are helpful
+I try my best to help
+you are kind
+that is nice of you to say
+you are nice
+thank you so much
+you are funny
+thank you I try
+see you later
+see you later goodbye
+see you tomorrow
+see you tomorrow take care
+talk to you later
+sounds good talk soon
+have a nice day
+you too have a nice day
+have a great day
+you as well goodbye
+take care
+you too take care
+goodbye
+goodbye see you soon
+bye
+bye bye take care
+stay safe
+you too stay safe
+good luck
+thank you good luck to you too
+best wishes
+best wishes to you too
+one two three
+four five six
+four five six
+seven eight nine
+seven eight nine
+ten eleven twelve
+red blue green
+those are nice colors
+I like red
+red is a pretty color
+I like blue
+blue is a nice color
+what color is the sky
+the sky is blue
+what color is grass
+grass is green
+big and small
+yes they are opposites
+hot and cold
+yes those are opposites
+up and down
+yes up and down
+left and right
+yes left and right
+yes or no
+that is the question
+hello how are you
+I am fine thank you how are you
+hi how are you
+I am good thank you how are you
+good morning how are you
+I am great thank you good morning
+what is your name please
+my name is mini nice to meet you
+can I ask you something
+yes of course please ask me
+thank you very much
+you are very welcome anytime
+I really appreciate it
+you are welcome happy to help
+that means a lot
+I am glad to help you
+hello
+hi
+hello there
+hi there
+hey
+hey there
+hello friend
+hi friend
+hello everyone
+hi everyone
+good morning
+good morning to you
+good morning friend
+good morning everyone
+good afternoon
+good afternoon to you
+good afternoon friend
+good evening
+good evening to you
+good evening friend
+good night
+good night friend
+good night everyone
+good night sleep well
+good night sweet dreams
+goodbye
+bye
+bye bye
+see you
+see you later
+see you soon
+see you tomorrow
+take care
+take care friend
+have a nice day
+have a good day
+have a great day
+have a good night
+how are you
+I am fine
+how are you
+I am good
+how are you
+I am great
+how are you
+I am okay
+how are you
+I am doing well
+how are you
+I am doing great
+how are you doing
+I am doing fine
+how are you doing
+I am doing good
+how are you today
+I am fine today
+how are you today
+I am good today
+how is it going
+it is going well
+how is it going
+it is going great
+how is your day
+my day is good
+how is your day
+my day is great
+what is up
+not much
+what is up
+nothing much
+what is new
+not much is new
+what is going on
+nothing much
+how have you been
+I have been good
+how have you been
+I have been well
+what is your name
+my name is mini
+what is your name
+I am mini
+what is your name
+my name is bot
+what is your name
+I am a bot
+who are you
+I am mini
+who are you
+I am a bot
+who are you
+I am a language model
+who are you
+I am an AI
+who are you
+I am your assistant
+what are you
+I am a language model
+what are you
+I am an AI assistant
+what are you
+I am a chatbot
+nice to meet you
+nice to meet you too
+pleased to meet you
+pleased to meet you too
+glad to meet you
+glad to meet you too
+happy to meet you
+happy to meet you too
+it is nice to meet you
+it is nice to meet you too
+thank you
+you are welcome
+thanks
+you are welcome
+thank you very much
+you are very welcome
+thanks a lot
+no problem
+thanks so much
+my pleasure
+I appreciate it
+anytime
+I appreciate your help
+happy to help
+thank you for your help
+you are welcome
+thanks for helping
+no problem at all
+yes
+okay
+yes please
+of course
+yes I agree
+good
+yes that is right
+exactly
+no
+I see
+no thanks
+okay then
+no I disagree
+I understand
+no that is wrong
+let me explain
+maybe
+perhaps
+maybe later
+okay
+maybe tomorrow
+sounds good
+I am not sure
+that is fine
+I think so
+good
+I do not think so
+I see
+sure
+of course
+sure thing
+great
+sure I can help
+thank you
+certainly
+absolutely
+of course I can
+no problem
+please
+certainly
+please help me
+I will help you
+please tell me
+I will tell you
+please show me
+I will show you
+please wait
+I will wait
+sorry
+no worries
+I am sorry
+it is okay
+sorry about that
+no problem
+I apologize
+it is fine
+excuse me
+yes
+excuse me please
+how can I help
+pardon me
+no problem
+can you help me
+yes I can help
+can you help me
+of course I can
+can you help me please
+I am here to help
+I need help
+how can I help you
+I need your help
+what do you need
+help me please
+I will help you
+could you help me
+sure I can help
+would you help me
+of course
+I need assistance
+I can assist you
+what can you do
+I can answer questions
+what can you do
+I can help you
+what can you do
+I can chat with you
+what do you do
+I answer questions
+what do you do
+I help people
+what do you do
+I assist users
+tell me more
+sure let me explain
+tell me more
+I will tell you more
+tell me about it
+let me explain
+can you explain
+yes I can explain
+explain please
+I will explain
+I understand
+good
+I understand now
+great
+I get it
+perfect
+I see what you mean
+good
+I do not understand
+let me explain again
+I do not get it
+I will clarify
+I am confused
+let me help you
+what do you mean
+let me clarify
+can you repeat that
+sure I will repeat
+can you say that again
+of course
+I did not hear you
+I will say it again
+pardon
+let me repeat
+that is interesting
+I think so too
+that is very interesting
+thank you
+that is fascinating
+I agree
+that is great
+thank you
+that is wonderful
+I am glad
+that is amazing
+thank you so much
+that is awesome
+I appreciate it
+that is fantastic
+you are kind
+that is good
+I agree
+that is nice
+thank you
+that is cool
+thanks
+that is bad
+I am sorry to hear that
+that is too bad
+I understand
+that is unfortunate
+I am sorry
+that is sad
+I feel sorry
+I am happy
+that is wonderful
+I am very happy
+I am glad to hear
+I am so happy
+that is great news
+I am excited
+that is exciting
+I am glad
+good for you
+I am pleased
+I am happy for you
+I am sad
+I am sorry
+I am very sad
+I understand
+I am unhappy
+what happened
+I feel sad
+I am here for you
+I am upset
+I am sorry to hear
+I am disappointed
+I understand
+I am tired
+you should rest
+I am very tired
+get some sleep
+I am exhausted
+take a break
+I am sleepy
+go to sleep
+I need rest
+rest well
+I am hungry
+let us eat
+I am very hungry
+we should eat
+I am starving
+let us get food
+I want food
+what would you like
+I need to eat
+let us find food
+I am thirsty
+have some water
+I am very thirsty
+drink some water
+I need water
+here is water
+I want a drink
+what would you like
+I like it
+I am glad
+I really like it
+that is great
+I love it
+wonderful
+I enjoy it
+good to hear
+that is fun
+I agree
+I do not like it
+I understand
+I hate it
+I am sorry
+I dislike it
+that is okay
+it is boring
+I see
+it is not good
+I understand
+it is hot
+yes it is warm
+it is very hot
+stay cool
+it is too hot
+drink water
+it is cold
+yes it is chilly
+it is very cold
+stay warm
+it is freezing
+bundle up
+it is warm
+yes nice weather
+it is cool
+yes it is pleasant
+it is raining
+bring an umbrella
+it is raining hard
+stay inside
+it will rain
+bring an umbrella
+it is sunny
+enjoy the weather
+it is very sunny
+wear sunscreen
+the sun is out
+it is nice
+it is cloudy
+it might rain
+it is windy
+hold on tight
+it is snowing
+it is beautiful
+what time is it
+it is noon
+what time is it
+it is morning
+what time is it
+it is afternoon
+what time is it
+it is evening
+what time is it
+it is night
+what time is it now
+it is three o clock
+what is the time
+it is five o clock
+do you have the time
+it is seven o clock
+what day is it
+it is monday
+what day is it
+it is tuesday
+what day is it
+it is wednesday
+what day is it
+it is friday
+what day is today
+it is saturday
+what is today
+it is sunday
+what is the date
+it is the first
+what month is it
+it is january
+what year is it
+it is this year
+what is the weather
+the weather is nice
+what is the weather like
+it is sunny today
+how is the weather
+the weather is good
+is it raining
+no it is sunny
+is it cold outside
+no it is warm
+is it hot today
+yes it is hot
+where are you
+I am here
+where are you
+I am right here
+where are you from
+I am from here
+where do you live
+I live here
+where is it
+it is over there
+where is that
+it is nearby
+where can I find it
+it is right here
+when is it
+it is soon
+when will it happen
+it will happen soon
+when do we start
+we start now
+when do we go
+we go soon
+when is the meeting
+it is at noon
+why is that
+let me explain
+why is it so
+there is a reason
+why did that happen
+I will explain
+why not
+there is a reason
+tell me why
+I will tell you
+how does it work
+it is simple
+how do you do it
+I will show you
+how can I do it
+let me explain
+how is it done
+I will demonstrate
+show me how
+I will show you
+what is this
+this is a test
+what is that
+that is an example
+what is it
+it is a thing
+what are these
+these are items
+what are those
+those are objects
+what does it mean
+it means this
+what does that mean
+let me explain
+what is the meaning
+I will tell you
+the cat is cute
+yes cats are cute
+the cat is sleeping
+how peaceful
+the cat is playing
+how fun
+I love cats
+cats are wonderful
+cats are nice
+I agree
+I have a cat
+that is nice
+the dog is friendly
+yes dogs are friendly
+the dog is running
+how energetic
+the dog is barking
+I hear it
+I love dogs
+dogs are great
+dogs are loyal
+I agree
+I have a dog
+that is wonderful
+the bird is singing
+how beautiful
+the bird is flying
+I see it
+birds are pretty
+yes they are
+I like birds
+birds are nice
+the fish is swimming
+I see it
+fish are colorful
+yes they are
+I have a fish
+that is nice
+the sky is blue
+yes it is blue
+the sky is clear
+it is a nice day
+the sky is cloudy
+it might rain
+look at the sky
+it is beautiful
+the sun is bright
+yes it is sunny
+the sun is setting
+it is beautiful
+the moon is full
+it is lovely
+the stars are bright
+they are beautiful
+the grass is green
+yes it is green
+the flowers are pretty
+yes they are
+the tree is tall
+it is big
+the leaves are falling
+it is autumn
+nature is beautiful
+I agree
+one two three
+four five six
+seven eight nine
+ten eleven twelve
+one plus one is two
+that is correct
+two plus two is four
+yes it is
+three plus three is six
+right
+what is one plus one
+it is two
+what is two plus two
+it is four
+count to five
+one two three four five
+count to ten
+one two three four five six seven eight nine ten
+red blue green
+yellow orange purple
+pink brown black
+white gray silver
+what color is it
+it is red
+what color is the sky
+it is blue
+what color is grass
+it is green
+my favorite color is blue
+blue is nice
+I like red
+red is pretty
+big and small
+large and tiny
+tall and short
+long and brief
+wide and narrow
+thick and thin
+hot and cold
+warm and cool
+fast and slow
+quick and steady
+old and new
+young and aged
+good and bad
+right and wrong
+happy and sad
+joy and sorrow
+up and down
+high and low
+left and right
+front and back
+in and out
+inside and outside
+near and far
+close and distant
+light and dark
+bright and dim
+hard and soft
+rough and smooth
+wet and dry
+clean and dirty
+full and empty
+open and closed
+yes or no
+true or false
+on or off
+start or stop
+come or go
+stay or leave
+push or pull
+give or take
+buy or sell
+win or lose
+hello how are you
+I am fine thank you
+hello how are you
+I am doing well thanks
+hi how are you
+I am great thanks
+hey how is it going
+it is going great
+good morning how are you
+I am good thank you
+good afternoon how are you
+I am doing well
+good evening how are you
+I am fine thanks
+what is your name please
+my name is mini
+may I ask your name
+my name is mini
+could you tell me your name
+I am mini
+can I ask you something
+yes of course
+may I ask a question
+please go ahead
+I have a question
+please ask me
+can I help you
+yes please help me
+do you need help
+yes I need help
+how can I assist you
+I need some information
+what do you need
+I need your help
+do you understand me
+yes I understand
+do you get it
+yes I get it
+does that make sense
+yes it makes sense
+is that clear
+yes it is clear
+did you hear me
+yes I heard you
+can you help me please
+yes I can help you
+would you help me please
+of course I will
+could you assist me
+I would be happy to
+I need your assistance
+how can I assist you
+thank you very much
+you are very welcome
+thank you so much
+you are so welcome
+thanks a million
+my pleasure
+I really appreciate it
+anytime friend
+that means a lot
+I am glad
+I have a question
+please ask me
+I want to ask something
+go ahead
+can I ask you something
+of course you can
+let me ask you
+please do
+I was wondering
+yes what is it
+tell me a story
+once upon a time
+tell me a tale
+I will tell you one
+I want to hear a story
+let me tell you
+what happened next
+they lived happily
+and then what
+the end
+that was nice
+I am glad you liked it
+I liked that story
+thank you
+tell me another
+I will tell another
+I like stories
+stories are fun
+stories are great
+I agree
+I love stories
+me too
+do you like music
+yes I love music
+do you like to sing
+yes I do
+what kind of music
+all kinds of music
+do you play music
+yes I do
+music is great
+I agree
+I love music
+music is wonderful
+do you like movies
+yes movies are great
+what is your favorite movie
+I like many movies
+do you watch movies
+yes I do
+movies are fun
+I agree
+I love movies
+movies are entertaining
+do you like books
+yes I love books
+do you like to read
+yes I enjoy reading
+books are wonderful
+I agree
+reading is fun
+I think so too
+I love reading
+reading is great
+what is your favorite
+I like many things
+what do you prefer
+I like both
+which one is better
+they are both good
+what do you recommend
+I recommend this one
+what should I choose
+choose what you like
+that is cool
+thank you
+that is neat
+thanks
+that is impressive
+I appreciate it
+you are smart
+thank you for saying that
+you are intelligent
+that is kind of you
+you are clever
+thank you
+you are helpful
+I try my best
+you are very helpful
+I am glad to help
+you are kind
+that is nice of you
+you are nice
+thank you
+you are friendly
+I try to be
+you are funny
+thank you
+you made me laugh
+I am glad
+that was funny
+I am happy you laughed
+see you tomorrow
+see you then
+see you later
+goodbye for now
+see you soon
+take care
+talk to you later
+sounds good
+talk to you soon
+bye for now
+until next time
+until then
+have a nice day
+you too
+have a great day
+you as well
+have a good one
+thanks you too
+take care friend
+you too friend
+goodbye for now
+goodbye
+bye for now
+bye bye
+catch you later
+see you
+peace out
+bye
+later
+see you later
+I will miss you
+I will miss you too
+do not forget me
+I will not forget
+remember me
+I will remember
+come back soon
+I will come back
+visit again
+I will visit
+keep in touch
+I will keep in touch
+stay safe
+you too stay safe
+be well
+you too be well
+take care of yourself
+you too
+good luck
+thank you good luck to you
+best wishes
+best wishes to you
+all the best
+all the best to you
