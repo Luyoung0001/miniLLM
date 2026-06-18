@@ -3,3 +3,7 @@ course-site/.bundle-user/
 course/practice/labs/**/framework/*.o
 course/practice/labs/**/tmp_*
 course/practice/labs/**/lab*
+step11/bpe_vocab.txt
+step11/model_bpe.bin
+step11/train_log.txt
+step11/train_large.log

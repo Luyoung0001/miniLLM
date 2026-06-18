@@ -50,6 +50,15 @@ make train
 
 参数: `<数据文件> [epochs] [learning_rate]`
 
+### 说明：模型与词表文件
+
+`model_bpe.bin` 和 `bpe_vocab.txt` 都是训练过程中生成的产物，不是源码的一部分。
+
+- `model_bpe.bin`：训练后保存的模型权重
+- `bpe_vocab.txt`：训练后导出的 BPE 词表
+
+如果你是第一次运行 `step11`，本目录里没有这两个文件是正常的。先执行训练命令，再运行 `chat_bpe`、`demo_bpe` 或继续训练程序。
+
 ### 4. 交互对话
 
 ```bash
