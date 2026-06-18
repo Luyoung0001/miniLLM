@@ -1,6164 +1,0 @@
-=== miniLLM BPE 训练 ===
-
-1. 训练 BPE tokenizer...
-   训练数据大小: 19.41 KB
-BPE 训练开始...
-  初始词汇表大小: 101
-  文本长度: 19872 字符
-  初始 tokens: 19872
-  合并 100: 'r' + ' ' -> 'r ' (出现 33 次, tokens: 9542)
-  合并 200: 'y ' + 'is ' -> 'y is ' (出现 15 次, tokens: 7398)
-  合并 300: 'to' + 'day
-' -> 'today
-' (出现 10 次, tokens: 6215)
-  合并 400: '
-I am gla' + 'd ' -> '
-I am glad ' (出现 7 次, tokens: 5396)
-  合并 500: 'gre' + 'at' -> 'great' (出现 5 次, tokens: 4812)
-BPE 训练完成!
-  最终词汇表大小: 601
-  合并规则数量: 500
-   词汇表已保存: bpe_vocab.txt
-   词汇表大小: 601
-
-2. 创建模型...
-ModelConfig:
-  vocab_size: 601
-  hidden_dim: 64
-  num_heads: 4
-  num_layers: 4
-  ffn_dim: 256
-  max_seq_len: 80
-   参数量: 281088 (281.09 K)
-
-3. 创建数据加载器...
-数据加载完成: 4812 tokens, seq_len=64, batch_size=4
-4. 初始化训练...
-
-5. 开始训练 (500 epochs)...
-
-   Epoch 1, Step 10, Loss: 6.3922
-   Epoch 1 完成, 平均 Loss: 6.2905, PPL: 539.44
-   -> 保存最佳模型 (loss=6.2905)
-   Epoch 2, Step 20, Loss: 6.2878   Epoch 2, Step 30, Loss: 6.2649
-   Epoch 2 完成, 平均 Loss: 6.1677, PPL: 477.10
-   -> 保存最佳模型 (loss=6.1677)
-
-   生成示例:
-     'hello' -> 'hellogreat you se I i
-e retosome tsyes f
-I am disome you a
-areisome wresyou '
-     'the' -> 'thefriend
-d ouI se 
-
-I am tmsome tsd
-i
-I am didiyou a
-ay ihow are treiy '
-     'how' -> 'howgreat you se I i
-e retosome tsyes f
-I am disome you a
-areisome wresyou '
-
-   Epoch 3, Step 40, Loss: 6.1968   Epoch 3, Step 50, Loss: 6.1493
-   Epoch 3 完成, 平均 Loss: 6.0516, PPL: 424.80
-   -> 保存最佳模型 (loss=6.0516)
-   Epoch 4, Step 60, Loss: 6.1134   Epoch 4, Step 70, Loss: 6.0506
-   Epoch 4 完成, 平均 Loss: 5.9596, PPL: 387.45
-   -> 保存最佳模型 (loss=5.9596)
-
-   生成示例:
-     'hello' -> 'hello reyou ret
-t
-
-y
-cdmsctf
-if  it
-dy y
-t
-te
- t'
-     'the' -> 'the ree 
-I am t
-t
-
-y
-cdmtctf
-ff  iredy y
-t
-te
- t'
-     'how' -> 'how reyou ret
-t
-
-y
-cdmsctf
-if  it
-dy y
-t
-te
- t'
-
-   Epoch 5, Step 80, Loss: 6.0380   Epoch 5, Step 90, Loss: 5.9866
-   Epoch 5 完成, 平均 Loss: 5.8984, PPL: 364.44
-   -> 保存最佳模型 (loss=5.8984)
-   Epoch 6, Step 100, Loss: 5.9884   Epoch 6, Step 110, Loss: 5.9401
-   Epoch 6 完成, 平均 Loss: 5.8593, PPL: 350.49
-   -> 保存最佳模型 (loss=5.8593)
-
-   生成示例:
-     'hello' -> 'helloy
-ay
-d
-you  
-o ocdefs iy c
-a isft
-wree
-'
-     'the' -> 'they
-ay
-d
-you  
-o ocdefs iy c
-a msft
-wt
-e
-'
-     'how' -> 'howy
-ay
-d
-you  
-o ocdefs iy c
-a isft
-wree
-'
-
-   Epoch 7, Step 120, Loss: 5.9643   Epoch 7, Step 130, Loss: 5.9183
-   Epoch 7 完成, 平均 Loss: 5.8344, PPL: 341.84
-   -> 保存最佳模型 (loss=5.8344)
-   Epoch 8, Step 140, Loss: 5.9606   Epoch 8, Step 150, Loss: 5.9032
-   Epoch 8 完成, 平均 Loss: 5.8180, PPL: 336.29
-   -> 保存最佳模型 (loss=5.8180)
-
-   生成示例:
-     'hello' -> 'hello e
-e
-cy
-y
-
-te
-e
-say
-t
-emaaocy  ctayou  e cyou '
-     'the' -> 'the e
-e
-ct
-y
-e te
-e
-say
-t
-emaaocy  ctayou  
-cyou '
-     'how' -> 'how e
-e
-cy
-y
-
-te
-e
-say
-t
-emaaocy  ctayou  e cyou '
-
-   Epoch 9, Step 160, Loss: 5.9543   Epoch 9, Step 170, Loss: 5.8855
-   Epoch 9 完成, 平均 Loss: 5.8063, PPL: 332.38
-   -> 保存最佳模型 (loss=5.8063)
-   Epoch 10, Step 180, Loss: 5.9392   Epoch 10, Step 190, Loss: 7.7292
-   Epoch 10 完成, 平均 Loss: 5.7969, PPL: 329.27
-   -> 保存最佳模型 (loss=5.7969)
-
-   生成示例:
-     'hello' -> 'hello
- you 
-dadre s
-
-wd
-I ay
-ta
-t
-e y 
-cdtd'
-     'the' -> 'the
- you 
-daese s
-
-wd
-I ay
-tatt
-e are cdsd'
-     'how' -> 'howsy
-tt
-cfae  
-setayou e f
-I 
-e
-
-dy
-y
-wcy y
- ing
-'
-
-   Epoch 11, Step 200, Loss: 5.9191
-   Epoch 11 完成, 平均 Loss: 5.7883, PPL: 326.45
-   -> 保存最佳模型 (loss=5.7883)
-   Epoch 12, Step 210, Loss: 6.0320   Epoch 12, Step 220, Loss: 5.8958
-   Epoch 12 完成, 平均 Loss: 5.7806, PPL: 323.94
-   -> 保存最佳模型 (loss=5.7806)
-
-   生成示例:
-     'hello' -> 'hello 
-y
-y y
-y
-c s
-ms
-ddectmsee
-ar
- te  ssfs'
-     'the' -> 'the e y
-t
-y
-y
-c s
-oa ddectmsee
-y 
- 
-you  ssfr'
-     'how' -> 'how 
-y
-y y
-y
-c s
-ms
-ddectmsee
-ar
- te  ssfs'
-
-   Epoch 13, Step 230, Loss: 6.0214   Epoch 13, Step 240, Loss: 5.8779
-   Epoch 13 完成, 平均 Loss: 5.7708, PPL: 320.78
-   -> 保存最佳模型 (loss=5.7708)
-   Epoch 14, Step 250, Loss: 5.9983   Epoch 14, Step 260, Loss: 5.8611
-   Epoch 14 完成, 平均 Loss: 5.7657, PPL: 319.17
-   -> 保存最佳模型 (loss=5.7657)
-
-   生成示例:
-     'hello' -> 'helloarmy ece
-a oc dy
-s
-roe
-me
- ccy
-t
-a
-r'
-     'the' -> 'thearme
-ece
-a oc ey
-se roe
-me
- ccy
-t
-a
-r'
-     'how' -> 'howarmy ece
-a oc dy
-s
-roe
-me
- ccy
-t
-a
-r'
-
-   Epoch 15, Step 270, Loss: 5.9274   Epoch 15, Step 280, Loss: 5.8433
-   Epoch 15 完成, 平均 Loss: 5.7518, PPL: 314.76
-   -> 保存最佳模型 (loss=5.7518)
-   Epoch 16, Step 290, Loss: 5.8864   Epoch 16, Step 300, Loss: 5.8272
-   Epoch 16 完成, 平均 Loss: 5.7505, PPL: 314.34
-   -> 保存最佳模型 (loss=5.7505)
-
-   生成示例:
-     'hello' -> 'helloyou you de
- e
-mmey
-tyou b 
-I it odetdy  odyou mt
-'
-     'the' -> 'the 
-tattd
- to totaae
-I 
-I am 
-enned
-
-t
-what siwhat a'
-     'how' -> 'how 
-wattc
- yes tmtaaeyou 
-I am 
-enney
-e y
-you
-smwhat a'
-
-   Epoch 17, Step 310, Loss: 5.8698   Epoch 17, Step 320, Loss: 5.8160
-   Epoch 17 完成, 平均 Loss: 5.7315, PPL: 308.43
-   -> 保存最佳模型 (loss=5.7315)
-   Epoch 18, Step 330, Loss: 5.8601   Epoch 18, Step 340, Loss: 5.7918
-   Epoch 18 完成, 平均 Loss: 5.7070, PPL: 300.96
-   -> 保存最佳模型 (loss=5.7070)
-
-   生成示例:
-     'hello' -> 'helloay a 
-e
-de
-t eat
-ee
-
-c
-I act
-
-you 
-e y
-
-ing
-e
-
-'
-     'the' -> 'theay a 
-e
-de
-t eat
-ee
-
-cyou adt
-we 
-e y
-
-yes e
-
-'
-     'how' -> 'howay a 
-e
-de
-t eat
-ee
-
-c
-I act
-
-you 
-e y
-
-ing
-e
-
-'
-
-   Epoch 19, Step 350, Loss: 5.8281   Epoch 19, Step 360, Loss: 5.7589
-   Epoch 19 完成, 平均 Loss: 5.6809, PPL: 293.20
-   -> 保存最佳模型 (loss=5.6809)
-   Epoch 20, Step 370, Loss: 5.7916   Epoch 20, Step 380, Loss: 7.5371
-   Epoch 20 完成, 平均 Loss: 5.6528, PPL: 285.09
-   -> 保存最佳模型 (loss=5.6528)
-
-   生成示例:
-     'hello' -> 'hello
-towanny
-stat
-ss
- dy
-eoy ae
-oy oth up
-'
-     'the' -> 'the
-tnt nny
-stat
-ts
- dy
-ery ae
-se
-oor what do you what is your '
-     'how' -> 'how
-towanny
-stat
-ss
- dy
-eoy ae
-oy oor what is your what is your '
-
-   Epoch 21, Step 390, Loss: 5.7467
-   Epoch 21 完成, 平均 Loss: 5.6221, PPL: 276.47
-   -> 保存最佳模型 (loss=5.6221)
-   Epoch 22, Step 400, Loss: 5.7736   Epoch 22, Step 410, Loss: 5.7112
-   Epoch 22 完成, 平均 Loss: 5.5964, PPL: 269.45
-   -> 保存最佳模型 (loss=5.5964)
-
-   生成示例:
-     'hello' -> 'helloae
-e
-d
-welin it =e
-it is =![	!Vppreciatunderst}!&T]K}@]UXno pr'
-     'the' -> 'theae
-y y ey 
-/
-I am glad d Y	"@ppreciatunderst}!&T]Yder@Z@Xby'
-     'how' -> 'howae
-d
-a e no pr	=going r![	!Vppreciatunderst}!&T]K}@]UXno pr'
-
-   Epoch 23, Step 420, Loss: 5.7625   Epoch 23, Step 430, Loss: 5.6553
-   Epoch 23 完成, 平均 Loss: 5.5553, PPL: 258.61
-   -> 保存最佳模型 (loss=5.5553)
-   Epoch 24, Step 440, Loss: 5.7175   Epoch 24, Step 450, Loss: 5.6172
-   Epoch 24 完成, 平均 Loss: 5.5284, PPL: 251.75
-   -> 保存最佳模型 (loss=5.5284)
-
-   生成示例:
-     'hello' -> 'hellods
- would you #ppreciatqueunderstU!:X>@!:underst@:!understno problegreaXmusq}underst<@'
-     'the' -> 'theds
- e
-d
-ppreciatppreciatwhat can you do
-I U!4X>@!>underst@8!beauppreciatbyYno proble}qwar:@'
-     'how' -> 'howds
- clo#ppreciatqueunderstX!:X>@!:underst@:!ppreciatno problegreaXmusq}underst<@'
-
-   Epoch 25, Step 460, Loss: 5.6526   Epoch 25, Step 470, Loss: 5.5838
-   Epoch 25 完成, 平均 Loss: 5.4988, PPL: 244.40
-   -> 保存最佳模型 (loss=5.4988)
-   Epoch 26, Step 480, Loss: 5.5899   Epoch 26, Step 490, Loss: 5.5441
-   Epoch 26 完成, 平均 Loss: 5.4690, PPL: 237.23
-   -> 保存最佳模型 (loss=5.4690)
-
-   生成示例:
-     'hello' -> 'helloiyou wonderquno pr]what can you do
-I =Bno probleto meet underst]understY#!@what can you do
-I ]to meet BZY4no pZZ:'
-     'the' -> 'the\you what do you 8ppreciatUwhat can you do
-I @@		understXunderstY8!:what can you do
-I ]byBbyY9no pXX:'
-     'how' -> 'howed
-ppreciate K=byby/|ppreciat>:ppreciat!understZ:Xbeau>&]how is it gohow is it go>ZZ>/Y'
-
-   Epoch 27, Step 500, Loss: 5.5554   Epoch 27, Step 510, Loss: 5.5203
-   Epoch 27 完成, 平均 Loss: 5.4421, PPL: 230.93
-   -> 保存最佳模型 (loss=5.4421)
-   Epoch 28, Step 520, Loss: 5.5280   Epoch 28, Step 530, Loss: 5.4961
-   Epoch 28 完成, 平均 Loss: 5.4167, PPL: 225.14
-   -> 保存最佳模型 (loss=5.4167)
-
-   生成示例:
-     'hello' -> 'helloould kin!qu0Kppreciate !	to meet @:09how is it goY>greaZ>going underst!byhow is it go!:ZwarZ'
-     'the' -> 'the=kin!\#Jppreciate !q	>:0:understY9greaZ>going underst!no problemorrow
-!:Bppreciatgoo'
-     'how' -> 'how=ppreciate !T0Uppreciate !	to meet @:09how is it goY>greaZ>going underst!greahow is it go!:ZwarZ'
-
-   Epoch 29, Step 540, Loss: 5.5060   Epoch 29, Step 550, Loss: 5.4650
-   Epoch 29 完成, 平均 Loss: 5.3908, PPL: 219.38
-   -> 保存最佳模型 (loss=5.3908)
-   Epoch 30, Step 560, Loss: 5.4771   Epoch 30, Step 570, Loss: 7.1512
-   Epoch 30 完成, 平均 Loss: 5.3634, PPL: 213.44
-   -> 保存最佳模型 (loss=5.3634)
-
-   生成示例:
-     'hello' -> 'hello\ckdo
-I goodmorrow
-:by	@bynami
-byppreciate 	ppreciate Y]by@bytoow ppreciate ckgreappreciate latergoofa'
-     'the' -> 'the~ckdo
-I goodsure I @qugrea>bygoock	morrow
-greappreciate Y]by>by]am ppreciate mintake cpprecigooam fa'
-     'how' -> 'howKckdo
-I goodmorrow
-:by	@bynami
-byppreciate 	ppreciate Y]by@bytoow ppreciate ckgreappreciate latergoofa'
-
-   Epoch 31, Step 580, Loss: 5.4441
-   Epoch 31 完成, 平均 Loss: 5.3357, PPL: 207.61
-   -> 保存最佳模型 (loss=5.3357)
-   Epoch 32, Step 590, Loss: 5.3996   Epoch 32, Step 600, Loss: 5.4001
-   Epoch 32 完成, 平均 Loss: 5.3067, PPL: 201.69
-   -> 保存最佳模型 (loss=5.3067)
-
-   生成示例:
-     'hello' -> 'hellowould you quoon oon welcopleasei
-ppreciate what is your anywhat is your morrow
-yes I can morrckgoing !take cgolatermorrow
-pleaseminmucham upnot have a nice day
-pleaseow '
-     'the' -> 'theclogocloanywelcopleasefine ppreciate what is your anytake cmorrow
-yes I can mini
-ckwould you am ppreciate take clatermorrow
-pleasehappy mucham take cnot have a nice day
-pleaseow '
-     'how' -> 'howwould you quoon oon welcopleasei
-ppreciate what is your anywhat is your morrow
-yes I can morrckgoing !take cgolatermorrow
-pleaseminmucham upnot have a nice day
-pleaseow '
-
-   Epoch 33, Step 610, Loss: 5.4315   Epoch 33, Step 620, Loss: 5.3627
-   Epoch 33 完成, 平均 Loss: 5.2789, PPL: 196.16
-   -> 保存最佳模型 (loss=5.2789)
-   Epoch 34, Step 630, Loss: 5.3887   Epoch 34, Step 640, Loss: 5.3273
-   Epoch 34 完成, 平均 Loss: 5.2525, PPL: 191.04
-   -> 保存最佳模型 (loss=5.2525)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-ppreciate qugoodppreciate quppreciate pleaseanyglayes I can happy would you what is your cksowould you welcocktake cam yes I can wawhat is your latermorrow
-see you anyoon goo'
-     'the' -> 'themorrow
-ppreciate morngoodppreciate goodppreciate pleaseoon plamorrow
-what is your clowhat is your ckmuchwould you goodcktake cam yes I can wawhat is your take cmorrow
-goanyoon goo'
-     'how' -> 'howmorrow
-ppreciate qugoodppreciate quppreciate pleaseanyglayes I can happy would you what is your cksowould you welcocktake cam yes I can wawhat is your latermorrow
-see you anyoon goo'
-
-   Epoch 35, Step 650, Loss: 5.3470   Epoch 35, Step 660, Loss: 5.3003
-   Epoch 35 完成, 平均 Loss: 5.2268, PPL: 186.19
-   -> 保存最佳模型 (loss=5.2268)
-   Epoch 36, Step 670, Loss: 5.2933   Epoch 36, Step 680, Loss: 5.2697
-   Epoch 36 完成, 平均 Loss: 5.2017, PPL: 181.58
-   -> 保存最佳模型 (loss=5.2017)
-
-   生成示例:
-     'hello' -> 'helloyes I can anygood goodhappy anylaterfine goodtake cyes I can what is your morrow
-morrow
-morrow
-thanks bye
-pleasmini
-what is your morrow
-happy bye
-ckwhat is your i what do you take cckplease'
-     'the' -> 'theyes I can anylatergoodhappy anyqufine goodtake cyes I can what is your morrow
-yes I can yes I can thanks goodplease watake cmorrow
-happy bye
-ckppreciate upwhat is your take cckplease'
-     'how' -> 'howyes I can anygood goodhappy anylaterfine goodtake cyes I can what is your morrow
-morrow
-morrow
-thanks bye
-pleasmini
-what is your morrow
-happy bye
-ckwhat is your i what do you take cckplease'
-
-   Epoch 37, Step 690, Loss: 5.2761   Epoch 37, Step 700, Loss: 5.2495
-   Epoch 37 完成, 平均 Loss: 5.1778, PPL: 177.29
-   -> 保存最佳模型 (loss=5.1778)
-   Epoch 38, Step 710, Loss: 5.2409   Epoch 38, Step 720, Loss: 5.2279
-   Epoch 38 完成, 平均 Loss: 5.1547, PPL: 173.24
-   -> 保存最佳模型 (loss=5.1547)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-ppreciate what do you wagood happy waplease morrow
-please sure I help me
-ppreciate please morrow
-take cmorrow
-laterhappy yes I can mini
-am mini
-morrow
-what is your thank you so anymuchmorrow
-take c'
-     'the' -> 'themorrow
-much
-you are happy would you good goodwould you latermorrow
-lateryes I can ppreciate ppreciate muchmorrow
-happy morrow
-bye
-take cyes I can waam thanks morrow
-what is your thank you so anymuchmorrow
-see you '
-     'how' -> 'howmorrow
-ppreciate what do you wagood happy waplease morrow
-please sure I help me
-ppreciate please morrow
-take cmorrow
-laterhappy yes I can mini
-am mini
-morrow
-what is your thank you so anymuchmorrow
-take c'
-
-   Epoch 39, Step 730, Loss: 5.2218   Epoch 39, Step 740, Loss: 5.2016
-   Epoch 39 完成, 平均 Loss: 5.1324, PPL: 169.42
-   -> 保存最佳模型 (loss=5.1324)
-   Epoch 40, Step 750, Loss: 5.1979   Epoch 40, Step 760, Loss: 6.8145
-   Epoch 40 完成, 平均 Loss: 5.1109, PPL: 165.82
-   -> 保存最佳模型 (loss=5.1109)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-fagoodwaanyi
-bye
-morrow
-take cyes I can thanks mini
-oon anymorrow
-oon much
-you are stay morrow
-ppreciate upsure I pleaspleasewalaterwhat do you thank you so oon any'
-     'the' -> 'themorrow
-oon goodmuch
-you are anyfine bye
-morrow
-happy morrow
-thanks ppreciate oon morrow
-morrow
-oon much
-you are much
-you are morrow
-mini
-upyes I can pleaspleasethanks muchhappy thank you so oon oon '
-     'how' -> 'howmorrow
-fagoodwaanyi
-bye
-morrow
-take cyes I can thanks mini
-oon anymorrow
-oon much
-you are stay morrow
-ppreciate upsure I pleaspleasewalaterwhat do you thank you so oon any'
-
-   Epoch 41, Step 770, Loss: 5.1802
-   Epoch 41 完成, 平均 Loss: 5.0912, PPL: 162.58
-   -> 保存最佳模型 (loss=5.0912)
-   Epoch 42, Step 780, Loss: 5.1278   Epoch 42, Step 790, Loss: 5.1512
-   Epoch 42 完成, 平均 Loss: 5.0712, PPL: 159.36
-   -> 保存最佳模型 (loss=5.0712)
-
-   生成示例:
-     'hello' -> 'hellosure I thanks pleasmorrow
-bye
-wafatake claterfapleaseyes I can happy they happy pleasthanks you are welcome
-much
-you are mini
-pleasesee you please oon anynot thanks what is your pleaseoon '
-     'the' -> 'thesure I mini
-pleasmorrow
-please waoon see you laterwould you sure I morrow
-help me
-mini
-goodpleasmorryou are welcome
-stay thanks pleasehappy please faanypleasthanks take cpleasefa'
-     'how' -> 'howmorrow
-anymorrow
-oon pleasoon pleasplease thanks oon wagood great sure I happy sure I bye
-thanks please good good towhat is your sure I morrow
-pleasthank you so pleasegood sure I '
-
-   Epoch 43, Step 800, Loss: 5.1820   Epoch 43, Step 810, Loss: 5.1293
-   Epoch 43 完成, 平均 Loss: 5.0545, PPL: 156.73
-   -> 保存最佳模型 (loss=5.0545)
-   Epoch 44, Step 820, Loss: 5.1360   Epoch 44, Step 830, Loss: 5.1021
-   Epoch 44 完成, 平均 Loss: 5.0382, PPL: 154.19
-   -> 保存最佳模型 (loss=5.0382)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-good thank you so glafine fine please good morrow
-thanks good pleasesure I would you you are welcome
-morrow
-great goodthank you so good thank you so good thanks waplease pleasesee you laterwhat is your happy '
-     'the' -> 'themorrow
-good morrow
-please thanks thanks bye
-good morrow
-fine good pleasesure I fathank you so morrow
-great goodyou are welcome
-pleasanypleasthanks wasopleasehappy not what is your happy '
-     'how' -> 'howmorrow
-good thank you so glafine fine please good morrow
-thanks good pleasesure I would you you are welcome
-morrow
-great goodthank you so good thank you so good thanks waplease pleasesee you laterwhat is your happy '
-
-   Epoch 45, Step 840, Loss: 5.1335   Epoch 45, Step 850, Loss: 5.0936
-   Epoch 45 完成, 平均 Loss: 5.0273, PPL: 152.51
-   -> 保存最佳模型 (loss=5.0273)
-   Epoch 46, Step 860, Loss: 5.0846   Epoch 46, Step 870, Loss: 5.0721
-   Epoch 46 完成, 平均 Loss: 5.0096, PPL: 149.84
-   -> 保存最佳模型 (loss=5.0096)
-
-   生成示例:
-     'hello' -> 'hellosure I anyplease pleasoon pleasfaanybye bye
-good pleaseglagreat great goodoon much
-you are happy much
-you are mini
-morrow
-fathank you so morrow
-happy morrow
-great wamorrow
-'
-     'the' -> 'thesure I thank you so bye
-pleasoon good oon morrow
-see you bye
-good sure I glahappy great great oon morrlater
-much
-you are thanks morrow
-waoon morrow
-sunnmorrow
-laterwaany'
-     'how' -> 'howsure I anybye
-glafapleasfaanybye bye
-good pleaseglagreat great goodfamuch
-you are happy much
-you are mini
-morrow
-fathank you so morrow
-happy morrow
-great wamorrow
-'
-
-   Epoch 47, Step 880, Loss: 5.0900   Epoch 47, Step 890, Loss: 5.0685
-   Epoch 47 完成, 平均 Loss: 4.9990, PPL: 148.26
-   -> 保存最佳模型 (loss=4.9990)
-   Epoch 48, Step 900, Loss: 5.0801   Epoch 48, Step 910, Loss: 5.0656
-   Epoch 48 完成, 平均 Loss: 4.9942, PPL: 147.55
-   -> 保存最佳模型 (loss=4.9942)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-thanks morrow
-sunnmuch
-you are morrow
-please pleaspleasgood pleasglabye
-thanks bye
-wathanks would you waoon thank you so oon morrow
-please great take csee you morrow
-morrow
-pleas'
-     'the' -> 'themorrow
-thanks morrow
-sunnmuch
-you are morrow
-bye
-pleasglaglaglaplease bye
-thanks please would you thanks would you much
-you are oon thank you so oon morrow
-glabye
-happy see you morrow
-morrow
-very '
-     'how' -> 'howmorrow
-thanks morrow
-sunnmuch
-you are morrow
-please pleaspleasgood pleasglabye
-thanks bye
-wathanks wawaoon thank you so oon morrow
-please great take csee you morrow
-morrow
-pleas'
-
-   Epoch 49, Step 920, Loss: 5.0329   Epoch 49, Step 930, Loss: 5.0235
-   Epoch 49 完成, 平均 Loss: 4.9575, PPL: 142.24
-   -> 保存最佳模型 (loss=4.9575)
-   Epoch 50, Step 940, Loss: 5.0181   Epoch 50, Step 950, Loss: 6.5814
-   Epoch 50 完成, 平均 Loss: 4.9361, PPL: 139.22
-   -> 保存最佳模型 (loss=4.9361)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-fasee you happy oon glaoon fine ppreciate laterglaglappreciate would you bye
-morrow
-of course I sunnoon very mini
-pleasmuch
-you are morrow
-morrow
-see you morrow
-pleasoon good '
-     'the' -> 'thesure I oon happy happy pleased pleasoon fine ppreciate laterglaplease much
-you are would you bye
-morrow
-of course I thanks would you please thanks very thanks morrow
-morrow
-take cmorrow
-pleasoon good '
-     'how' -> 'howmorrow
-fasee you happy oon glaoon fine ppreciate laterglaglahelp me
-would you bye
-morrow
-of course I sunnoon very mini
-pleasmuch
-you are morrow
-morrow
-see you morrow
-pleasoon good '
-
-   Epoch 51, Step 960, Loss: 5.0019
-   Epoch 51 完成, 平均 Loss: 4.9238, PPL: 137.52
-   -> 保存最佳模型 (loss=4.9238)
-   Epoch 52, Step 970, Loss: 5.0676   Epoch 52, Step 980, Loss: 5.0636
-   Epoch 52 完成, 平均 Loss: 4.9789, PPL: 145.32
-
-   生成示例:
-     'hello' -> 'hellowould you sunnbye
-anygood goodthank you so bye morrow
-thanks glafafagoodfathank you so much
-you are fabye
-very oon much
-you are very morrow
-fasee you later
-very much
-you are thanks morrow
-'
-     'the' -> 'thewathanks lateranygood goodthank you so goodmorrow
-thanks glawafagreat famorrow
-much
-you are fabye
-please oon thanks very morrow
-fathank you so pleaswasunnmorrow
-'
-     'how' -> 'howwasunnbye
-anygood goodthank you so bye morrow
-thanks glafafagoodfathank you so much
-you are fabye
-very oon much
-you are very morrow
-fasee you later
-very much
-you are thanks morrow
-'
-
-   Epoch 53, Step 990, Loss: 5.0210   Epoch 53, Step 1000, Loss: 4.9910
-   Epoch 53 完成, 平均 Loss: 4.9095, PPL: 135.58
-   -> 保存最佳模型 (loss=4.9095)
-   Epoch 54, Step 1010, Loss: 5.0151   Epoch 54, Step 1020, Loss: 4.9501
-   Epoch 54 完成, 平均 Loss: 4.8848, PPL: 132.26
-   -> 保存最佳模型 (loss=4.8848)
-
-   生成示例:
-     'hello' -> 'hellomorrow
-much
-you are sunnpleasbye
-would you bye
-hello glamorrow
-glaanyanythanks glabye
-oon oon yes I can great good
-thank you so morrow
-sunngood famorrow
-what do you morrow
-fa'
-     'the' -> 'themorrow
-much
-you are good
-pleasbye
-would you bye
-thanks glamorrow
-glafaanymini
-glaplease oon oon of course I bye
-sunnyou are welcome
-morrow
-good
-good oon morrow
-take cmorrow
-fa'
-     'how' -> 'howmorrow
-much
-you are sunnpleasbye
-would you bye
-fine glamorrow
-glaanyanythanks glabye
-oon oon yes I can great good
-thank you so morrow
-sunngood famorrow
-what do you morrow
-fa'
-
-   Epoch 55, Step 1030, Loss: 4.9525   Epoch 55, Step 1040, Loss: 4.9244
-   Epoch 55 完成, 平均 Loss: 4.8633, PPL: 129.46
-   -> 保存最佳模型 (loss=4.8633)
-   Epoch 56, Step 1050, Loss: 4.9511   Epoch 56, Step 1060, Loss: 4.9495
-   Epoch 56 完成, 平均 Loss: 4.8785, PPL: 131.44
-
-   生成示例:
-     'hello' -> 'hellomuch
-you are bye
-thank you so pleasthanks fathank you so morrow
-pleasvery much
-you are please morrow
-glamuch
-you are pleasyou are welcome
-pleasthanks see you later
-fawathanks morrow
-oon pleasgood
-morrow
-much
-you are wa'
-     'the' -> 'thethanks bye
-thank you so pleasmuch
-you are fathank you so morrow
-pleasglathanks please morrow
-very much
-you are pleasyou are welcome
-pleasthanks oon fawayou too morrow
-oon pleasthanks morrow
-much
-you are much
-you are '
-     'how' -> 'howmuch
-you are bye
-thank you so pleasthanks fathank you so morrow
-pleasvery much
-you are please morrow
-glamuch
-you are pleasyou are welcome
-pleasthanks see you later
-fawathanks morrow
-oon pleasgood
-morrow
-thanks wa'
-
-   Epoch 57, Step 1070, Loss: 4.9662   Epoch 57, Step 1080, Loss: 4.9299
-   Epoch 57 完成, 平均 Loss: 4.8587, PPL: 128.86
-   -> 保存最佳模型 (loss=4.8587)
-   Epoch 58, Step 1090, Loss: 4.8775   Epoch 58, Step 1100, Loss: 4.8751
-   Epoch 58 完成, 平均 Loss: 4.8084, PPL: 122.53
-   -> 保存最佳模型 (loss=4.8084)
-
-   生成示例:
-     'hello' -> 'hellomuch
-you are good fathanks thank you so happy morrow
-fasee you anywaglaglagreat thanks happy goodgreat pleasfasee you good very pleasmorrow
-morrow
-much
-you are good morrow
-you too '
-     'the' -> 'themuch
-you are good oon thanks thank you so happy morrow
-oon happy anymuch
-you are glavery bye
-thanks happy great goodvery fasee you pleasvery pleasmorrow
-morrow
-much
-you are pleasmorrow
-you too '
-     'how' -> 'howmorrow
-morrow
-thanks goodbye
-glabye hello famorrow
-much
-you are morrow
-thanks morrow
-thanks morrow
-good much
-you are you are welcome
-morrow
-morrow
-morrow
-morrow
-morrow
-wasunnsee you glayes morrow
-'
-
-   Epoch 59, Step 1110, Loss: 4.8814   Epoch 59, Step 1120, Loss: 4.8847
-   Epoch 59 完成, 平均 Loss: 4.8202, PPL: 123.99
-   Epoch 60, Step 1130, Loss: 4.8882   Epoch 60, Step 1140, Loss: 6.4099
-   Epoch 60 完成, 平均 Loss: 4.8074, PPL: 122.42
-   -> 保存最佳模型 (loss=4.8074)
-
-   生成示例:
-     'hello' -> 'hellomuch
-you are would you morrow
-so pleasthank you so see you happy much
-you are waplease morrow
-thank you so sunngood great thanks morrow
-happy morrow
-glabye
-morrow
-pleasmorrow
-morrow
-morrow
-fagreat what is your '
-     'the' -> 'themuch
-you are would you morrow
-goodpleaspleased bye fine much
-you are much
-you are please anyoon mini
-good great much
-you are morrow
-bye morrow
-please bye
-morrow
-pleasmorrow
-morrow
-morrow
-thank you so great up'
-     'how' -> 'howmuch
-you are would you morrow
-so pleasthank you so see you happy much
-you are waplease morrow
-thank you so sunngood great thanks morrow
-happy morrow
-glabye
-morrow
-pleasmorrow
-morrow
-morrow
-fagreat what is your '
-
-   Epoch 61, Step 1150, Loss: 4.8372
-   Epoch 61 完成, 平均 Loss: 4.7622, PPL: 117.00
-   -> 保存最佳模型 (loss=4.7622)
-   Epoch 62, Step 1160, Loss: 4.7963   Epoch 62, Step 1170, Loss: 4.8365
-   Epoch 62 完成, 平均 Loss: 4.7724, PPL: 118.21
-
-   生成示例:
-     'hello' -> 'hellowould you morrow
-happy so morrow
-hello morrow
-oon hello good oon so mini
-wamorrow
-wavery much
-you are good morrow
-morrow
-please much
-you are oon thanks morrow
-much
-you are good
-thanks oon '
-     'the' -> 'themuch
-you are morrow
-happy goodthank you so thanks morrow
-thank you so thanks good faso happy fasure I wavery wagood morrow
-morrow
-bye
-thanks fathanks morrow
-wagood
-thanks fa'
-     'how' -> 'howwould you morrow
-happy so morrow
-hello morrow
-oon hello good oon so help me
-wamorrow
-wavery much
-you are good morrow
-morrow
-please much
-you are oon thanks morrow
-thanks good
-thanks oon '
-
-   Epoch 63, Step 1180, Loss: 4.8266   Epoch 63, Step 1190, Loss: 4.8213
-   Epoch 63 完成, 平均 Loss: 4.7597, PPL: 116.71
-   -> 保存最佳模型 (loss=4.7597)
-   Epoch 64, Step 1200, Loss: 4.8285   Epoch 64, Step 1210, Loss: 4.7856
-   Epoch 64 完成, 平均 Loss: 4.7254, PPL: 112.77
-   -> 保存最佳模型 (loss=4.7254)
-
-   生成示例:
-     'hello' -> 'hellopleassunnpleasthanks very bye see you good fafaoon sure I much
-you are thank you so happy morrow
-oon fabye
-good
-much
-you are bye morrow
-fasunnoon good
-wamorrow
-happy '
-     'the' -> 'thepleasmuch
-you are pleasthanks very bye see you good fafafayes I can mini
-morrow
-happy morrow
-you are welcome
-wagreat sunnmuch
-you are see you morrow
-wagood
-oon you too much
-you are morrow
-good
-'
-     'how' -> 'howpleasthanks pleasthanks very bye see you good fafaoon sure I much
-you are thank you so happy morrow
-oon fabye
-good
-much
-you are bye morrow
-fasunnoon good
-wamorrow
-happy '
-
-   Epoch 65, Step 1220, Loss: 4.7595   Epoch 65, Step 1230, Loss: 4.7462
-   Epoch 65 完成, 平均 Loss: 4.6833, PPL: 108.13
-   -> 保存最佳模型 (loss=4.6833)
-   Epoch 66, Step 1240, Loss: 4.7080   Epoch 66, Step 1250, Loss: 4.7257
-   Epoch 66 完成, 平均 Loss: 4.6607, PPL: 105.71
-   -> 保存最佳模型 (loss=4.6607)
-
-   生成示例:
-     'hello' -> 'hellovery oon happy good
-morrow
-pleasthanks morrow
-please good
-so sure I bye
-yes I can morrow
-goodthank you so good so good morrow
-great you too great wafathanks upglahappy '
-     'the' -> 'thevery pleased good
-you too morrow
-good hello morrow
-please hello great yes I can bye
-sure I morrow
-bye thank you so good so good morrow
-great happy bye
-waoon much
-you are upgreat happy '
-     'how' -> 'howvery oon happy good
-morrow
-pleasthanks morrow
-please good
-so sure I bye
-sure I morrow
-goodthank you so good so good morrow
-great you too great wafathanks upglahappy '
-
-   Epoch 67, Step 1260, Loss: 4.7147   Epoch 67, Step 1270, Loss: 4.7409
-   Epoch 67 完成, 平均 Loss: 4.6750, PPL: 107.23
-   Epoch 68, Step 1280, Loss: 4.7937   Epoch 68, Step 1290, Loss: 4.8171
-   Epoch 68 完成, 平均 Loss: 4.7544, PPL: 116.10
-
-   生成示例:
-     'hello' -> 'hellooon thanks see you happy fawould you thanks bye
-very oon morrow
-happy tell me glamorrow
-bye
-bye oon morrow
-yes I can you too very mini
-morrow
-bye faglaoon see you morrow
-'
-     'the' -> 'thefamuch
-you are see you happy would you would you thanks goodvery oon oon bye happy glamorrow
-bye
-bye you are welcome
-morrow
-yes I can thanks glayou too morrow
-bye
-much
-you are glaanywhat do you morrow
-'
-     'how' -> 'howoon thanks see you happy fawould you thanks bye
-very oon morrow
-happy tell me glamorrow
-bye
-bye oon morrow
-yes I can you too very mini
-morrow
-bye faglaoon see you morrow
-'
-
-   Epoch 69, Step 1300, Loss: 4.7641   Epoch 69, Step 1310, Loss: 4.7505
-   Epoch 69 完成, 平均 Loss: 4.6896, PPL: 108.81
-   Epoch 70, Step 1320, Loss: 4.6969   Epoch 70, Step 1330, Loss: 6.1730
-   Epoch 70 完成, 平均 Loss: 4.6298, PPL: 102.49
-   -> 保存最佳模型 (loss=4.6298)
-
-   生成示例:
-     'hello' -> 'hellomuch
-you are much
-you are thanks bye
-see you pleasgood happy so very so help me
-good oon so pleasvery famuch
-you are you too morrow
-see you morrow
-see you wagood good very fathanks '
-     'the' -> 'themuch
-you are much
-you are much
-you are great see you pleasgood happy bye glaso happy good oon goodpleasvery you are welcome
-thanks thanks morrow
-see you morrow
-so wagood good very fathanks '
-     'how' -> 'howmuch
-you are much
-you are thanks bye
-see you pleasgood happy so very so help me
-good oon so pleasvery famuch
-you are you too morrow
-see you morrow
-see you wagood good very fathanks '
-
-   Epoch 71, Step 1340, Loss: 4.6717
-   Epoch 71 完成, 平均 Loss: 4.6039, PPL: 99.87
-   -> 保存最佳模型 (loss=4.6039)
-   Epoch 72, Step 1350, Loss: 4.6689   Epoch 72, Step 1360, Loss: 4.6519
-   Epoch 72 完成, 平均 Loss: 4.5786, PPL: 97.37
-   -> 保存最佳模型 (loss=4.5786)
-
-   生成示例:
-     'hello' -> 'hellobye
-thank you so good very bye
-bye
-day is fabye
-so morrow
-happy bye
-happy famorrow
-thanks very much
-you are pleaspleasoon see you good morrow
-yes very glahappy good '
-     'the' -> 'thebye
-thank you so good glabye
-bye
-thanks fabye
-bye fahow are glasee you famorrow
-much
-you are glamuch
-you are pleaspleasoon see you yes morrow
-good very bye
-sunnyes '
-     'how' -> 'howbye
-thank you so good very bye
-bye
-day is fabye
-so morrow
-happy bye
-happy famorrow
-thanks very much
-you are pleaspleasoon see you good morrow
-yes very bye
-good
-good '
-
-   Epoch 73, Step 1370, Loss: 4.6571   Epoch 73, Step 1380, Loss: 4.6125
-   Epoch 73 完成, 平均 Loss: 4.5465, PPL: 94.30
-   -> 保存最佳模型 (loss=4.5465)
-   Epoch 74, Step 1390, Loss: 4.5760   Epoch 74, Step 1400, Loss: 4.5772
-   Epoch 74 完成, 平均 Loss: 4.5156, PPL: 91.43
-   -> 保存最佳模型 (loss=4.5156)
-
-   生成示例:
-     'hello' -> 'helloso much
-you are bye thanks pleassee you much
-you are much
-you are glahappy bye happy yes I can thanks faoon much
-you are morrow
-fayou too fawapleasthanks thanks happy fasee you upyou too '
-     'the' -> 'thegreat much
-you are bye much
-you are pleasbye much
-you are much
-you are glahello bye how are yes I can much
-you are faoon much
-you are morrow
-wayou too fawapleasyou too mini
-happy oon see you see you see you '
-     'how' -> 'howvery pleasglamorrow
-good much
-you are day is happy see you please bye much
-you are so bye
-fafagoodthanks good bye
-morrow
-good so you too bye morrow
-good you too yes so '
-
-   Epoch 75, Step 1410, Loss: 4.5581   Epoch 75, Step 1420, Loss: 4.5540
-   Epoch 75 完成, 平均 Loss: 4.4961, PPL: 89.67
-   -> 保存最佳模型 (loss=4.4961)
-   Epoch 76, Step 1430, Loss: 4.4979   Epoch 76, Step 1440, Loss: 4.5204
-   Epoch 76 完成, 平均 Loss: 4.4629, PPL: 86.74
-   -> 保存最佳模型 (loss=4.4629)
-
-   生成示例:
-     'hello' -> 'hellobye
-fapleaspleased would you wavery fafabye how very pleassee you great wabye see you pleasbye
-day is happy bye thanks day is morrow
-thanks r great
-great
-'
-     'the' -> 'thebye
-favery thank you so wawould you very pleased fasee you yes glagood see you great much
-you are happy happy very bye
-day is happy bye you too you too thank you so much
-you are very upgreat
-'
-     'how' -> 'howbye
-fapleaspleased would you wavery fafabye how very pleassee you great wasee you happy pleasbye
-day is see you bye thanks day is morrow
-thanks r great
-great
-'
-
-   Epoch 77, Step 1450, Loss: 4.4519   Epoch 77, Step 1460, Loss: 4.4867
-   Epoch 77 完成, 平均 Loss: 4.4271, PPL: 83.69
-   -> 保存最佳模型 (loss=4.4271)
-   Epoch 78, Step 1470, Loss: 4.4138   Epoch 78, Step 1480, Loss: 4.4598
-   Epoch 78 完成, 平均 Loss: 4.4060, PPL: 81.94
-   -> 保存最佳模型 (loss=4.4060)
-
-   生成示例:
-     'hello' -> 'hellofagood good so good see you thank you thanks thanks glabye day is fagood great pleasbye thanks day is can you wafayes wapleasgreat
-glagood see you very '
-     'the' -> 'thewagood good goodgood bye very much
-you are thanks can you so happy thanks yes bye
-good happy would you day is glafaoon what thanks very bye
-bye
-r what do you r '
-     'how' -> 'howfagood good so good bye thank you thanks thanks thank you bye day is fagood great pleasbye thanks day is can you wafayes wapleasgreat
-glagood see you very '
-
-   Epoch 79, Step 1490, Loss: 4.3990   Epoch 79, Step 1500, Loss: 4.4465
-   Epoch 79 完成, 平均 Loss: 4.3925, PPL: 80.84
-   -> 保存最佳模型 (loss=4.3925)
-   Epoch 80, Step 1510, Loss: 4.4021   Epoch 80, Step 1520, Loss: 5.8475
-   Epoch 80 完成, 平均 Loss: 4.3857, PPL: 80.29
-   -> 保存最佳模型 (loss=4.3857)
-
-   生成示例:
-     'hello' -> 'helloglagood
-I good
-I happy bye
-wahello bye bye good yes bye
-would you glabye
-fabye
-much
-you are fawagood good bye
-gladay is glayou too bye great how '
-     'the' -> 'theglathanks good
-I you too thank you waday is see you see you good good can you thanks glacan you fabye
-faof course I much
-you are pleasgood bye
-pleasday is bye
-you too see you great how '
-     'how' -> 'howglagood
-I you too happy bye
-wahello bye bye good yes bye
-would you glabye
-fabye
-much
-you are fawagood good bye
-gladay is glayou too bye great how '
-
-   Epoch 81, Step 1530, Loss: 4.4009
-   Epoch 81 完成, 平均 Loss: 4.3760, PPL: 79.52
-   -> 保存最佳模型 (loss=4.3760)
-   Epoch 82, Step 1540, Loss: 4.3474   Epoch 82, Step 1550, Loss: 4.4380
-   Epoch 82 完成, 平均 Loss: 4.3973, PPL: 81.23
-
-   生成示例:
-     'hello' -> 'hellofasee you good good pleasyes glawould you bye for bye bye
-good oon thanks great great
-very happy fagreat see you bye great oon glagreat
-good can you see you '
-     'the' -> 'thewould you bye pleasgood good yes glawabye please bye glagood fathanks great great please see you thanks great
-see you bye bye
-oon very great pleascan you bye '
-     'how' -> 'howfasee you good good pleasyes glawould you bye please bye bye
-good oon thanks great great
-very happy fagreat see you bye great oon glagreat good can you see you '
-
-   Epoch 83, Step 1560, Loss: 4.4638   Epoch 83, Step 1570, Loss: 4.4429
-   Epoch 83 完成, 平均 Loss: 4.4062, PPL: 81.96
-   Epoch 84, Step 1580, Loss: 4.4400   Epoch 84, Step 1590, Loss: 4.4256
-   Epoch 84 完成, 平均 Loss: 4.3743, PPL: 79.38
-   -> 保存最佳模型 (loss=4.3743)
-
-   生成示例:
-     'hello' -> 'hellopleased day is happy good bye thanks bye thanks great see you see you would you bye
-good morning bye
-thanks fasee you happy great tell me morrow
-you too see you tell me good oon you too how great '
-     'the' -> 'theoon thanks happy pleasbye day is goodthanks bye see you see you thanks bye
-happy can you thanks fasee you day is bye happy morrow
-happy bye happy pleasoon thanks yes great '
-     'how' -> 'howpleased day is happy good bye thanks bye thanks great see you see you would you bye
-good morning bye
-thanks fasee you good morning great tell me morrow
-you too see you tell me good oon day is how great '
-
-   Epoch 85, Step 1600, Loss: 4.3500   Epoch 85, Step 1610, Loss: 4.3842
-   Epoch 85 完成, 平均 Loss: 4.3323, PPL: 76.12
-   -> 保存最佳模型 (loss=4.3323)
-   Epoch 86, Step 1620, Loss: 4.2571   Epoch 86, Step 1630, Loss: 4.3152
-   Epoch 86 完成, 平均 Loss: 4.2602, PPL: 70.83
-   -> 保存最佳模型 (loss=4.2602)
-
-   生成示例:
-     'hello' -> 'hellogoodso bye
-goodvery hello bye
-bye how are bye pleasbye bye bye
-very thank you so happy good goodhow great you too oon bye see you see you thanks see you faday is '
-     'the' -> 'theso goodbye
-goodvery happy bye
-bye hello bye very so great bye
-glamorrow
-happy good goodgood bye you too fabye bye you too thanks see you fayou too '
-     'how' -> 'howgoodgoodbye
-goodvery happy bye
-bye how are bye pleasbye bye bye
-very thank you so happy good goodhow great
-you too oon bye see you see you thanks see you faday is '
-
-   Epoch 87, Step 1640, Loss: 4.2265   Epoch 87, Step 1650, Loss: 4.3069
-   Epoch 87 完成, 平均 Loss: 4.2491, PPL: 70.04
-   -> 保存最佳模型 (loss=4.2491)
-   Epoch 88, Step 1660, Loss: 4.1973   Epoch 88, Step 1670, Loss: 4.2951
-   Epoch 88 完成, 平均 Loss: 4.2424, PPL: 69.58
-   -> 保存最佳模型 (loss=4.2424)
-
-   生成示例:
-     'hello' -> 'hellooon good very great see you glagoodthanks see you how are how are yes I can good see you pleasfapleasbye
-fasee you see you see you bye good thanks happy fayes good you too '
-     'the' -> 'thefapleasvery great see you glagoodthanks see you hello how are fagood see you pleasfapleasgreat thank you so see you happy see you bye good stay happy fagood glagood morning '
-     'how' -> 'howoon good very great see you for goodthanks see you how are how are yes I can good see you pleasfapleasbye
-fasee you see you see you bye good thanks happy fayes good you too '
-
-   Epoch 89, Step 1680, Loss: 4.2194   Epoch 89, Step 1690, Loss: 4.3018
-   Epoch 89 完成, 平均 Loss: 4.2492, PPL: 70.05
-   Epoch 90, Step 1700, Loss: 4.2243   Epoch 90, Step 1710, Loss: 5.6335
-   Epoch 90 完成, 平均 Loss: 4.2251, PPL: 68.38
-   -> 保存最佳模型 (loss=4.2251)
-
-   生成示例:
-     'hello' -> 'hellopleased great see you bye
-thanks would you fayou too fabye are you
-I am fathanks happy pleasthanks very pleasgood bye day is how good pleasthanks fapleased good see you happy '
-     'the' -> 'thepleased great happy bye
-thanks would you faday is fabye glafathanks happy pleasthanks glaare you
-I am pleasbye thanks how good good wafathank you so pleassee you what do you '
-     'how' -> 'howwould you day is fagood day is hello bye
-see you hello bye how are happy glaglapleasfor bye
-thanks stay good morning bye
-glabye
-see you happy fathanks have a nice day
-what do you bye '
-
-   Epoch 91, Step 1720, Loss: 4.2078
-   Epoch 91 完成, 平均 Loss: 4.2038, PPL: 66.94
-   -> 保存最佳模型 (loss=4.2038)
-   Epoch 92, Step 1730, Loss: 4.0887   Epoch 92, Step 1740, Loss: 4.2075
-   Epoch 92 完成, 平均 Loss: 4.1917, PPL: 66.14
-   -> 保存最佳模型 (loss=4.1917)
-
-   生成示例:
-     'hello' -> 'hellofapleased thank you good good day is wathanks how are glahappy see you great
-for see you pleasgreat
-happy bye
-good good pleaswahappy glahave a nice day
-laterfagreat
-wa'
-     'the' -> 'thewapleased bye
-good good thanks would you thanks happy for how are bye bye
-can you see you pleasgreat
-happy bye
-good good thank you wasee you very thanks great
-fagreat
-thanks '
-     'how' -> 'howfapleased glagood good thanks wathanks see you glahappy see you great
-bye
-see you pleasgreat
-you too bye
-good good pleaswagood morning glahave a nice day
-laterfagreat
-wa'
-
-   Epoch 93, Step 1750, Loss: 4.1901   Epoch 93, Step 1760, Loss: 4.2713
-   Epoch 93 完成, 平均 Loss: 4.2495, PPL: 70.07
-   Epoch 94, Step 1770, Loss: 4.2223   Epoch 94, Step 1780, Loss: 4.3340
-   Epoch 94 完成, 平均 Loss: 4.3132, PPL: 74.68
-
-   生成示例:
-     'hello' -> 'hellogood night
-that is how are wfithank you good night
-fiyes I to good yes it is bye thanks what can you the skgood evenday is what good it byes thank you that is good evenhave a nice day
-tawhat '
-     'the' -> 'thegood night
-a wonderfulwfiit how are you
-I am fine hello yes it is what good so yes it is day is what bye
-you too you too the skhow good sabwhat it that is good evenhave a nice day
-thank you what '
-     'how' -> 'howgood night
-that is please
-wfithank you good night
-fiyes I to good yes it is bye thanks what can you the skgood evenday is what good it byes thank you that is good evenhave a nice day
-tayes '
-
-   Epoch 95, Step 1790, Loss: 4.2652   Epoch 95, Step 1800, Loss: 4.6294
-   Epoch 95 完成, 平均 Loss: 4.9227, PPL: 137.37
-   Epoch 96, Step 1810, Loss: 5.9781   Epoch 96, Step 1820, Loss: 5.8215
-   Epoch 96 完成, 平均 Loss: 5.6871, PPL: 295.03
-
-   生成示例:
-     'hello' -> 'hellothat is that is yes it is yes wyes yes it is funit yes I you are very yes the wthat is what cyou are it I yes thank you what that is very thank you yes that is w'
-     'the' -> 'thethat is that is to you
-yes wyes yes it is of course
-thank you yes I it very what the wthat is what wyou are it to yes thank you what good and thank you yes that is w'
-     'how' -> 'howthat is that is yes it is yes wyes yes it is funit thank you it very what the wthat is what cyou are it I yes thank you what that is very thank you yes that is w'
-
-   Epoch 97, Step 1830, Loss: 5.6336   Epoch 97, Step 1840, Loss: 5.5355
-   Epoch 97 完成, 平均 Loss: 5.4412, PPL: 230.73
-   Epoch 98, Step 1850, Loss: 5.4542   Epoch 98, Step 1860, Loss: 5.3608
-   Epoch 98 完成, 平均 Loss: 5.2675, PPL: 193.93
-
-   生成示例:
-     'hello' -> 'helloa what yes I sathat is fia that is it yes can you yes yes it is thank you that is good yes that is thank you good thank you thank you
-that is yes I a what that is great
-it that is '
-     'the' -> 'thea what yes I sathat is fia that is it yes yes I yes yes it is yes I that is good good that is thank you that is yes I it that is thank you a what that is ask sathat is '
-     'how' -> 'howthat is what yes I sathat is fia that is it yes can you yes yes it is thank you that is good yes that is thank you good thank you thank you
-that is yes I a what that is great
-it that is '
-
-   Epoch 99, Step 1870, Loss: 5.2032   Epoch 99, Step 1880, Loss: 5.0854
-   Epoch 99 完成, 平均 Loss: 5.0093, PPL: 149.80
-   Epoch 100, Step 1890, Loss: 4.8593   Epoch 100, Step 1900, Loss: 6.3211
-   Epoch 100 完成, 平均 Loss: 4.7409, PPL: 114.53
-
-   生成示例:
-     'hello' -> 'helloyes a great great great
-great
-for great good thanks
-very good good can you thanks yes great yes very great yes can you what very great
-what yes I very it is fi'
-     'the' -> 'theyes a great great great
-great
-for ask good thanks
-you are that is good can you thanks yes great yes very great yes great
-what the great what yes I very it is you too '
-     'how' -> 'howyes a great great great
-for for great good thanks
-very good good can you thanks yes great yes very great yes can you what very great
-what yes I very it is fi'
-
-   Epoch 101, Step 1910, Loss: 4.6348
-   Epoch 101 完成, 平均 Loss: 4.5649, PPL: 96.05
-   Epoch 102, Step 1920, Loss: 4.5026   Epoch 102, Step 1930, Loss: 4.5490
-   Epoch 102 完成, 平均 Loss: 4.4820, PPL: 88.41
-
-   生成示例:
-     'hello' -> 'hellofinfincan you great
-thanks great
-great
-thanks can you very thanks you too very that is finthanks show that is that is can you happy can you can you for bye have a nice day
-thanks fithanks great '
-     'the' -> 'thefor finfor great
-thanks great great
-thanks can you you are thanks you too very that is finthanks thanks that is that is for day is can you can you bye
-great fathanks fithanks great '
-     'how' -> 'howfinfor for great
-thanks great
-great
-thanks can you very thanks day is very that is finthanks show that is that is can you happy can you can you for bye have a nice day
-thanks fithanks great '
-
-   Epoch 103, Step 1940, Loss: 4.5287   Epoch 103, Step 1950, Loss: 4.4903
-   Epoch 103 完成, 平均 Loss: 4.4330, PPL: 84.18
-   Epoch 104, Step 1960, Loss: 4.3620   Epoch 104, Step 1970, Loss: 4.3719
-   Epoch 104 完成, 平均 Loss: 4.3309, PPL: 76.02
-
-   生成示例:
-     'hello' -> 'hellogood very glafavery fithat is thank you happy great
-thanks for great
-you too finfor great show very can you yes very fayes thanks for great
-thank you good great '
-     'the' -> 'thegood very can you fathat is fithat is glayou too great
-thanks for bye
-you too for for great thanks very for yes thank you fayes thanks for great can you that is great '
-     'how' -> 'howgood that is thank you favery fithat is thank you happy great
-thanks for great
-day is finfor great show very can you yes thank you fayes thanks for great thank you that is great '
-
-   Epoch 105, Step 1980, Loss: 4.2924   Epoch 105, Step 1990, Loss: 4.3196
-   Epoch 105 完成, 平均 Loss: 4.2816, PPL: 72.36
-   Epoch 106, Step 2000, Loss: 4.2175   Epoch 106, Step 2010, Loss: 4.3048
-   Epoch 106 完成, 平均 Loss: 4.2609, PPL: 70.87
-
-   生成示例:
-     'hello' -> 'hellohow are finvery would you great for you are how are very glafaday is how are great finfigreat thank you you too day is happy that is great that is it is thanks that is for fagreat '
-     'the' -> 'thegreat thanks great you too great
-bye good great yes thanks fagreat good yes finvery happy fagreat
-it is day is great thank you great you too day is for see you it is thanks '
-     'how' -> 'howgreat
-thanks great you too great
-bye good great yes thanks fagreat good good great
-that is happy fagreat it is day is great glagreat you too day is for see you it is day is '
-
-   Epoch 107, Step 2020, Loss: 4.2449   Epoch 107, Step 2030, Loss: 4.3170
-   Epoch 107 完成, 平均 Loss: 4.2595, PPL: 70.78
-   Epoch 108, Step 2040, Loss: 4.2516   Epoch 108, Step 2050, Loss: 4.3066
-   Epoch 108 完成, 平均 Loss: 4.2578, PPL: 70.66
-
-   生成示例:
-     'hello' -> 'hellogood bye good night
-that is thank you you are that is for great
-good great great can you fifor great for day is great it is yes bye
-thanks figreat
-very great
-fithank you you too '
-     'the' -> 'thegood bye good night
-very thank you you are that is for great
-that is bye great can you fibye
-great for day is great it is yes bye
-thanks bye great
-thank you great
-fican you day is '
-     'how' -> 'howgood bye good night
-that is thank you you are that is for great
-good great great can you fifor great for day is great it is yes bye
-thanks figreat
-very great
-fithank you you too '
-
-   Epoch 109, Step 2060, Loss: 4.2093   Epoch 109, Step 2070, Loss: 4.5825
-   Epoch 109 完成, 平均 Loss: 4.5413, PPL: 93.81
-   Epoch 110, Step 2080, Loss: 5.2407   Epoch 110, Step 2090, Loss: 6.7478
-   Epoch 110 完成, 平均 Loss: 5.0609, PPL: 157.72
-
-   生成示例:
-     'hello' -> 'hellowafafawathanks pleased laterlateri faglahappy what is your bye i fabye glathanks what is your i bye pleasi glalaterwafaglagreat '
-     'the' -> 'thewafafawaday is pleased great great see you faglawhat is your what is your bye i fabye glathanks happy i see you pleasi glalaterthanks faglagreat '
-     'how' -> 'howwafafawathanks pleased lateri see you fapleaswhat is your happy i i fabye glathanks day is i bye pleasi glalaterwafaglagreat '
-
-   Epoch 111, Step 2100, Loss: 4.8732
-   Epoch 111 完成, 平均 Loss: 4.7423, PPL: 114.70
-   Epoch 112, Step 2110, Loss: 4.6175   Epoch 112, Step 2120, Loss: 4.5433
-   Epoch 112 完成, 平均 Loss: 4.4713, PPL: 87.47
-
-   生成示例:
-     'hello' -> 'helloglado
-I pleasdo
-I goodi bye
-pleased thanks bye
-glathanks thanks day is fawould you pleasthanks pleased glapleasthanks fafapleasgladay is pleaswhat do you thanks '
-     'the' -> 'thegladay is pleasdo
-I i i bye
-thank you so thanks bye
-glathanks thanks thanks fahow is it pleaswathank you so glapleasthanks fawould you pleasgladay is pleaswhat do you day is '
-     'how' -> 'howglawhat do you pleasdo
-I i i bye
-thank you so thanks bye
-glathanks thanks day is fawould you pleaswathank you so glapleasthanks fathank you
-that is pleasgladay is pleasday is day is '
-
-   Epoch 113, Step 2130, Loss: 4.3864   Epoch 113, Step 2140, Loss: 4.3657
-   Epoch 113 完成, 平均 Loss: 4.3286, PPL: 75.84
-   Epoch 114, Step 2150, Loss: 4.2307   Epoch 114, Step 2160, Loss: 4.2795
-   Epoch 114 完成, 平均 Loss: 4.2583, PPL: 70.69
-
-   生成示例:
-     'hello' -> 'hellohow is it latergoothank you so glathank you so laterfado
-I thank you so glaglai how is it i wapleasthank you so day is thanks i do
-I do
-I pleased would you pleaspleasglai pleased '
-     'the' -> 'thehow is it latergoothank you so pleasthank you so i fado
-I thank you so glaglai how is it i thanks glathank you so thanks thanks i do
-I do
-I pleased would you pleaspleasbye
-laterpleased '
-     'how' -> 'howhow is it latergoothank you so glathank you so laterfado
-I thank you so glaglai how is it i how is it pleasthank you so day is wai do
-I do
-I pleased would you goopleasglai pleased '
-
-   Epoch 115, Step 2170, Loss: 4.2098   Epoch 115, Step 2180, Loss: 4.2489
-   Epoch 115 完成, 平均 Loss: 4.2243, PPL: 68.32
-   Epoch 116, Step 2190, Loss: 4.1982   Epoch 116, Step 2200, Loss: 4.2502
-   Epoch 116 完成, 平均 Loss: 4.2107, PPL: 67.40
-
-   生成示例:
-     'hello' -> 'hellolaterthank you so pleased pleased take cthanks goodwasee you wathanks day is do
-I goodbye
-thank you so thanks how is it pleasthanks what is your fawhat do you do
-I take cdo
-I bye
-laterdo
-I good morn'
-     'the' -> 'thelaterexplain pleased pleased see you thanks goodwatake cwathanks day is do
-I see you bye
-thank you so thanks how is it goothanks what is your pleased do
-I what is your take cdo
-I bye
-bye
-what is your i '
-     'how' -> 'howpleaspleased how is it latersee you falaterdo
-I laterthank you
-that is glalatertake cyou are welcome
-bye
-thank you so i do
-I laterlaterpleashow is it bye
-see you wawhat is your take ctake cpleaswa'
-
-   Epoch 117, Step 2210, Loss: 4.2088   Epoch 117, Step 2220, Loss: 4.2491
-   Epoch 117 完成, 平均 Loss: 4.1975, PPL: 66.52
-   Epoch 118, Step 2230, Loss: 4.1668   Epoch 118, Step 2240, Loss: 4.2226
-   Epoch 118 完成, 平均 Loss: 4.1824, PPL: 65.53
-   -> 保存最佳模型 (loss=4.1824)
-
-   生成示例:
-     'hello' -> 'hellowaglapleasglaglaexplain i see you thanks do
-I thanks latergoogoohow is it goodsee you laterfahow is it how is it pleasfawhat is your see you pleased do
-I do
-I see you thanks '
-     'the' -> 'thewaglapleasglaglathank you so i see you thanks what do you walatergoogoohow is it latersee you laterhow is it going
-it is going how is it how is it goofatake claterpleased do
-I do
-I see you what do you '
-     'how' -> 'howwaofpleasglaofexplain latersee you thanks what do you walatergoogoohow is it i i laterfahow is it how is it goofatake claterpleased do
-I do
-I see you what do you '
-
-   Epoch 119, Step 2250, Loss: 4.1013   Epoch 119, Step 2260, Loss: 4.1816
-   Epoch 119 完成, 平均 Loss: 4.1369, PPL: 62.61
-   -> 保存最佳模型 (loss=4.1369)
-   Epoch 120, Step 2270, Loss: 4.0473   Epoch 120, Step 2280, Loss: 5.4497
-   Epoch 120 完成, 平均 Loss: 4.0873, PPL: 59.58
-   -> 保存最佳模型 (loss=4.0873)
-
-   生成示例:
-     'hello' -> 'hellowould you see you do
-I thanks do
-I glasee you would you goothank you
-that is bye
-how is it thank you
-that is how is it glabye
-you are welcome
-thanks you are welcome
-how is it goodo
-I do
-I day is goosee you glapleasglagoo'
-     'the' -> 'thewould you see you do
-I thanks take cglasee you would you goothank you
-that is bye
-wathank you
-that is how is it glabye
-you are welcome
-thanks you are welcome
-how is it goodo
-I what is your what do you goosee you bye
-pleasglagoo'
-     'how' -> 'howhow is it i do
-I thanks what is your glasee you would you goothank you
-that is bye
-how is it fahow is it glabye
-you are welcome
-thanks you are welcome
-how is it <do
-I do
-I day is gooi glagooofgoo'
-
-   Epoch 121, Step 2290, Loss: 4.0227
-   Epoch 121 完成, 平均 Loss: 4.0550, PPL: 57.68
-   -> 保存最佳模型 (loss=4.0550)
-   Epoch 122, Step 2300, Loss: 3.8921   Epoch 122, Step 2310, Loss: 4.0240
-   Epoch 122 完成, 平均 Loss: 4.0324, PPL: 56.39
-   -> 保存最佳模型 (loss=4.0324)
-
-   生成示例:
-     'hello' -> 'helloglado
-I laterwhat is your wagoosee you thank you so how is it glabye
-fasee you see you glado
-I glathanks wai fahow is it bye
-do
-I thank you so laterdo
-I pleased goolater'
-     'the' -> 'theglado
-I bye
-see you wagooi thank you so how is it pleasbye
-fasee you see you glado
-I glawahow is it see you fahow is it bye
-do
-I thank you so bye
-do
-I pleased goolater'
-     'how' -> 'howofdo
-I bye
-see you wagoolaterthank you so how is it pleasbye
-fasee you see you ofdo
-I ofthanks wai thank you
-that is how is it bye
-do
-I thank you so bye
-do
-I pleased goolater'
-
-   Epoch 123, Step 2320, Loss: 3.9620   Epoch 123, Step 2330, Loss: 4.0140
-   Epoch 123 完成, 平均 Loss: 4.0154, PPL: 55.45
-   -> 保存最佳模型 (loss=4.0154)
-   Epoch 124, Step 2340, Loss: 3.9347   Epoch 124, Step 2350, Loss: 4.0001
-   Epoch 124 完成, 平均 Loss: 4.0065, PPL: 54.96
-   -> 保存最佳模型 (loss=4.0065)
-
-   生成示例:
-     'hello' -> 'hellohow is it how is it thanks pleased thank you so wasee you i glasee you how is it i do
-I googooyou are welcome
-glatake cthank you
-that is i do
-I ofpleased ofthanks wapleas<laterhow is it '
-     'the' -> 'thehow is it how is it thanks pleased thank you so wasee you goodbye
-see you how is it gooddo
-I pleaspleasyou are welcome
-glawhat is your fai what is your ofpleased glathanks wapleas<laterhow is it '
-     'how' -> 'howhow is it how is it thanks pleased thank you so wasee you laterofi how is it laterdo
-I googooyou are welcome
-ofsee you thank you
-that is laterwhat is your pleaspleased pleasthanks wagoo<laterhow is it '
-
-   Epoch 125, Step 2360, Loss: 3.9196   Epoch 125, Step 2370, Loss: 4.0115
-   Epoch 125 完成, 平均 Loss: 4.0125, PPL: 55.29
-   Epoch 126, Step 2380, Loss: 3.9302   Epoch 126, Step 2390, Loss: 4.0599
-   Epoch 126 完成, 平均 Loss: 4.0519, PPL: 57.50
-
-   生成示例:
-     'hello' -> 'helloi <googoodi see you thank you so wapleaspleaslateri bye
-how is it goolaterhow is it wafalaterofX<how is it thank you
-that is gooofdo
-I googoo'
-     'the' -> 'thei <gooi latersee you thank you so wagoogoolateri bye
-how is it goolaterhow is it how is it falaterpleasX<how is it thank you
-that is googoodo
-I googoo'
-     'how' -> 'howofsee you fathanks glagoothank you
-that is do
-I see you glathank you
-that is do
-I wathank you
-that is goobye
-take cthank you so do
-I do
-I fai ofpleasgoodo
-I <how is it pleasdo
-I '
-
-   Epoch 127, Step 2400, Loss: 4.0149   Epoch 127, Step 2410, Loss: 4.1560
-   Epoch 127 完成, 平均 Loss: 4.1297, PPL: 62.16
-   Epoch 128, Step 2420, Loss: 4.1040   Epoch 128, Step 2430, Loss: 4.2138
-   Epoch 128 完成, 平均 Loss: 4.1674, PPL: 64.54
-
-   生成示例:
-     'hello' -> 'hellohow is it pleasbye
-thanks goohow is it pleased see you thank you
-that is thank you so i what is your pleased take cdo
-I pleaswhat is your thank you
-that is thanks what is your <bye
-thank you
-that is thank you
-that is bye
-Xgoothank you
-that is what is your pleased '
-     'the' -> 'thehow is it pleasbye
-what do you <how is it thank you so take cthank you
-that is thank you so i what is your pleased take cdo
-I goodo
-I thank you
-that is thanks do
-I <glahow is it how is it gla<goothank you
-that is what is your pleased '
-     'how' -> 'howhow is it pleasglado
-I <how is it thank you so see you thank you
-that is thank you so i what is your pleased take cdo
-I pleasdo
-I thank you
-that is thanks what is your <bye
-thank you
-that is thank you
-that is bye
-Xgoothank you
-that is what is your pleased '
-
-   Epoch 129, Step 2440, Loss: 4.1515   Epoch 129, Step 2450, Loss: 4.2573
-   Epoch 129 完成, 平均 Loss: 4.2090, PPL: 67.29
-   Epoch 130, Step 2460, Loss: 4.2177   Epoch 130, Step 2470, Loss: 5.6326
-   Epoch 130 完成, 平均 Loss: 4.2244, PPL: 68.33
-
-   生成示例:
-     'hello' -> 'hellopleased you are welcome
-glapleasfayou are welcome
-gooi laterbye
-pleased thank you so thanks goo<<do
-I thanks bye
-thank you so bye
-wawhat is your thank you so what is your <thank you
-that is thank you so bye
-what is your '
-     'the' -> 'thefayou are welcome
-glagoofayou are welcome
-goosee you laterbye
-pleased thank you so thanks goo<<do
-I thanks bye
-thank you so bye
-watake cthank you so do
-I <how is it thank you so glatake c'
-     'how' -> 'howpleased you are welcome
-glagoofayou are welcome
-goolaterbye
-bye
-pleased explain thanks goo<<do
-I thanks bye
-thank you so bye
-wawhat is your thank you so do
-I <thank you
-that is thank you so laterwhat is your '
-
-   Epoch 131, Step 2480, Loss: 4.1055
-   Epoch 131 完成, 平均 Loss: 4.1092, PPL: 60.90
-   Epoch 132, Step 2490, Loss: 4.0003   Epoch 132, Step 2500, Loss: 4.0687
-   Epoch 132 完成, 平均 Loss: 4.1588, PPL: 63.99
-
-   生成示例:
-     'hello' -> 'hellothank you
-that is do
-I see you see you do
-I thank you
-that is what is your thank you so take cdo
-I you are welcome
-thanks bye
-i thank you so pleased how is it pleasthank you so pleasgootake cbye
-see you goodpleased goobye
-pleasthanks '
-     'the' -> 'thehow is it do
-I see you gooddo
-I thank you
-that is do
-I thank you so what is your do
-I you are welcome
-thanks bye
-i thank you so pleased how is it pleasthank you so pleasgoosee you bye
-see you goodpleased googlagoothanks '
-     'how' -> 'howhow is it do
-I see you see you do
-I thank you
-that is do
-I thank you so take cdo
-I you are welcome
-thanks glalaterthank you so pleased how is it goothank you so pleasgootake cbye
-see you i pleased googlagoothanks '
-
-   Epoch 133, Step 2510, Loss: 4.4906   Epoch 133, Step 2520, Loss: 4.6534
-   Epoch 133 完成, 平均 Loss: 4.6224, PPL: 101.73
-   Epoch 134, Step 2530, Loss: 4.8565   Epoch 134, Step 2540, Loss: 4.7969
-   Epoch 134 完成, 平均 Loss: 4.7127, PPL: 111.35
-
-   生成示例:
-     'hello' -> 'hellofalaterlaterthank you
-that is fapleased goothank you
-that is i thank you
-that is pleased glabye bye you are welcome
-thanks bye
-pleased see you take cthanks would you laterthank you so goofaday is have a nice day
-fawhat is your '
-     'the' -> 'thefalaterlaterwould you fapleased goowould you i would you pleased glagoodbye thank you so thanks bye
-pleased see you take cthanks would you laterthank you so goofaday is have a nice day
-fawhat is your '
-     'how' -> 'howfalaterlaterwould you fapleased goothank you
-that is i would you pleased glagoodbye you are welcome
-thanks bye
-pleased see you take cthanks would you laterthank you so goofaday is have a nice day
-fawhat is your '
-
-   Epoch 135, Step 2550, Loss: 4.6937   Epoch 135, Step 2560, Loss: 4.7070
-   Epoch 135 完成, 平均 Loss: 4.7342, PPL: 113.77
-   Epoch 136, Step 2570, Loss: 5.0893   Epoch 136, Step 2580, Loss: 5.1205
-   Epoch 136 完成, 平均 Loss: 5.0920, PPL: 162.72
-
-   生成示例:
-     'hello' -> 'hellogoodgoowhat do you thanks do
-I see you gladay is thanks glabye glasee you glagoodglalaterday is see you see you pleased bye
-pleased see you bye
-latertime is it
-it is faglagoo'
-     'the' -> 'thegoodpleasdo
-I thanks take csee you gladay is thanks glabye glasee you glagoodglalaterthanks see you see you pleased bye
-pleased see you bye
-laterfafaglagoo'
-     'how' -> 'howgoodgoowhat do you thanks do
-I see you gladay is thanks glabye glasee you glagoodglalaterday is see you see you pleased bye
-pleased see you bye
-latertime is it
-it is faglagoo'
-
-   Epoch 137, Step 2590, Loss: 5.0951   Epoch 137, Step 2600, Loss: 4.8829
-   Epoch 137 完成, 平均 Loss: 4.7864, PPL: 119.86
-   Epoch 138, Step 2610, Loss: 4.4913   Epoch 138, Step 2620, Loss: 4.5111
-   Epoch 138 完成, 平均 Loss: 4.4523, PPL: 85.83
-
-   生成示例:
-     'hello' -> 'hellopleased how is it bye pleasyou are welcome
-goopleasyou are welcome
-do
-I see you goothank you
-that is thank you
-that is bye
-goodof course I goohow is it going
-it is going bye glafasee you bye
-pleaspleasthank you
-that is how is it how is it goobye
-'
-     'the' -> 'thepleased thank you
-that is see you pleasyou are welcome
-goopleasthank you so do
-I see you goothank you
-that is time is it
-it is bye
-goodthank you so goohow is it going
-it is going see you bye
-fasee you bye
-pleaspleashow is it how is it how is it googla'
-     'how' -> 'howpleased thank you
-that is see you pleasyou are welcome
-googooyou are welcome
-do
-I see you goothank you
-that is thank you
-that is bye
-bye of course I goohow is it going
-it is going see you glafasee you bye
-pleaspleasthank you
-that is how is it how is it googla'
-
-   Epoch 139, Step 2630, Loss: 4.3108   Epoch 139, Step 2640, Loss: 4.3699
-   Epoch 139 完成, 平均 Loss: 4.3160, PPL: 74.89
-   Epoch 140, Step 2650, Loss: 4.2281   Epoch 140, Step 2660, Loss: 5.6431
-   Epoch 140 完成, 平均 Loss: 4.2323, PPL: 68.88
-
-   生成示例:
-     'hello' -> 'hellodo
-I see you pleased goothank you
-that is how is it ofbye
-thank you so how is it hello time is it
-it is see you explain laterbye pleaspleasexplain fasee you laterbye thank you
-that is pleased pleashow is it going
-it is going fabye
-thank you
-that is '
-     'the' -> 'thedo
-I see you pleased goothank you
-that is how is it ofbye
-thank you so thanks do
-I time is it
-it is see you explain laterlaterpleaspleasexplain fado
-I laterlaterhow is it pleased pleaspleased fabye
-thank you
-that is '
-     'how' -> 'howdo
-I see you pleased goothank you
-that is how is it ofbye
-thank you so how is it is it thank you
-that is see you explain bye laterpleaspleasexplain fado
-I laterbye thank you
-that is pleased pleashow is it going
-it is going fabye
-thank you
-that is '
-
-   Epoch 141, Step 2670, Loss: 4.1307
-   Epoch 141 完成, 平均 Loss: 4.1565, PPL: 63.85
-   Epoch 142, Step 2680, Loss: 4.0773   Epoch 142, Step 2690, Loss: 4.1514
-   Epoch 142 完成, 平均 Loss: 4.1561, PPL: 63.82
-
-   生成示例:
-     'hello' -> 'helloyou are welcome
-pleasgoobye
-see you hello hello do
-I glais it pleassee you hello ofpleased thank you
-that is bye
-pleashow is it going
-it is going bye glapleasofthank you
-that is bye
-is it thanks what do you thank you
-that is explain '
-     'the' -> 'theyou are welcome
-pleasgoobye
-see you hello hello do
-I glahello pleasbye hello glapleased thank you
-that is bye
-pleashow is it going
-it is going laterbye
-pleasofthank you
-that is bye
-is it thanks what do you thank you
-that is explain '
-     'how' -> 'howyou are welcome
-pleasgoobye
-do
-I hello thanks do
-I glahello pleassee you hello ofpleased thank you
-that is bye
-pleashow is it going
-it is going bye glapleasofthank you
-that is bye
-is it thanks is it thank you
-that is explain '
-
-   Epoch 143, Step 2700, Loss: 4.1730   Epoch 143, Step 2710, Loss: 4.2543
-   Epoch 143 完成, 平均 Loss: 4.2327, PPL: 68.90
-   Epoch 144, Step 2720, Loss: 4.2268   Epoch 144, Step 2730, Loss: 4.2089
-   Epoch 144 完成, 平均 Loss: 4.1727, PPL: 64.89
-
-   生成示例:
-     'hello' -> 'hellodo
-I pleased see you bye
-time is it
-it is would you for pleased hello bye
-stay bye time is it
-it is pleased laterthanks bye thank you so pleased laterexplain what do you bye
-how is it going
-it is going is it explain how is it going
-it is going pleaswhat do you what do you '
-     'the' -> 'thethanks
-pleased see you bye
-time is it
-it is thank you
-that is for pleased hello bye
-hello bye time is it
-it is pleased bye
-hello great thank you so pleased bye explain see you bye
-how is it going
-it is going what do you explain how is it going
-it is going pleassee you bye '
-     'how' -> 'howthanks
-pleased see you bye
-thank you
-that is thank you
-that is for pleased stay bye
-stay see you time is it
-it is pleased bye
-thanks bye thank you so pleased bye explain what do you bye
-how is it going
-it is going do
-I explain how is it going
-it is going pleaswhat do you what do you '
-
-   Epoch 145, Step 2740, Loss: 4.0772   Epoch 145, Step 2750, Loss: 4.1466
-   Epoch 145 完成, 平均 Loss: 4.1245, PPL: 61.84
-   Epoch 146, Step 2760, Loss: 4.0730   Epoch 146, Step 2770, Loss: 4.2128
-   Epoch 146 完成, 平均 Loss: 4.1877, PPL: 65.87
-
-   生成示例:
-     'hello' -> 'hellohello hello pleased bye
-hello pleased fabye
-do
-I hello thanks pleased thank you so do
-I pleased do
-I do
-I for thank you so laterthank you
-that is see you see you thank you so ofdo
-I see you glafapleased '
-     'the' -> 'thehello hello pleased for hello pleased falaterwell
-hello thanks pleased thank you so do
-I pleased see you see you for thank you so laterwasee you bye thank you so ofdo
-I see you bye
-fapleased '
-     'how' -> 'howhello hello pleased bye
-hello pleased fabye
-what do you hello thanks pleased thank you so do
-I pleased do
-I do
-I for thank you so laterthank you
-that is see you see you thank you so ofwhat do you see you glafapleased '
-
-   Epoch 147, Step 2780, Loss: 4.3564   Epoch 147, Step 2790, Loss: 4.4853
-   Epoch 147 完成, 平均 Loss: 4.4412, PPL: 84.87
-   Epoch 148, Step 2800, Loss: 4.6147   Epoch 148, Step 2810, Loss: 4.7294
-   Epoch 148 完成, 平均 Loss: 4.6869, PPL: 108.52
-
-   生成示例:
-     'hello' -> 'hellopleased no problembye bye thanks bye
-hello laterno problemlatertake cbye bye for thanks thanks see you bye
-bye
-goopleased glahello laterpleastime is it
-it is bye
-gootake csee you '
-     'the' -> 'thepleased hello see you bye thanks bye
-hello goodhello laterno problembye bye for thanks thanks see you bye
-bye
-goopleased gladay is laterpleasfabye
-goosee you see you '
-     'how' -> 'howpleased hello see you bye thanks bye
-hello laterhello laterno problembye bye for thanks thanks see you bye
-bye
-gooyou are welcome
-glahello laterpleashow is it going
-it is going bye
-goodo
-I see you '
-
-   Epoch 149, Step 2820, Loss: 4.9180   Epoch 149, Step 2830, Loss: 4.8605
-   Epoch 149 完成, 平均 Loss: 4.7951, PPL: 120.92
-   Epoch 150, Step 2840, Loss: 4.6509   Epoch 150, Step 2850, Loss: 6.0868
-   Epoch 150 完成, 平均 Loss: 4.5651, PPL: 96.08
-
-   生成示例:
-     'hello' -> 'helloan laterpleased laterbye time is it
-it is laterfifor for for latersee you day is see you for for bye see you good see you bye latergood see you laterlaterfor have a nice day
-gla'
-     'the' -> 'thean laterpleased latergoodtime is it
-it is laterfifor for for latersee you day is see you for for bye see you good see you bye latergood see you laterlaterfor have a nice day
-gla'
-     'how' -> 'howan laterpleased laterbye would you latertake cfor for for latersee you day is see you for for bye see you good see you bye latergood see you laterlaterfor have a nice day
-gla'
-
-   Epoch 151, Step 2860, Loss: 4.4277
-   Epoch 151 完成, 平均 Loss: 4.4004, PPL: 81.48
-   Epoch 152, Step 2870, Loss: 4.2438   Epoch 152, Step 2880, Loss: 4.6011
-   Epoch 152 完成, 平均 Loss: 4.5973, PPL: 99.21
-
-   生成示例:
-     'hello' -> 'hellothat is bye soon
-great you too bye soon
-bye good bye
-for goodbye good bye bye for bye
-bye
-bye great time is it
-it is great bye goodsee you good for for bye '
-     'the' -> 'thegoodbye bye bye
-bye
-bye
-see you yes I can laterwould you see you bye soon
-bye see you faday is bye an for yes I can bye
-bye good bye for for day is fisoon
-'
-     'how' -> 'howlatergreat bye very glaglasee you day is for day is bye bye figreat bye thanks soon
-bye good an time is it
-it is yes I bye what bye very very soon
-fifi'
-
-   Epoch 153, Step 2890, Loss: 4.7198   Epoch 153, Step 2900, Loss: 4.6334
-   Epoch 153 完成, 平均 Loss: 4.5280, PPL: 92.58
-   Epoch 154, Step 2910, Loss: 4.3330   Epoch 154, Step 2920, Loss: 4.3693
-   Epoch 154 完成, 平均 Loss: 4.3276, PPL: 75.76
-
-   生成示例:
-     'hello' -> 'hellogood for good bye very thanks for bye
-see you bye bye glabye bye for fithanks day is for glafor bye bye bye bye
-bye latertime is it
-it is good see you '
-     'the' -> 'thegood bye
-an bye glatime is it
-it is for bye
-see you bye bye glabye bye for soon
-thanks day is for glafor bye see you bye bye
-bye bye
-fagood see you '
-     'how' -> 'howgood for good bye an thanks for bye
-see you bye bye an bye bye for fithanks day is glaglafor bye bye bye bye
-bye bye
-fagood see you '
-
-   Epoch 155, Step 2930, Loss: 4.2983   Epoch 155, Step 2940, Loss: 4.3415
-   Epoch 155 完成, 平均 Loss: 4.3111, PPL: 74.53
-   Epoch 156, Step 2950, Loss: 4.4048   Epoch 156, Step 2960, Loss: 4.5509
-   Epoch 156 完成, 平均 Loss: 4.5593, PPL: 95.52
-
-   生成示例:
-     'hello' -> 'helloglaZpleased see you laterbye latertake cfor laterdo
-I bye no problemhave a nice day
-for bye
-good mornfor bye
-see you laterbye latertake cgoobye pleased bye thanks take c'
-     'the' -> 'theglaXpleased bye laterbye laterdo
-I for laterdo
-I bye day is would you for bye
-goodbye
-bye
-bye laterbye latertake cgood bye pleased bye day is see you '
-     'how' -> 'howgooZpleased see you laterbye latertake cfor laterno problembye no problemtime is it
-it is for bye
-good mornbye
-for bye laterbye latertake cgoobye pleased bye thanks take c'
-
-   Epoch 157, Step 2970, Loss: 5.0634   Epoch 157, Step 2980, Loss: 4.9550
-   Epoch 157 完成, 平均 Loss: 4.8608, PPL: 129.13
-   Epoch 158, Step 2990, Loss: 4.6783   Epoch 158, Step 3000, Loss: 4.6065
-   Epoch 158 完成, 平均 Loss: 4.5324, PPL: 92.98
-
-   生成示例:
-     'hello' -> 'hello<		bye
-]*do
-I time is it
-it is laterdo
-I thanks for thanks good mornZgood morngoosee you pleased take cgoodo
-I goo]laterlater	X<no prob'
-     'the' -> 'the<glaZlaterZ*do
-I time is it
-it is latertake cno problemgoono problemlaterXlater]see you pleased see you gootake cX]for bye
-glaF<que'
-     'how' -> 'how*goo]laterZ*do
-I time is it
-it is latertake cno problem	no problaterXlater]bye pleased see you 	see you ]Zfor later]U<que'
-
-   Epoch 159, Step 3010, Loss: 4.3976   Epoch 159, Step 3020, Loss: 4.3965
-   Epoch 159 完成, 平均 Loss: 4.3422, PPL: 76.87
-   Epoch 160, Step 3030, Loss: 4.2738   Epoch 160, Step 3040, Loss: 5.6736
-   Epoch 160 完成, 平均 Loss: 4.2552, PPL: 70.47
-
-   生成示例:
-     'hello' -> 'hellobye latergoodwould you laterbye time is it
-it is laterno probleman laterfor goodfor goodlatersee you pleaspleassee you laterfor take claterbye laterfatime is it
-it is pleased have a nice day
-'
-     'the' -> 'thebye great bye would you latersee you would you laterno problemglalaterfor goodbye
-bye latertake cpleasglatake claterfor take claterbye latertime is it
-it is have a nice day
-fahave a nice day
-'
-     'how' -> 'howbye latergoodwould you laterbye would you laterno probleman laterfor goodfor bye latersee you glaglasee you laterfor take claterbye latertime is it
-it is time is it
-it is pleased have a nice day
-'
-
-   Epoch 161, Step 3050, Loss: 4.2293
-   Epoch 161 完成, 平均 Loss: 4.2488, PPL: 70.02
-   Epoch 162, Step 3060, Loss: 4.1967   Epoch 162, Step 3070, Loss: 4.3894
-   Epoch 162 完成, 平均 Loss: 4.4274, PPL: 83.72
-
-   生成示例:
-     'hello' -> 'hellofor for good fifor figood for for for soon
-for for soon
-goodbye
-see you see you bye bye for bye bye
-thanks fibye
-bye bye see you bye
-'
-     'the' -> 'thefor for good fifor figood for for for soon
-for for day is bye for see you see you bye bye for bye bye
-thanks fibye
-bye bye see you bye
-'
-     'how' -> 'howfor for good fifor figood for for for soon
-for for soon
-goodfor bye see you bye bye for bye bye
-thanks fibye
-bye bye see you bye
-'
-
-   Epoch 163, Step 3080, Loss: 4.4359   Epoch 163, Step 3090, Loss: 4.4524
-   Epoch 163 完成, 平均 Loss: 4.3879, PPL: 80.47
-   Epoch 164, Step 3100, Loss: 4.1892   Epoch 164, Step 3110, Loss: 4.2372
-   Epoch 164 完成, 平均 Loss: 4.2123, PPL: 67.51
-
-   生成示例:
-     'hello' -> 'hellofor hi bye bye great bye day is soon
-laterbye bye
-fibye
-bye good bye goodbye
-bye
-bye
-latersee you for bye
-for bye
-latersee you bye bye '
-     'the' -> 'theglasoon
-bye bye goodbye day is you too goodbye laterfibye
-bye good bye bye bye
-bye
-bye
-laterfifor bye
-for bye
-latersee you bye bye '
-     'how' -> 'howan soon
-bye bye laterbye day is hello laterbye bye
-fibye
-bye good bye goodbye
-bye
-bye
-laterfifor bye
-for for bye
-see you bye bye '
-
-   Epoch 165, Step 3120, Loss: 4.0927   Epoch 165, Step 3130, Loss: 4.1452
-   Epoch 165 完成, 平均 Loss: 4.1377, PPL: 62.66
-   Epoch 166, Step 3140, Loss: 4.1492   Epoch 166, Step 3150, Loss: 4.3221
-   Epoch 166 完成, 平均 Loss: 4.2945, PPL: 73.30
-
-   生成示例:
-     'hello' -> 'hellofor so goodbye bye
-soon
-laterfor take csoon
-thanks no probleman for laterlaterlaterbye yes I can laterfor bye bye
-so laterbye goodlaterthanks good '
-     'the' -> 'thefor bye bye bye bye
-soon
-goodbye
-soon
-day is time is it
-it is no probleman for latergreat bye bye yes I can laterfor see you bye
-goodlaterbye bye latersoon
-good '
-     'how' -> 'howfor bye bye bye bye
-soon
-so for take csoon
-thanks see you an for laterlatergreat bye yes I can laterfor see you bye
-goodlaterbye bye latersoon
-good '
-
-   Epoch 167, Step 3160, Loss: 4.2907   Epoch 167, Step 3170, Loss: 4.3278
-   Epoch 167 完成, 平均 Loss: 4.2771, PPL: 72.03
-   Epoch 168, Step 3180, Loss: 4.2083   Epoch 168, Step 3190, Loss: 4.2687
-   Epoch 168 完成, 平均 Loss: 4.2131, PPL: 67.57
-
-   生成示例:
-     'hello' -> 'hellofor for fisoon
-good see you laterlaterso bye laterlaterfor bye
-time is it
-it is bye
-see you see you see you good latertime is it
-it is very good bye
-for bye
-for for fi'
-     'the' -> 'thefor for fisoon
-good see you laterlaterso bye laterlaterfor bye
-time is it
-it is bye
-see you bye see you good latertime is it
-it is very good bye
-for bye
-for for fi'
-     'how' -> 'howvery for soon
-soon
-good see you laterlaterbye see you laterlaterfor bye
-thanks bye
-see you see you figood latertime is it
-it is very good bye
-for bye
-for for fi'
-
-   Epoch 169, Step 3200, Loss: 4.1112   Epoch 169, Step 3210, Loss: 4.2230
-   Epoch 169 完成, 平均 Loss: 4.1714, PPL: 64.81
-   Epoch 170, Step 3220, Loss: 4.1978   Epoch 170, Step 3230, Loss: 5.5737
-   Epoch 170 完成, 平均 Loss: 4.1803, PPL: 65.38
-
-   生成示例:
-     'hello' -> 'hellofor great for fibye
-day is are you
-I am see you good goodbye pleased soon
-bye thanks bye bye
-an laterlaterbye laterbye for bye for good bye
-glabye
-'
-     'the' -> 'thefor goodbye
-see you laterday is are you
-I am see you good bye bye pleased soon
-bye thanks see you bye
-an laterlaterbye laterbye for bye for good bye
-glabye
-'
-     'how' -> 'howfor goodbye
-soon
-bye
-day is an hi good bye bye pleased soon
-bye day is see you bye
-an bye
-bye bye laterbye for bye for good bye
-are you
-I am bye
-'
-
-   Epoch 171, Step 3240, Loss: 4.0323
-   Epoch 171 完成, 平均 Loss: 4.0622, PPL: 58.10
-   Epoch 172, Step 3250, Loss: 3.9173   Epoch 172, Step 3260, Loss: 4.0620
-   Epoch 172 完成, 平均 Loss: 4.0966, PPL: 60.14
-
-   生成示例:
-     'hello' -> 'hellobye
-for for bye
-for for for bye soon
-bye an laterglafor you too bye bye
-see you laterlaterfisee you bye
-bye
-for good bye see you see you for '
-     'the' -> 'thebye
-bye
-for bye
-for for for bye day is bye an laterglabye
-day is bye latersee you laterlaterfisee you laterfor for good bye take ctake cfor '
-     'how' -> 'howbye
-for for bye
-for glafor bye soon
-bye an laterare you
-I am for you too bye bye
-see you laterlatersoon
-see you bye
-for for good bye see you see you for '
-
-   Epoch 173, Step 3270, Loss: 4.1532   Epoch 173, Step 3280, Loss: 4.1681
-   Epoch 173 完成, 平均 Loss: 4.1455, PPL: 63.15
-   Epoch 174, Step 3290, Loss: 4.0125   Epoch 174, Step 3300, Loss: 4.0697
-   Epoch 174 完成, 平均 Loss: 4.0772, PPL: 58.98
-
-   生成示例:
-     'hello' -> 'hellofor latersoon
-an soon
-laterbye soon
-for very so bye bye day is bye
-time is it
-it is for bye
-for bye for so for for bye day is pleased bye bye later'
-     'the' -> 'thefor latersoon
-good soon
-laterbye soon
-an good bye bye see you you too bye
-day is an bye
-for see you dobye for for see you soon
-day is see you see you later'
-     'how' -> 'howfor latersoon
-good soon
-laterbye soon
-very an bye bye see you day is bye
-time is it
-it is an bye
-for bye for bye for for see you you too pleased bye bye later'
-
-   Epoch 175, Step 3310, Loss: 4.1107   Epoch 175, Step 3320, Loss: 4.1801
-   Epoch 175 完成, 平均 Loss: 4.1417, PPL: 62.91
-   Epoch 176, Step 3330, Loss: 4.0484   Epoch 176, Step 3340, Loss: 4.1242
-   Epoch 176 完成, 平均 Loss: 4.0740, PPL: 58.79
-
-   生成示例:
-     'hello' -> 'hellosee you goodsee you an for bye bye bye
-for see you laterlaterlaterlaterfifibye for see you so laterlaterbye laterlaterlaterfor for latersoon
-'
-     'the' -> 'thesee you goodsee you glafor bye bye bye
-for see you laterlaterlaterlaterfisee you bye for bye bye laterlaterbye laterbye
-laterfor for laterfi'
-     'how' -> 'howsoon
-see you do not good for see you see you bye
-an soon
-bye bye laterbye soon
-soon
-bye for fibye laterlaterfibye
-laterlaterfor for latersoon
-'
-
-   Epoch 177, Step 3350, Loss: 3.9766   Epoch 177, Step 3360, Loss: 4.2510
-   Epoch 177 完成, 平均 Loss: 4.2630, PPL: 71.02
-   Epoch 178, Step 3370, Loss: 4.7172   Epoch 178, Step 3380, Loss: 4.7147
-   Epoch 178 完成, 平均 Loss: 4.6413, PPL: 103.68
-
-   生成示例:
-     'hello' -> 'hellosoon
-soon
-for what pleased soon
-bye
-see you laterbye for bye bye bye
-soon
-bye
-for latersoon
-bye are you
-I am bye
-bye
-time is it
-it is goodbye
-bye
-do not do not for '
-     'the' -> 'thesee you bye
-pleased laterlaterso bye laterbye
-for for for good soon
-bye
-see you soon
-for an do not see you see you bye bye
-do not bye
-day is pleased soon
-see you '
-     'how' -> 'howdo not bye
-pleased for bye
-so see you so for very an have wthere
-for fisoon
-for good hi fisee you so for hi for day is day is there
-see you '
-
-   Epoch 179, Step 3390, Loss: 4.5045   Epoch 179, Step 3400, Loss: 4.4753
-   Epoch 179 完成, 平均 Loss: 4.4157, PPL: 82.74
-   Epoch 180, Step 3410, Loss: 4.2327   Epoch 180, Step 3420, Loss: 5.7193
-   Epoch 180 完成, 平均 Loss: 4.2895, PPL: 72.93
-
-   生成示例:
-     'hello' -> 'hellosoon
-good laterhappan do not do not there
-do not need understand
-happan soon
-hi to bye
-laterunderstand
-happsoon
-bye good soon
-bye
-happwwunderstand
-need '
-     'the' -> 'thesoon
-good laterhave an fido not soon
-do not bye
-do not happan day is there
-to bye
-bye see you happsoon
-bye an soon
-bye
-happwhat what see you bye '
-     'how' -> 'howthere
-bhave happwhat do not do not there
-do not bye
-understand
-good good soon
-there
-whave bye
-see you good sleepneed what soon
-bye
-good wwunderstand
-need '
-
-   Epoch 181, Step 3430, Loss: 4.7086
-   Epoch 181 完成, 平均 Loss: 4.9192, PPL: 136.89
-   Epoch 182, Step 3440, Loss: 4.7742   Epoch 182, Step 3450, Loss: 4.8590
-   Epoch 182 完成, 平均 Loss: 4.7612, PPL: 116.89
-
-   生成示例:
-     'hello' -> 'hellolaterdo not there
-do not have an to do not understand
-do not do not do not dowwhat happsoon
-an is do not understand
-soon
-there
-need get do not is whapphave '
-     'the' -> 'thelaterdo not there
-do not happis wdo not need get get get stbwand soon
-wpdo not have soon
-do not happneed need peis and '
-     'how' -> 'howbethere
-sleepdo not laterand what do not get do not do not do not dowwhat have soon
-an is do not understand
-soon
-there
-need get do not is whapphave '
-
-   Epoch 183, Step 3460, Loss: 4.7009   Epoch 183, Step 3470, Loss: 4.5653
-   Epoch 183 完成, 平均 Loss: 4.4769, PPL: 87.96
-   Epoch 184, Step 3480, Loss: 4.3871   Epoch 184, Step 3490, Loss: 4.3493
-   Epoch 184 完成, 平均 Loss: 4.3037, PPL: 73.98
-
-   生成示例:
-     'hello' -> 'hellolaterhave abye do not do not what besleepbthere
-sleepbye fithere
-there
-do not happneed have have to wbunderstand
-understand
-wsoon
-lateran '
-     'the' -> 'thelatertiahave do not do not is tithere
-ado not sleephave there
-do not there
-do not and happand and wbbneed need bsoon
-wis '
-     'how' -> 'howfor laterwunderstand
-do not do not an need sleepwdo not sleepunderstand
-sleepthere
-there
-do not for bye laterneed an is wget fiis soon
-laterdo'
-
-   Epoch 185, Step 3500, Loss: 4.2671   Epoch 185, Step 3510, Loss: 4.2752
-   Epoch 185 完成, 平均 Loss: 4.2320, PPL: 68.85
-   Epoch 186, Step 3520, Loss: 4.1803   Epoch 186, Step 3530, Loss: 4.2219
-   Epoch 186 完成, 平均 Loss: 4.1760, PPL: 65.10
-
-   生成示例:
-     'hello' -> 'hellodo not an soon
-time is it
-it is good fibluthere
-to there
-there
-and is have do not is to get need an wunderstand
-do not get do not ado not aneed is '
-     'the' -> 'thesoon
-for soon
-time is it
-it is good fibye bludothere
-there
-happan need do not to an do not bye lateris understand
-do not get do not bdo not wbye later'
-     'how' -> 'howsoon
-dosoon
-soon
-to soon
-do not there
-laterdo not do not laterdoso do not dohappfibye lateran see you fiunderstand
-do not is fiis so for '
-
-   Epoch 187, Step 3540, Loss: 4.1450   Epoch 187, Step 3550, Loss: 4.1826
-   Epoch 187 完成, 平均 Loss: 4.1330, PPL: 62.37
-   Epoch 188, Step 3560, Loss: 4.0697   Epoch 188, Step 3570, Loss: 4.1426
-   Epoch 188 完成, 平均 Loss: 4.0995, PPL: 60.31
-
-   生成示例:
-     'hello' -> 'hellolatersoon
-happsoon
-happunderstand
-soon
-do not do not wthere
-have for to do not wthere
-need fisoon
-bye
-bye laterdo not for soon
-there
-for lateris '
-     'the' -> 'thelaterthere
-to soon
-to have there
-get understand
-ado not to and sunderstand
-bdo not dounderstand
-there
-is happis do not dosoon
-do not eis w'
-     'how' -> 'howlatersleepand soon
-and need sleepget get athere
-what dowget bthere
-happunderstand
-there
-what have what do not happsoon
-there
-ewhat w'
-
-   Epoch 189, Step 3580, Loss: 4.0368   Epoch 189, Step 3590, Loss: 4.1161
-   Epoch 189 完成, 平均 Loss: 4.0716, PPL: 58.65
-   Epoch 190, Step 3600, Loss: 4.0186   Epoch 190, Step 3610, Loss: 5.3978
-   Epoch 190 完成, 平均 Loss: 4.0484, PPL: 57.30
-
-   生成示例:
-     'hello' -> 'hellolaterbye bye bye so bye
-bye latersoon
-laterhappneed laterhave understand
-soon
-laterlaterfor time is it
-it is good for see you happhapphave what fifor soon
-'
-     'the' -> 'thelaterhave have do not need and there
-to sleepto sthapphave stunderstand
-there
-happhappensoon
-ewneed wstto esleepsthere
-'
-     'how' -> 'howlaterneed need do not need dothere
-and sleepand what happhave an understand
-sleephave have and soon
-eis need is what and tsleeptsleep'
-
-   Epoch 191, Step 3620, Loss: 4.0041
-   Epoch 191 完成, 平均 Loss: 4.0298, PPL: 56.25
-   Epoch 192, Step 3630, Loss: 3.9763   Epoch 192, Step 3640, Loss: 4.0118
-   Epoch 192 完成, 平均 Loss: 4.0157, PPL: 55.46
-
-   生成示例:
-     'hello' -> 'hellomy name is bluhave is happbhappto there
-understand
-dosoon
-do not Awdo not ban Alaterthere
-understand
-do not and need there
-do not have soon
-soon
-'
-     'the' -> 'theday is bye surfor laterdolaterfor there
-bye latersoon
-fito an do not to for wlatersoon
-bye bye laterso there
-do not latersoon
-see you '
-     'how' -> 'howday is do not laterdoneed good latervery there
-understand
-have soon
-do not bis do not whappblaterthere
-get do not have bye there
-there
-latersoon
-there
-'
-
-   Epoch 193, Step 3650, Loss: 4.0089   Epoch 193, Step 3660, Loss: 4.0101
-   Epoch 193 完成, 平均 Loss: 4.0063, PPL: 54.94
-   -> 保存最佳模型 (loss=4.0063)
-   Epoch 194, Step 3670, Loss: 3.9524   Epoch 194, Step 3680, Loss: 4.0086
-   Epoch 194 完成, 平均 Loss: 4.0008, PPL: 54.64
-   -> 保存最佳模型 (loss=4.0008)
-
-   生成示例:
-     'hello' -> 'hellosoon
-is it
-it is no problemlaterto latersleepneed bneed have wdowhat is understand
-there
-sleepdo not understand
-is sleepbdosunnan understand
-an and later'
-     'the' -> 'thesoon
-soon
-bye great an laterfilateran laterlaterdolaterhave a happbye bye fido not bye have a figood latersoon
-happunderstand
-laterfor later'
-     'how' -> 'howsoon
-soon
-bye laterhapplatersoon
-latergood laterlateran bye
-for an see you do not soon
-do not understand
-have a soon
-is need soon
-for see you laterneed later'
-
-   Epoch 195, Step 3690, Loss: 3.9465   Epoch 195, Step 3700, Loss: 4.0134
-   Epoch 195 完成, 平均 Loss: 3.9964, PPL: 54.40
-   -> 保存最佳模型 (loss=3.9964)
-   Epoch 196, Step 3710, Loss: 3.9303   Epoch 196, Step 3720, Loss: 4.0226
-   Epoch 196 完成, 平均 Loss: 3.9861, PPL: 53.84
-   -> 保存最佳模型 (loss=3.9861)
-
-   生成示例:
-     'hello' -> 'hellogood mornlaterlove laterlaterunderstand
-soon
-sleepneed an soon
-understand
-laterfor bye laterthere
-get happis sleepthere
-get need get do not do not soon
-is w'
-     'the' -> 'thelaterunderstand
-have and and need soon
-there
-and tsoon
-need happto have and there
-understand
-is bthere
-do not need and need understand
-do not there
-bb'
-     'how' -> 'howlaterget need happdounderstand
-soon
-there
-happwsoon
-need have an need happthere
-understand
-what ethere
-do not understand
-happunderstand
-get do not there
-an b'
-
-   Epoch 197, Step 3730, Loss: 3.9282   Epoch 197, Step 3740, Loss: 4.0123
-   Epoch 197 完成, 平均 Loss: 3.9619, PPL: 52.56
-   -> 保存最佳模型 (loss=3.9619)
-   Epoch 198, Step 3750, Loss: 3.8472   Epoch 198, Step 3760, Loss: 3.9705
-   Epoch 198 完成, 平均 Loss: 3.9296, PPL: 50.88
-   -> 保存最佳模型 (loss=3.9296)
-
-   生成示例:
-     'hello' -> 'helloto you
-is it
-it is see you toto you too
-for laterlaterbye
-soon
-day is soon
-an bye
-an laterbye
-soon
-soon
-laterto to do not do not bye see you see you soon
-soon
-fitime is it
-it is '
-     'the' -> 'thelatersleepsoon
-sleeptis happtthere
-soon
-soon
-bwbhave stthere
-soon
-enbbunderstand
-do not have there
-need there
-soon
-sleepsoon
-'
-     'how' -> 'howlatersoon
-soon
-sleepis an need is sleepsoon
-soon
-bis bneed and sleepsoon
-doebget do not need there
-need sleepsoon
-soon
-soon
-'
-
-   Epoch 199, Step 3770, Loss: 3.8222   Epoch 199, Step 3780, Loss: 3.9489
-   Epoch 199 完成, 平均 Loss: 3.9056, PPL: 49.68
-   -> 保存最佳模型 (loss=3.9056)
-   Epoch 200, Step 3790, Loss: 3.8295   Epoch 200, Step 3800, Loss: 5.2270
-   Epoch 200 完成, 平均 Loss: 3.9203, PPL: 50.41
-
-   生成示例:
-     'hello' -> 'hellolaterlove do not get soon
-do not laterneed to besoon
-do not for happbdo not is bdo not happbye
-need wso do not wdo not do not happdo'
-     'the' -> 'thelaterneed get understand
-soon
-get happenbstsoon
-do not an waget bbget wstenbhave do not aget get wt'
-     'how' -> 'howlaterneed get get soon
-get hearhapptand soon
-do not doto bdo not wbdo not to and happbneed do not bdo not do not to is '
-
-   Epoch 201, Step 3810, Loss: 4.2707
-   Epoch 201 完成, 平均 Loss: 4.7804, PPL: 119.15
-   Epoch 202, Step 3820, Loss: 5.7649   Epoch 202, Step 3830, Loss: 5.4144
-   Epoch 202 完成, 平均 Loss: 5.1331, PPL: 169.54
-
-   生成示例:
-     'hello' -> 'hellolaterlaterlaterlaterlatersoon
-an filaterlateran bye
-latersoon
-to laterhappdo not do not for laterfor very filatersoon
-soon
-need so fi'
-     'the' -> 'thelaterlaterlove bye bye
-soon
-an do not laterlatergood for latersoon
-to laterhappdo not do not for laterlaterhave see you laterpleasesoon
-laterso fi'
-     'how' -> 'howlaterlaterso so bye
-soon
-an so laterlatergood for latersoon
-to laterhappdo not do not bye
-laterlaterhappunderstand
-laterpleasesoon
-laterlaterfi'
-
-   Epoch 203, Step 3840, Loss: 4.6283   Epoch 203, Step 3850, Loss: 4.6670
-   Epoch 203 完成, 平均 Loss: 4.6154, PPL: 101.03
-   Epoch 204, Step 3860, Loss: 4.2072   Epoch 204, Step 3870, Loss: 4.2902
-   Epoch 204 完成, 平均 Loss: 4.2615, PPL: 70.92
-
-   生成示例:
-     'hello' -> 'hellolateran laterlaterso laterhave for laterlaterlaterunderstand
-do not an laterlaterdo not an need do not do not happthere
-for dolaterlatersoon
-there
-to '
-     'the' -> 'thelatersoon
-there
-soon
-to have a day is laterfor soon
-latersoon
-bye dolatersoon
-soon
-soon
-an laterlaterso soon
-understand
-soon
-laterdo not bye latersoon
-'
-     'how' -> 'howlatersoon
-there
-soon
-to bye
-pleased laterbye
-soon
-latersoon
-so an latersoon
-soon
-soon
-an laterlaterlatersoon
-see you soon
-laterfibye latersoon
-'
-
-   Epoch 205, Step 3880, Loss: 4.0054   Epoch 205, Step 3890, Loss: 4.0739
-   Epoch 205 完成, 平均 Loss: 4.0695, PPL: 58.53
-   Epoch 206, Step 3900, Loss: 3.9188   Epoch 206, Step 3910, Loss: 4.0276
-   Epoch 206 完成, 平均 Loss: 4.0078, PPL: 55.03
-
-   生成示例:
-     'hello' -> 'hellolaterlaterfor soon
-there
-soon
-for laterlaterhave a very do not laterbye
-laterdo not laterhave a have a lateran laterbye bye
-see you laterneed do not do not need '
-     'the' -> 'thelaterhave besoon
-there
-soon
-an laterunderstand
-have an soon
-laterfor laterhi laterhapphapplateran laterunderstand
-bebye need need do not do not later'
-     'how' -> 'howlaterbefor soon
-there
-soon
-an laterbye for an soon
-laterfor laterdo not laterhave have lateran laterbye bye
-see you laterneed do not do not later'
-
-   Epoch 207, Step 3920, Loss: 3.9051   Epoch 207, Step 3930, Loss: 4.0065
-   Epoch 207 完成, 平均 Loss: 3.9617, PPL: 52.55
-   Epoch 208, Step 3940, Loss: 3.8392   Epoch 208, Step 3950, Loss: 3.9575
-   Epoch 208 完成, 平均 Loss: 3.9177, PPL: 50.29
-
-   生成示例:
-     'hello' -> 'hellofor laterfor laterlaterlaterbye
-laterlatersoon
-laterdo not latersoon
-laterdo not sunnsoon
-besoon
-hi need happsoon
-there
-there
-soon
-bye
-soon
-there
-'
-     'the' -> 'thefor laterfor laterlaterlaterfor laterlatersoon
-laterthere
-latersoon
-laterdo not soon
-soon
-for soon
-there
-laterdosoon
-there
-there
-soon
-have soon
-there
-'
-     'how' -> 'howbye
-laterfor laterlaterlaterfor laterlatersoon
-laterthere
-latersoon
-laterdo not sunnsoon
-have soon
-hi need happsoon
-there
-there
-soon
-bye
-soon
-there
-'
-
-   Epoch 209, Step 3960, Loss: 3.8031   Epoch 209, Step 3970, Loss: 3.9300
-   Epoch 209 完成, 平均 Loss: 3.8877, PPL: 48.80
-   -> 保存最佳模型 (loss=3.8877)
-   Epoch 210, Step 3980, Loss: 3.7889   Epoch 210, Step 3990, Loss: 5.1575
-   Epoch 210 完成, 平均 Loss: 3.8681, PPL: 47.85
-   -> 保存最佳模型 (loss=3.8681)
-
-   生成示例:
-     'hello' -> 'helloan for bye laterbye laterglalaterso great for day is laterfor bye good for laterday is sure I for for laterlatersee you for latergood need an '
-     'the' -> 'thefor glabye laterbye laterfor laterso so for day is laterfor bye good for laterday is sure I for for laterlaterbye for lateran lateran '
-     'how' -> 'howfor for bye laterbye laterfor laterso laterfor day is laterfor bye an for laterday is sure I for for laterlaterunderstand
-for latergood need good '
-
-   Epoch 211, Step 4000, Loss: 3.7851
-   Epoch 211 完成, 平均 Loss: 3.8542, PPL: 47.19
-   -> 保存最佳模型 (loss=3.8542)
-   Epoch 212, Step 4010, Loss: 3.5519   Epoch 212, Step 4020, Loss: 3.7986
-   Epoch 212 完成, 平均 Loss: 3.8436, PPL: 46.69
-   -> 保存最佳模型 (loss=3.8436)
-
-   生成示例:
-     'hello' -> 'helloglabye bye laterlaterglafor for bye laterso latertake cbye for bye
-bye for laterlaterlatergood laterpleaselaterunderstand
-laterdo not an w'
-     'the' -> 'thefor see you bye latergreat an for for bye great bye laterblubye for bye
-bye for laterlaterlatergood latertime is it
-it is laterbye laterfihave good '
-     'how' -> 'howfor bye bye laterlaterfor for for so laterlaterlaterbye bye for laterlaterlaterlaterlaterlatergood laterhow are you
-I am doing laterfilaterdo not an b'
-
-   Epoch 213, Step 4030, Loss: 3.7137   Epoch 213, Step 4040, Loss: 3.8090
-   Epoch 213 完成, 平均 Loss: 3.8363, PPL: 46.35
-   -> 保存最佳模型 (loss=3.8363)
-   Epoch 214, Step 4050, Loss: 3.7071   Epoch 214, Step 4060, Loss: 3.8205
-   Epoch 214 完成, 平均 Loss: 3.8328, PPL: 46.19
-   -> 保存最佳模型 (loss=3.8328)
-
-   生成示例:
-     'hello' -> 'helloZ<Xlaterlaterfor bye good mornsurlaterlaterlaterlaterlatergoodbye
-so laterfor lateran laterbesee you an an an need soon
-later'
-     'the' -> 'thefor good glagreat great for take cbye good morntake cbye great surlaterno problemfor bye great for lateran laterlaterlateran for for latersoon
-later'
-     'how' -> 'howr you too soon
-for for laterglayou too laterbye bye laterlateryou too for for fifor for laterlaterlatersoon
-you too laterlaterneed soon
-pleased there
-'
-
-   Epoch 215, Step 4070, Loss: 3.7171   Epoch 215, Step 4080, Loss: 3.8275
-   Epoch 215 完成, 平均 Loss: 3.8333, PPL: 46.21
-   Epoch 216, Step 4090, Loss: 3.7191   Epoch 216, Step 4100, Loss: 3.8569
-   Epoch 216 完成, 平均 Loss: 3.8371, PPL: 46.39
-
-   生成示例:
-     'hello' -> 'hello36U	^^6U	\_\^]H*^no prob]H3*]ZXgreat good for for '
-     'the' -> 'theV<Xno probgreat good 6Ugreat ]great ]__I*_no problemsurlaterfor have a laterlaterlaterlaterwbye
-for '
-     'how' -> 'howglalet for take cbye good mornfor laterno problemsurbye surgood morngood mornfor glagood great figreat for for have a laterlaterlaterlatergood need bye
-'
-
-   Epoch 217, Step 4110, Loss: 3.7546   Epoch 217, Step 4120, Loss: 3.8812
-   Epoch 217 完成, 平均 Loss: 3.8409, PPL: 46.57
-   Epoch 218, Step 4130, Loss: 3.7299   Epoch 218, Step 4140, Loss: 3.8769
-   Epoch 218 完成, 平均 Loss: 3.8405, PPL: 46.55
-
-   生成示例:
-     'hello' -> 'helloScoo		Z	S_~V	]derS~cooZV33_6no prob'^'
-     'the' -> 'theLcoo~~ZpleS_~U~]derS~cooZV33_6no prob']'
-     'how' -> 'how<coo_~X	L^_S_ZderL_cooZV**^3no prob'\'
-
-   Epoch 219, Step 4150, Loss: 3.7237   Epoch 219, Step 4160, Loss: 3.8800
-   Epoch 219 完成, 平均 Loss: 3.8381, PPL: 46.44
-   Epoch 220, Step 4170, Loss: 3.7368   Epoch 220, Step 4180, Loss: 5.1234
-   Epoch 220 完成, 平均 Loss: 3.8426, PPL: 46.65
-
-   生成示例:
-     'hello' -> 'hello_3Z'~<Lno probZ_U~Z\LpleS\SSple	coo<'VderVXno prob'
-     'the' -> 'the_3Z'~<Lno probX_U~Z\LpleS\SSple	coo<'VderVXno prob'
-     'how' -> 'how^3X'~HLno probX_U~Z\LpleS\SSple	coo<'VderVXno prob'
-
-   Epoch 221, Step 4190, Loss: 3.7648
-   Epoch 221 完成, 平均 Loss: 3.8589, PPL: 47.41
-   Epoch 222, Step 4200, Loss: 3.5019   Epoch 222, Step 4210, Loss: 3.8233
-   Epoch 222 完成, 平均 Loss: 3.8933, PPL: 49.07
-
-   生成示例:
-     'hello' -> 'helloyou
-I am Vder\\wonderUVXV~~<L~USV~_]	Syou
-I am ZZ_V'
-     'the' -> 'the	Vder\\deryou
-I am UVXV~_<L~USV~_]	S	ZZ_V'
-     'how' -> 'how	Vder\\deryou
-I am SVXV~_<L~USV~_]	S	ZZ_V'
-
-   Epoch 223, Step 4220, Loss: 3.8069   Epoch 223, Step 4230, Loss: 4.2257
-   Epoch 223 完成, 平均 Loss: 4.4450, PPL: 85.20
-   Epoch 224, Step 4240, Loss: 5.1649   Epoch 224, Step 4250, Loss: 4.9508
-   Epoch 224 完成, 平均 Loss: 4.8165, PPL: 123.54
-
-   生成示例:
-     'hello' -> 'helloS]ScooSno prob<S~won	XS~]V'X	L'<no probZH3'ZS'
-     'the' -> 'theS]ScooSno prob<S~won	XS~]V'X	L'<no probZH3'ZS'
-     'how' -> 'howS]ScooSno prob<S~won	XS~]V'X	L'<no probZH3'ZS'
-
-   Epoch 225, Step 4260, Loss: 4.6135   Epoch 225, Step 4270, Loss: 4.4941
-   Epoch 225 完成, 平均 Loss: 4.4185, PPL: 82.97
-   Epoch 226, Step 4280, Loss: 4.2109   Epoch 226, Step 4290, Loss: 4.2336
-   Epoch 226 完成, 平均 Loss: 4.1910, PPL: 66.09
-
-   生成示例:
-     'hello' -> 'hellopleHL]Xwonwon\no probwon\<no prob]3	V\you
-I am coono probV^ZSyou
-I am ''
-     'the' -> 'thepleHL]Xwonwon\no probwon\<no prob]3	V\you
-I am coono probV^ZSyou
-I am ''
-     'how' -> 'howpleHL]Xwonwon\no probwon\<no prob]3	V\you
-I am coono probV^ZSyou
-I am ''
-
-   Epoch 227, Step 4300, Loss: 4.1338   Epoch 227, Step 4310, Loss: 4.1728
-   Epoch 227 完成, 平均 Loss: 4.1208, PPL: 61.61
-   Epoch 228, Step 4320, Loss: 4.0203   Epoch 228, Step 4330, Loss: 4.0995
-   Epoch 228 完成, 平均 Loss: 4.0570, PPL: 57.80
-
-   生成示例:
-     'hello' -> 'helloSZno probHwon\no probplecooLcooS	<^you
-I am ^XLV	H'Z'''no prob^Z'
-     'the' -> 'theSZno probHwon\no probplecooLcooS	<^you
-I am ^XLV	H'Z'''no prob^Z'
-     'how' -> 'howSZno probHwon\no probplecooLcooS	<^you
-I am ^XLV	H'Z'''no prob^Z'
-
-   Epoch 229, Step 4340, Loss: 3.9512   Epoch 229, Step 4350, Loss: 4.0518
-   Epoch 229 完成, 平均 Loss: 4.0076, PPL: 55.01
-   Epoch 230, Step 4360, Loss: 3.9180   Epoch 230, Step 4370, Loss: 5.2926
-   Epoch 230 完成, 平均 Loss: 3.9694, PPL: 52.96
-
-   生成示例:
-     'hello' -> 'hellople^^Z3XVno prob<3ZZyou
-I am won'^Vcoo'\XXcooZcoono prob~Z	'
-     'the' -> 'theple^^Z3XVno prob<3ZZyou
-I am won'^Vcoo'\XXcooZcoono prob~Z	'
-     'how' -> 'howple^^Z3XVno prob<3ZZyou
-I am won'^Vcoo'\XXcooZcoono prob~Z	'
-
-   Epoch 231, Step 4380, Loss: 3.8902
-   Epoch 231 完成, 平均 Loss: 3.9402, PPL: 51.43
-   Epoch 232, Step 4390, Loss: 3.8027   Epoch 232, Step 4400, Loss: 3.8866
-   Epoch 232 完成, 平均 Loss: 3.9181, PPL: 50.31
-
-   生成示例:
-     'hello' -> 'hellowonV\coono prob3Zyou
-I am ]VZZ\\'Xple^Z	S'~X\L	<'
-     'the' -> 'thewonV\coono prob3Zyou
-I am ]VZZ\\'Xple^Z	S'~X\L	<'
-     'how' -> 'howwonV\coono prob3Zyou
-I am ]VZZ\\'Xple^Z	S'~X\L	<'
-
-   Epoch 233, Step 4410, Loss: 3.8314   Epoch 233, Step 4420, Loss: 3.8834
-   Epoch 233 完成, 平均 Loss: 3.9019, PPL: 49.50
-   Epoch 234, Step 4430, Loss: 3.7857   Epoch 234, Step 4440, Loss: 3.8810
-   Epoch 234 完成, 平均 Loss: 3.8904, PPL: 48.93
-
-   生成示例:
-     'hello' -> 'hellono prob]no probno prob	ple	Z^\coo	~no probcoo]HZZL3	Vwon~V^'
-     'the' -> 'theno prob]no probno prob	ple	Z^\coo	~no probcoo]HZZL3	Vwon~V^'
-     'how' -> 'howno prob]no probno prob	ple	Z^\coo	~no probcoo]HZZL3	Vwon~V^'
-
-   Epoch 235, Step 4450, Loss: 3.7839   Epoch 235, Step 4460, Loss: 3.8781
-   Epoch 235 完成, 平均 Loss: 3.8827, PPL: 48.55
-   Epoch 236, Step 4470, Loss: 3.7743   Epoch 236, Step 4480, Loss: 3.8935
-   Epoch 236 完成, 平均 Loss: 3.8782, PPL: 48.34
-
-   生成示例:
-     'hello' -> 'hellowonL<~coo<ZwonHcoo]3SXZ	<3Z3Lcoocoo	LL\<no probwon'
-     'the' -> 'thewonL<~coo<ZwonHcoo]3SXZ	<3Z3Lcoocoo	LL\<no probwon'
-     'how' -> 'howwonL<~coo<ZwonHcoo]3SXZ	<3Z3Lcoocoo	LL\<no probwon'
-
-   Epoch 237, Step 4490, Loss: 3.8059   Epoch 237, Step 4500, Loss: 3.9110
-   Epoch 237 完成, 平均 Loss: 3.8766, PPL: 48.26
-   Epoch 238, Step 4510, Loss: 3.7712   Epoch 238, Step 4520, Loss: 3.9066
-   Epoch 238 完成, 平均 Loss: 3.8772, PPL: 48.29
-
-   生成示例:
-     'hello' -> 'hellono prob\~	S'ple^	33'Z^	no prob]3Zno prob\you
-I am coo	^L<you
-I am '
-     'the' -> 'theno prob\~	S'ple^	33'Z^	no prob]3Zno prob\you
-I am coo	^L<you
-I am '
-     'how' -> 'howno prob\~	S'ple^	33'Z^	no prob]3Zno prob\you
-I am coo	^L<you
-I am '
-
-   Epoch 239, Step 4530, Loss: 3.7745   Epoch 239, Step 4540, Loss: 3.9134
-   Epoch 239 完成, 平均 Loss: 3.8756, PPL: 48.21
-   Epoch 240, Step 4550, Loss: 3.7920   Epoch 240, Step 4560, Loss: 5.1477
-   Epoch 240 完成, 平均 Loss: 3.8608, PPL: 47.50
-
-   生成示例:
-     'hello' -> 'hello\Hcoo^\coo^<\Z^'	HcooL	^]~S^no prob<^LSZple'
-     'the' -> 'theV<LcoocooHcoowon]3	3plecoocoocoocooVLple3VSno prob3coo']'
-     'how' -> 'howV<LcoocooHcoowon]3	3plecoocoocoocooVLple3VSno prob3coo']'
-
-   Epoch 241, Step 4570, Loss: 3.7585
-   Epoch 241 完成, 平均 Loss: 3.8214, PPL: 45.67
-   -> 保存最佳模型 (loss=3.8214)
-   Epoch 242, Step 4580, Loss: 3.6112   Epoch 242, Step 4590, Loss: 3.7562
-   Epoch 242 完成, 平均 Loss: 3.9340, PPL: 51.11
-
-   生成示例:
-     'hello' -> 'hellocoono prob<no prob	der\SLS<~derXno probplecooLV~XZXno prob\\]3no probZ'
-     'the' -> 'thecoono prob<no prob	no p\SHS<~pleXno probdercooLV	ZZXblulaterlove ]3blubye '
-     'how' -> 'howblusunnstsunnthere
-bluag\Z]Vsursunngreat elsunnhow are you
-I am doing sachthere
-surneed salikagneed there
-stsunnneed '
-
-   Epoch 243, Step 4600, Loss: 5.1323   Epoch 243, Step 4610, Loss: 6.5441
-   Epoch 243 完成, 平均 Loss: 6.3007, PPL: 544.97
-   Epoch 244, Step 4620, Loss: 6.4085   Epoch 244, Step 4630, Loss: 6.0160
-   Epoch 244 完成, 平均 Loss: 5.8082, PPL: 333.03
-
-   生成示例:
-     'hello' -> 'hello^'der'\~H~]HH\]no probH\'	Hno prob'ZHZ		^Z'
-     'the' -> 'the^'der'\~H~]HH\]no probH\'	Hno prob'ZHZ		^Z'
-     'how' -> 'how^'der'\~H~]HH\]no probH\'	<no prob'ZHZ		^Z'
-
-   Epoch 245, Step 4640, Loss: 5.7305   Epoch 245, Step 4650, Loss: 5.6188
-   Epoch 245 完成, 平均 Loss: 5.5071, PPL: 246.43
-   Epoch 246, Step 4660, Loss: 5.5498   Epoch 246, Step 4670, Loss: 5.4889
-   Epoch 246 完成, 平均 Loss: 5.4034, PPL: 222.15
-
-   生成示例:
-     'hello' -> 'helloXyou
-I am you
-I am ~Sque~queXXHV<Lno prob'L~Lno probZ~no prob\<X]Zcoople'
-     'the' -> 'theXyou
-I am you
-I am ~Sque~queXXHV<Lno prob'L~Lno probZ~no prob\<X]Zcoople'
-     'how' -> 'howXyou
-I am you
-I am ~Sque~queXXHV<Lno prob'L~Lno probZ~no prob\<X]Zcoople'
-
-   Epoch 247, Step 4680, Loss: 5.4665   Epoch 247, Step 4690, Loss: 5.4193
-   Epoch 247 完成, 平均 Loss: 5.3337, PPL: 207.20
-   Epoch 248, Step 4700, Loss: 5.3866   Epoch 248, Step 4710, Loss: 5.3468
-   Epoch 248 完成, 平均 Loss: 5.2658, PPL: 193.61
-
-   生成示例:
-     'hello' -> 'hello\H]~]pleSder~LVno probcooVcooSXVVH'3queVple]S	'
-     'the' -> 'the\H_~]pleSder	LVno probcooVcooSXVVH'3queVple]S	'
-     'how' -> 'how\H_~]pleSder~LVno probcooVcooSXVVH'3queVple]S	'
-
-   Epoch 249, Step 4720, Loss: 5.2908   Epoch 249, Step 4730, Loss: 5.2427
-   Epoch 249 完成, 平均 Loss: 5.1699, PPL: 175.89
-   Epoch 250, Step 4740, Loss: 5.1279   Epoch 250, Step 4750, Loss: 6.6853
-   Epoch 250 完成, 平均 Loss: 5.0140, PPL: 150.51
-
-   生成示例:
-     'hello' -> 'hello3L]'queLS<plequeSV']Syou
-I am VHXno probXZ_L'Sno prob~]_'
-     'the' -> 'the3L]'queLS<plequeSV']Syou
-I am VHZno probXZ_L'Sno prob~]_'
-     'how' -> 'how3L]'queLS<plequeSV']Syou
-I am VHXno probXZ_L'Sno prob~]_'
-
-   Epoch 251, Step 4760, Loss: 4.8345
-   Epoch 251 完成, 平均 Loss: 4.7000, PPL: 109.95
-   Epoch 252, Step 4770, Loss: 4.3536   Epoch 252, Step 4780, Loss: 4.4271
-   Epoch 252 完成, 平均 Loss: 4.3618, PPL: 78.40
-
-   生成示例:
-     'hello' -> 'helloqueyou
-I am you
-I am <3Hyou
-I am X	you
-I am coo_SL;]LHZH<XHX	;VXyou
-I am '
-     'the' -> 'thequeyou
-I am you
-I am <3Hyou
-I am Z	you
-I am coo_SL<]LHZH<XHZ	;VVyou
-I am '
-     'how' -> 'howqueyou
-I am you
-I am <3Hyou
-I am X	you
-I am coo_SH;]LHZH<XHX	;VXyou
-I am '
-
-   Epoch 253, Step 4790, Loss: 4.1510   Epoch 253, Step 4800, Loss: 4.2118
-   Epoch 253 完成, 平均 Loss: 4.1712, PPL: 64.80
-   Epoch 254, Step 4810, Loss: 3.9818   Epoch 254, Step 4820, Loss: 4.0863
-   Epoch 254 完成, 平均 Loss: 4.0515, PPL: 57.48
-
-   生成示例:
-     'hello' -> 'hello]_	pleZLS	no probno probcooVcoo	\3\SZX3S~_S<S'
-     'the' -> 'the]_	pleZLS	no probno probcooVcoo	\3\SZX3S~_S<S'
-     'how' -> 'how]_	pleZLS	no probno probcooVcoo	\3\SZX3S~_S<S'
-
-   Epoch 255, Step 4830, Loss: 3.9058   Epoch 255, Step 4840, Loss: 3.9934
-   Epoch 255 完成, 平均 Loss: 3.9676, PPL: 52.86
-   Epoch 256, Step 4850, Loss: 3.8282   Epoch 256, Step 4860, Loss: 3.9399
-   Epoch 256 完成, 平均 Loss: 3.9041, PPL: 49.60
-
-   生成示例:
-     'hello' -> 'hello'you
-I am coo'H<LX3no probque_coo~	Vno prob3]3	Vyou
-I am V]'<S']'
-     'the' -> 'the'you
-I am coo'H<LX3no probque_coo~	Vno prob3]3	Vyou
-I am V]'<S']'
-     'how' -> 'how'you
-I am coo'H<LX3no probque_coo~	Vno prob3]3	Vyou
-I am V]'<S']'
-
-   Epoch 257, Step 4870, Loss: 3.8098   Epoch 257, Step 4880, Loss: 3.9001
-   Epoch 257 完成, 平均 Loss: 3.8566, PPL: 47.30
-   Epoch 258, Step 4890, Loss: 3.7278   Epoch 258, Step 4900, Loss: 3.8512
-   Epoch 258 完成, 平均 Loss: 3.8187, PPL: 45.54
-   -> 保存最佳模型 (loss=3.8187)
-
-   生成示例:
-     'hello' -> 'hello_\no prob\you
-I am Vder]que3<SHLqueque<3ZLcooZderplequeS\'
-     'the' -> 'the_\no prob\you
-I am Vyou
-I am _que3<SHLqueque<3ZLcooZyou
-I am plequeV\'
-     'how' -> 'how_\no prob\derVder]que3<SHLqueque<3ZLcooZderplequeS\'
-
-   Epoch 259, Step 4910, Loss: 3.6977   Epoch 259, Step 4920, Loss: 3.8280
-   Epoch 259 完成, 平均 Loss: 3.7880, PPL: 44.17
-   -> 保存最佳模型 (loss=3.7880)
-   Epoch 260, Step 4930, Loss: 3.6743   Epoch 260, Step 4940, Loss: 5.0176
-   Epoch 260 完成, 平均 Loss: 3.7632, PPL: 43.09
-   -> 保存最佳模型 (loss=3.7632)
-
-   生成示例:
-     'hello' -> 'hello~ple	ZpleZX_coono probcoo'no probcoo<_queH~3<_\\cooXqueX]que'
-     'the' -> 'the~ple	ZpleZX~coono probcoo'no probcoo<_queH~3<_\\cooXqueZ]que'
-     'how' -> 'how_		ZpleXX_coono probcoo'afcoo<_queH~3<_\\cooXqueX]que'
-
-   Epoch 261, Step 4950, Loss: 3.6642
-   Epoch 261 完成, 平均 Loss: 3.7427, PPL: 42.21
-   -> 保存最佳模型 (loss=3.7427)
-   Epoch 262, Step 4960, Loss: 3.4534   Epoch 262, Step 4970, Loss: 3.6820
-   Epoch 262 完成, 平均 Loss: 3.7254, PPL: 41.49
-   -> 保存最佳模型 (loss=3.7254)
-
-   生成示例:
-     'hello' -> 'hello3afcoo	no probno probno prob<HXLcoo~_coo<LZLcooVno probXno prob	S~'
-     'the' -> 'the3quecoo	afno probno prob<HXLcoo~_coo<LZLcooVno probXno prob	S~'
-     'how' -> 'how3afcoo	no probno probno prob<HXLcoo~_coo<LZLcooVafXno prob	S_'
-
-   Epoch 263, Step 4980, Loss: 3.5455   Epoch 263, Step 4990, Loss: 3.6886
-   Epoch 263 完成, 平均 Loss: 3.7103, PPL: 40.87
-   -> 保存最佳模型 (loss=3.7103)
-   Epoch 264, Step 5000, Loss: 3.5102   Epoch 264, Step 5010, Loss: 3.6879
-   Epoch 264 完成, 平均 Loss: 3.6969, PPL: 40.32
-   -> 保存最佳模型 (loss=3.6969)
-
-   生成示例:
-     'hello' -> 'helloH_U~UX	'X~<U3U~\\H<Scoo]\SVUL<'
-     'the' -> 'theH_U~UX	'X~<U3V~\\H<Scoo_\SVUL<'
-     'how' -> 'howH~U~UX	'X~<U3U~\\H<Scoo]\SVUL<'
-
-   Epoch 265, Step 5020, Loss: 3.5356   Epoch 265, Step 5030, Loss: 3.6823
-   Epoch 265 完成, 平均 Loss: 3.6849, PPL: 39.84
-   -> 保存最佳模型 (loss=3.6849)
-   Epoch 266, Step 5040, Loss: 3.5271   Epoch 266, Step 5050, Loss: 3.6958
-   Epoch 266 完成, 平均 Loss: 3.6740, PPL: 39.41
-   -> 保存最佳模型 (loss=3.6740)
-
-   生成示例:
-     'hello' -> 'helloLafLH]_Z]Z_ZHno probcoo\~	U]~V<'		LcooZ\'
-     'the' -> 'theSafLH]_Z]Z_ZHno probcoo\~	U]~V<'		LcooZ\'
-     'how' -> 'howSno prob'Z\VVVple	'no probS'_X3no probno probXZL]ZHH]]V'
-
-   Epoch 267, Step 5060, Loss: 3.5650   Epoch 267, Step 5070, Loss: 3.6994
-   Epoch 267 完成, 平均 Loss: 3.6642, PPL: 39.02
-   -> 保存最佳模型 (loss=3.6642)
-   Epoch 268, Step 5080, Loss: 3.5227   Epoch 268, Step 5090, Loss: 3.6825
-   Epoch 268 完成, 平均 Loss: 3.6553, PPL: 38.68
-   -> 保存最佳模型 (loss=3.6553)
-
-   生成示例:
-     'hello' -> 'hello~'XXno prob\cooS~'\no prob_'\cooVXno prob_VV~_<UHVple'
-     'the' -> 'theple'XXno prob\cooS~'\no prob_'\cooVXno prob_VV~_<UHVple'
-     'how' -> 'howbluyneed like bluthere
-cooXsuris \no prob_'\cooVXno prob_VVsursunnstbye HVple'
-
-   Epoch 269, Step 5100, Loss: 3.5210   Epoch 269, Step 5110, Loss: 3.6839
-   Epoch 269 完成, 平均 Loss: 3.6473, PPL: 38.37
-   -> 保存最佳模型 (loss=3.6473)
-   Epoch 270, Step 5120, Loss: 3.5245   Epoch 270, Step 5130, Loss: 4.8535
-   Epoch 270 完成, 平均 Loss: 3.6401, PPL: 38.10
-   -> 保存最佳模型 (loss=3.6401)
-
-   生成示例:
-     'hello' -> 'hello	SVX_~'H]ple3ple~UZX~UafUZUV]cooU~	'
-     'the' -> 'theno probSVX_~'H]ple3ple~UZX~UafUZUV]cooU~	'
-     'how' -> 'howbluand surhearsunnsunnystthere
-surstple~UXbye ~UafUZlatersathere
-cooU~	'
-
-   Epoch 271, Step 5140, Loss: 3.5326
-   Epoch 271 完成, 平均 Loss: 3.6336, PPL: 37.85
-   -> 保存最佳模型 (loss=3.6336)
-   Epoch 272, Step 5150, Loss: 3.3003   Epoch 272, Step 5160, Loss: 3.5665
-   Epoch 272 完成, 平均 Loss: 3.6278, PPL: 37.63
-   -> 保存最佳模型 (loss=3.6278)
-
-   生成示例:
-     'hello' -> 'helloHX3~af]Zno probno prob]<cooS'coo		L	_ZSple	S\\'
-     'the' -> 'thean to <pleaf]Zno probno prob\<cooS'coo		H	_ZSple	S\\'
-     'how' -> 'howan great 3pleblusoon
-Zno probno prob_<cooS'coobye 	H~]ZLintesunnbsa\\'
-
-   Epoch 273, Step 5170, Loss: 3.4188   Epoch 273, Step 5180, Loss: 3.5844
-   Epoch 273 完成, 平均 Loss: 3.6225, PPL: 37.43
-   -> 保存最佳模型 (loss=3.6225)
-   Epoch 274, Step 5190, Loss: 3.4021   Epoch 274, Step 5200, Loss: 3.5946
-   Epoch 274 完成, 平均 Loss: 3.6178, PPL: 37.26
-   -> 保存最佳模型 (loss=3.6178)
-
-   生成示例:
-     'hello' -> 'hello	_<	L*		no prob<XX_coo3pleZpleXno probVafcooZVcooHUX'
-     'the' -> 'theblusunnbstsunnenysunnsunnintean so to you
-to you
-cooXsunnplease
-elhearinteto elhow are you
-I am doing bye you how are you
-I am doing X	X'
-     'how' -> 'howfito you
-<pleL*		no prob<XZ~coo3pleZno probXafXafcooXXcoo<UX'
-
-   Epoch 275, Step 5210, Loss: 3.4311   Epoch 275, Step 5220, Loss: 3.5991
-   Epoch 275 完成, 平均 Loss: 3.6136, PPL: 37.10
-   -> 保存最佳模型 (loss=3.6136)
-   Epoch 276, Step 5230, Loss: 3.4356   Epoch 276, Step 5240, Loss: 3.6217
-   Epoch 276 完成, 平均 Loss: 3.6099, PPL: 36.96
-   -> 保存最佳模型 (loss=3.6099)
-
-   生成示例:
-     'hello' -> 'hellono probZX<coo33<_HX	VXno probsurhow are you
-I am doing coo*Vbye 3blustL3blu'
-     'the' -> 'thedo not surhi to acooto to VpleHX	VVsurintecoocoo*S\<do not *L3no prob'
-     'how' -> 'howlaterneed do not understand
-survery to you
-]coosursunn	3\bluthere
-*ple<sursunnsado not fibluand cooHH'
-
-   Epoch 277, Step 5250, Loss: 3.4830   Epoch 277, Step 5260, Loss: 3.6335
-   Epoch 277 完成, 平均 Loss: 3.6067, PPL: 36.84
-   -> 保存最佳模型 (loss=3.6067)
-   Epoch 278, Step 5270, Loss: 3.4430   Epoch 278, Step 5280, Loss: 3.6240
-   Epoch 278 完成, 平均 Loss: 3.6040, PPL: 36.74
-   -> 保存最佳模型 (loss=3.6040)
-
-   生成示例:
-     'hello' -> 'helloV3<]Vno prob_UX\S3no prob_blufi]blusunnthere
-Zto latersoon
-for so is it
-it is '	S'
-     'the' -> 'thefor 3<]Vno prob_UXZS3surlaterhi Vbluhow are you
-I am doing ple_X]Vlaterand bye
-blustyou S'
-     'how' -> 'howlaterstendo not saintesoon
-surdo not love you \bluthere
-is it
-it is need to you
-is it
-it is latersoon
-surthere
-like there
-for bye
-is it
-it is Xyou V'
-
-   Epoch 279, Step 5290, Loss: 3.4520   Epoch 279, Step 5300, Loss: 3.6352
-   Epoch 279 完成, 平均 Loss: 3.6018, PPL: 36.66
-   -> 保存最佳模型 (loss=3.6018)
-   Epoch 280, Step 5310, Loss: 3.4685   Epoch 280, Step 5320, Loss: 4.8005
-   Epoch 280 完成, 平均 Loss: 3.6004, PPL: 36.61
-   -> 保存最佳模型 (loss=3.6004)
-
-   生成示例:
-     'hello' -> 'helloyou to sursee you X3to you
-<surpleple]Z	no probsursoon
-<surthere
-]Zan hearhearsunnw	surthere
-'
-     'the' -> 'thelaterbye
-to you
-to you too
-you Xblusainteblusunnthere
-to you
-bluhow are you
-I am doing bluthere
-an sunnthere
-bluplease
-laterstsasunnwthere
-bluthere
-'
-     'how' -> 'howlaterhearthere
-intestbsunnsaintesoon
-do not do not do not soon
-there
-there
-latervery sunnthere
-do not do not do not and hearsunnwdo not bluthere
-'
-
-   Epoch 281, Step 5330, Loss: 3.4890
-   Epoch 281 完成, 平均 Loss: 3.6002, PPL: 36.60
-   -> 保存最佳模型 (loss=3.6002)
-   Epoch 282, Step 5340, Loss: 3.2915   Epoch 282, Step 5350, Loss: 3.5406
-   Epoch 282 完成, 平均 Loss: 3.6027, PPL: 36.70
-
-   生成示例:
-     'hello' -> 'hellodo not to you
-blubye
-like sursoon
-to you too
-to to you
-surneed good love do not for hello bye to you
-bluhow are you
-I am doing wineed do not need bye
-elhi to meet you
-you '
-     'the' -> 'thebye \	<SV\no prob'ZLH3Vder*no prob	Z~no prob<Hsurhearhave how are you
-I am doing V]U'
-     'how' -> 'howsunnthere
-do not hearneed latersunnhow are you
-I am doing an there
-great like good to you
-soon
-for intesunnthere
-do not soon
-like need you too bye
-bye
-soon
-suryou too great '
-
-   Epoch 283, Step 5360, Loss: 3.4416   Epoch 283, Step 5370, Loss: 3.5775
-   Epoch 283 完成, 平均 Loss: 3.6136, PPL: 37.10
-   Epoch 284, Step 5380, Loss: 3.4253   Epoch 284, Step 5390, Loss: 3.6204
-   Epoch 284 完成, 平均 Loss: 3.6478, PPL: 38.39
-
-   生成示例:
-     'hello' -> 'hellobye blubye
-Xbluthere
-bye ]surinteto ]blustintethere
-laterthere
-you laterthere
-bluintesunnhearthere
-bplease
-to you too
-blu'
-     'the' -> 'thesoon
-bluenstthere
-to you
-blumuchhi sunnneed an inteand likthere
-do not there
-hearsathere
-laterintesunnneed there
-bthere
-soon
-do not '
-     'how' -> 'howhow are you
-I am doing sunnbye
-for bye suryou too Z	blubye ]blufor do not bye to bye Zto blusoon
-bye no probfibye 3surhow are you
-I am doing blu'
-
-   Epoch 285, Step 5400, Loss: 3.4636   Epoch 285, Step 5410, Loss: 3.6805
-   Epoch 285 完成, 平均 Loss: 3.6954, PPL: 40.26
-   Epoch 286, Step 5420, Loss: 3.5945   Epoch 286, Step 5430, Loss: 3.7435
-   Epoch 286 完成, 平均 Loss: 3.7148, PPL: 41.05
-
-   生成示例:
-     'hello' -> 'hellolaterhow are you
-I am doing there
-for filove laterfor do not for do not laterthere
-latersunnintehow are you
-I am doing so sunnsunnintethere
-there
-inteand there
-for there
-for later'
-     'the' -> 'thebye coo	3ZpleU3blufor blusunnthere
-<sunnintehow are you
-I am doing bye sursunnintethere
-hi how are you
-I am doing stthere
-very there
-bye
-Z'
-     'how' -> 'howthere
-how are you
-I am doing bye to latersunnlaterhearhow are you
-I am doing an intesoon
-laterneed sunnintehow are you
-I am doing bye blusunnintethere
-hi how are you
-I am doing stthere
-very there
-like later'
-
-   Epoch 287, Step 5440, Loss: 3.6191   Epoch 287, Step 5450, Loss: 3.7475
-   Epoch 287 完成, 平均 Loss: 3.7111, PPL: 40.90
-   Epoch 288, Step 5460, Loss: 3.5409   Epoch 288, Step 5470, Loss: 3.7498
-   Epoch 288 完成, 平均 Loss: 3.7290, PPL: 41.64
-
-   生成示例:
-     'hello' -> 'hellolaterand bye
-need very and soon
-laterthere
-hi laterneed love latersunnsasoon
-bye is bye blusunnbye
-intebhi how are you
-I am doing laterstst'
-     'the' -> 'thebye VZ	V3bluhearthere
-how are you
-I am doing bye 	there
-do not sunnenthere
-need bhearthere
-sunnsaintebneed assistant
-hearpa'
-     'how' -> 'howfivery need need savery sunnso there
-sunnfiso there
-do not sunnfor soon
-fistneed there
-sunnneed intebhi how are you
-I am doing need for st'
-
-   Epoch 289, Step 5480, Loss: 3.6339   Epoch 289, Step 5490, Loss: 3.8700
-   Epoch 289 完成, 平均 Loss: 3.8322, PPL: 46.16
-   Epoch 290, Step 5500, Loss: 3.7254   Epoch 290, Step 5510, Loss: 5.0257
-   Epoch 290 完成, 平均 Loss: 3.7693, PPL: 43.35
-
-   生成示例:
-     'hello' -> 'hellobye for bye
-laterhow are you
-I am doing need bye blustbye
-do not latersunnmuchbye
-muchbye
-soon
-sainteintesoon
-fihi you too fisahi sunnhow are you
-I am doing '
-     'the' -> 'thehi bye an laterhow are you
-I am doing laterintesunnstmuchhow are you
-I am doing so sunnvery hearstsayou too stsunnintethere
-need do not soon
-need stdo not sunnhow are you
-I am doing '
-     'how' -> 'howhi need saneed how are you
-I am doing hearintesunnsthave how are you
-I am doing need sunnenand stenthere
-yinteintethere
-hearneed there
-hearyneed sunnhow are you
-I am doing '
-
-   Epoch 291, Step 5520, Loss: 3.5167
-   Epoch 291 完成, 平均 Loss: 3.6304, PPL: 37.73
-   Epoch 292, Step 5530, Loss: 3.3563   Epoch 292, Step 5540, Loss: 3.5980
-   Epoch 292 完成, 平均 Loss: 3.6813, PPL: 39.70
-
-   生成示例:
-     'hello' -> 'hellothere
-there
-there
-sunnneed how are you
-I am doing fithere
-bye laterhi sunnsasunnsunnhi sunnhow are you
-I am doing hearso there
-there
-there
-saplease
-need hearstthere
-bye '
-     'the' -> 'thefithere
-how are you
-I am doing there
-hearthere
-sunnhow are you
-I am doing bye
-sthi there
-how are you
-I am doing need you too fihow are you
-I am doing bye
-intestmuchbye you too hi sasunnhow are you
-I am doing hearsasa'
-     'how' -> 'howplease
-there
-intethere
-very there
-sunnhow are you
-I am doing bye
-sthi hi how are you
-I am doing need you too please
-how are you
-I am doing hearinteband bye you too do not ensunnhow are you
-I am doing very and and '
-
-   Epoch 293, Step 5550, Loss: 3.4971   Epoch 293, Step 5560, Loss: 3.6411
-   Epoch 293 完成, 平均 Loss: 3.7700, PPL: 43.38
-   Epoch 294, Step 5570, Loss: 4.2588   Epoch 294, Step 5580, Loss: 4.4650
-   Epoch 294 完成, 平均 Loss: 4.4616, PPL: 86.63
-
-   生成示例:
-     'hello' -> 'hellohi you too sunnfor hi sunnbye hello bye
-need good do not there
-how are you
-I am doing soon
-sunnthere
-very do not how are you
-I am doing bye laterso sasunnneed sasunnthere
-there
-'
-     'the' -> 'thethere
-you too sunnmuchhi sunnbye you too bye
-latersthi there
-how are you
-I am doing soon
-sunnthere
-very do not how are you
-I am doing bye laterso muchsunnneed very sunnthere
-there
-'
-     'how' -> 'howthere
-sunnsunnsathere
-sunnfisunnbye
-so sthi there
-how are you
-I am doing soon
-sunnthere
-very hi how are you
-I am doing bye need so sasunnbye
-very sunnthere
-there
-'
-
-   Epoch 295, Step 5590, Loss: 4.5751   Epoch 295, Step 5600, Loss: 4.5852
-   Epoch 295 完成, 平均 Loss: 4.5377, PPL: 93.47
-   Epoch 296, Step 5610, Loss: 4.5442   Epoch 296, Step 5620, Loss: 4.5851
-   Epoch 296 完成, 平均 Loss: 4.5379, PPL: 93.50
-
-   生成示例:
-     'hello' -> 'hellosahow are you
-I am doing you too there
-need how are you
-I am doing how are you
-I am doing bye
-for very very hi bye for bye
-there
-very sunnthere
-how are you
-I am doing sabye
-do not soon
-how are you
-I am doing hearyou too how are you
-I am doing sunnthere
-'
-     'the' -> 'thehave how are you
-I am doing you too there
-need how are you
-I am doing how are you
-I am doing hearsaststhi bye for for there
-stsunnthere
-how are you
-I am doing very bye
-do not soon
-how are you
-I am doing hearyou too how are you
-I am doing sunnthere
-'
-     'how' -> 'howsahow are you
-I am doing you too there
-laterhow are you
-I am doing how are you
-I am doing bye
-savery very hi bye for hearsoon
-stsunnthere
-how are you
-I am doing very bye
-do not soon
-how are you
-I am doing hearyou too how are you
-I am doing sunnthere
-'
-
-   Epoch 297, Step 5630, Loss: 4.6032   Epoch 297, Step 5640, Loss: 4.6392
-   Epoch 297 完成, 平均 Loss: 4.5764, PPL: 97.16
-   Epoch 298, Step 5650, Loss: 4.5376   Epoch 298, Step 5660, Loss: 4.5385
-   Epoch 298 完成, 平均 Loss: 4.4690, PPL: 87.27
-
-   生成示例:
-     'hello' -> 'hellohow are you
-I am doing there
-do not need there
-bye intesunnsunnsunnthere
-there
-how are you
-I am doing sunnhave bhearneed sunnthere
-need bye hearenneed there
-there
-unthere
-sa'
-     'the' -> 'thehow are you
-I am doing there
-do not need there
-need intesunnsunnsunnthere
-there
-how are you
-I am doing sunnand bhearbye sunnthere
-need bye saand need there
-there
-have there
-need '
-     'how' -> 'howhow are you
-I am doing there
-hi need there
-so intesunnsunnlikthere
-there
-how are you
-I am doing sunnenbhearneed sunnthere
-need please
-sastneed there
-hi and there
-hear'
-
-   Epoch 299, Step 5670, Loss: 4.2059   Epoch 299, Step 5680, Loss: 4.2235
-   Epoch 299 完成, 平均 Loss: 4.1697, PPL: 64.70
-   Epoch 300, Step 5690, Loss: 3.9707   Epoch 300, Step 5700, Loss: 5.3309
-   Epoch 300 完成, 平均 Loss: 3.9981, PPL: 54.50
-
-   生成示例:
-     'hello' -> 'hellothere
-inteso need sunnhi how are you
-I am doing you too bye
-there
-sasahearhow are you
-I am doing and intesunnthere
-need there
-ensunnsunnhearthere
-stenyou too intesa'
-     'the' -> 'thethere
-inteneed bye
-sunnhi how are you
-I am doing hello hearthere
-and and sahow are you
-I am doing and intesunnthere
-need there
-stsunnsunnhearthere
-stenyou too intesa'
-     'how' -> 'howthere
-inteneed need sunnhi how are you
-I am doing hello hearthere
-and and sahow are you
-I am doing and intesunnthere
-need there
-stsunnsunnsathere
-stenyou too intesa'
-
-   Epoch 301, Step 5710, Loss: 3.8206
-   Epoch 301 完成, 平均 Loss: 3.8750, PPL: 48.18
-   Epoch 302, Step 5720, Loss: 3.5396   Epoch 302, Step 5730, Loss: 3.7723
-   Epoch 302 完成, 平均 Loss: 3.8080, PPL: 45.06
-
-   生成示例:
-     'hello' -> 'hellobye
-there
-you too hello hearbye
-muchthere
-there
-bye for there
-much
-you are hearthere
-sunnneed how are you
-I am doing how are you
-I am doing sasunnbye
-fiso need hi need how are you
-I am doing hearhear'
-     'the' -> 'thehi there
-there
-there
-there
-bye fihow are you
-I am doing hi hi bye
-bye
-need bye
-there
-hello stbye
-there
-sunnbye and there
-sunnthere
-do not stensunnst'
-     'how' -> 'howhi there
-there
-there
-there
-fido not how are you
-I am doing do not hi hearbye
-need bye
-there
-you too stbye
-there
-sunnneed enthere
-sunnhi do not stensunnst'
-
-   Epoch 303, Step 5740, Loss: 3.6057   Epoch 303, Step 5750, Loss: 3.7496
-   Epoch 303 完成, 平均 Loss: 3.7654, PPL: 43.18
-   Epoch 304, Step 5760, Loss: 3.5680   Epoch 304, Step 5770, Loss: 3.7335
-   Epoch 304 完成, 平均 Loss: 3.7349, PPL: 41.88
-
-   生成示例:
-     'hello' -> 'hellofor need do not stintethere
-stso bye soon
-there
-hello how are you
-I am doing how are you
-I am doing there
-hearenthere
-hearhearendo not bye
-need hearhow are you
-I am doing and have stdo not '
-     'the' -> 'thehave bye
-do not stintethere
-stneed need hello soon
-you too how are you
-I am doing intethere
-saenthere
-hearhearendo not bye
-need hearhow are you
-I am doing and have stdo not '
-     'how' -> 'howhave need do not stintethere
-stso bye soon
-soon
-you too how are you
-I am doing intethere
-for have there
-bye
-bye
-and do not need so hearhow are you
-I am doing and have stdo not '
-
-   Epoch 305, Step 5780, Loss: 3.5809   Epoch 305, Step 5790, Loss: 3.7152
-   Epoch 305 完成, 平均 Loss: 3.7117, PPL: 40.92
-   Epoch 306, Step 5800, Loss: 3.5621   Epoch 306, Step 5810, Loss: 3.7177
-   Epoch 306 完成, 平均 Loss: 3.6920, PPL: 40.13
-
-   生成示例:
-     'hello' -> 'hellobye
-hi how are you
-I am doing hi bye
-hello there
-need laterhi bye
-bye
-soon
-hi hi how are you
-I am doing there
-so latersunnneed fihow are you
-I am doing stfineed sunnsunnneed fi'
-     'the' -> 'thehearhi intehi have you too there
-hearbye
-hi hearhearhello hi there
-how are you
-I am doing there
-need need you too need so how are you
-I am doing stneed need sunnsunnneed need '
-     'how' -> 'howhearthere
-how are you
-I am doing hi hearsunnthere
-hearneed hi hearhearhello hi there
-how are you
-I am doing there
-need need you too need so how are you
-I am doing stneed need sunnsunnneed need '
-
-   Epoch 307, Step 5820, Loss: 3.5838   Epoch 307, Step 5830, Loss: 3.7100
-   Epoch 307 完成, 平均 Loss: 3.6761, PPL: 39.49
-   Epoch 308, Step 5840, Loss: 3.5373   Epoch 308, Step 5850, Loss: 3.6900
-   Epoch 308 完成, 平均 Loss: 3.6635, PPL: 39.00
-
-   生成示例:
-     'hello' -> 'hellothere
-soon
-for sunnhow are you
-I am doing there
-there
-how are you
-I am doing stso need how are you
-I am doing need need hi laterso how are you
-I am doing have how are you
-I am doing sahave bye
-hi inteneed have stsunnhear'
-     'the' -> 'thethere
-hello for sunnhow are you
-I am doing there
-there
-how are you
-I am doing stneed need how are you
-I am doing need bye
-hi so bye how are you
-I am doing muchhow are you
-I am doing muchmuchbye
-hi inteneed muchstsunnhear'
-     'how' -> 'howthere
-hello for sunnhow are you
-I am doing there
-there
-how are you
-I am doing stso need how are you
-I am doing need need hi so so how are you
-I am doing sahow are you
-I am doing and have hearhi intebye
-and stsunnhave '
-
-   Epoch 309, Step 5860, Loss: 3.5341   Epoch 309, Step 5870, Loss: 3.6912
-   Epoch 309 完成, 平均 Loss: 3.6542, PPL: 38.64
-   Epoch 310, Step 5880, Loss: 3.5305   Epoch 310, Step 5890, Loss: 4.8646
-   Epoch 310 完成, 平均 Loss: 3.6484, PPL: 38.41
-
-   生成示例:
-     'hello' -> 'hellosoon
-how are you
-I am doing pleased hello hello sunnthere
-need fithere
-need laterhi bye how are you
-I am doing hello take chello soon
-how are you
-I am doing laterthere
-need muchthere
-bye
-need soon
-stfor '
-     'the' -> 'thehello how are you
-I am doing how are you
-I am doing hello hello sunnsoon
-need fithere
-need so hi so how are you
-I am doing hello fihello hello how are you
-I am doing laterthere
-need for there
-bye
-need soon
-stfor '
-     'how' -> 'howsoon
-how are you
-I am doing pleased hello hello sunnsoon
-need fithere
-need so hi bye how are you
-I am doing hello take chello hello how are you
-I am doing laterthere
-need muchthere
-bye
-need soon
-sthave '
-
-   Epoch 311, Step 5900, Loss: 3.5373
-   Epoch 311 完成, 平均 Loss: 3.6464, PPL: 38.34
-   Epoch 312, Step 5910, Loss: 3.3710   Epoch 312, Step 5920, Loss: 3.5808
-   Epoch 312 完成, 平均 Loss: 3.6485, PPL: 38.42
-
-   生成示例:
-     'hello' -> 'helloyou too bye
-take chello stfineed bye
-much
-you are sunnlatermuch
-you are bye
-hi how are you
-I am doing hearhow are you
-I am doing hi need how are you
-I am doing nichow are you
-I am doing do not sunnhearsaneed hearmuch
-you are nic'
-     'the' -> 'thesunnfor fihello stdo not bye
-hearhow are you
-I am doing inteneed how are you
-I am doing bye
-there
-how are you
-I am doing have how are you
-I am doing there
-need how are you
-I am doing nichow are you
-I am doing do not sunnhearhave need hearmuch
-you are en'
-     'how' -> 'howthere
-there
-hello hi how are you
-I am doing soon
-for how are you
-I am doing bye
-how are you
-I am doing so hi there
-for fithere
-there
-need fihi there
-need there
-for how are you
-I am doing there
-there
-how are you
-I am doing how are you
-I am doing how are you
-I am doing '
-
-   Epoch 313, Step 5930, Loss: 3.4982   Epoch 313, Step 5940, Loss: 3.6178
-   Epoch 313 完成, 平均 Loss: 3.6558, PPL: 38.70
-   Epoch 314, Step 5950, Loss: 3.5077   Epoch 314, Step 5960, Loss: 3.6418
-   Epoch 314 完成, 平均 Loss: 3.6710, PPL: 39.29
-
-   生成示例:
-     'hello' -> 'hellosoon
-laterfor do not hello much
-you are bye
-how are you
-I am doing there
-soon
-so hi sunnyou too fifihello muchsthi laterhearsunnsunnhello nicsunnthere
-hello need '
-     'the' -> 'thehello need hearhi sunnintehearhow are you
-I am doing there
-hello need there
-much
-you are sunndo not do not hello ststthere
-need hearsunnyou too there
-ensunnhi there
-need '
-     'how' -> 'howhello need for fisunnintehearhow are you
-I am doing there
-soon
-laterhi sunnsunndo not do not hello ststthere
-need hearsunnsunnthere
-ensunnhi there
-need '
-
-   Epoch 315, Step 5970, Loss: 3.5434   Epoch 315, Step 5980, Loss: 3.6738
-   Epoch 315 完成, 平均 Loss: 3.6997, PPL: 40.43
-   Epoch 316, Step 5990, Loss: 3.5737   Epoch 316, Step 6000, Loss: 3.7544
-   Epoch 316 完成, 平均 Loss: 3.7463, PPL: 42.36
-
-   生成示例:
-     'hello' -> 'helloneed hi do not how are you
-I am doing nicfineed need how are you
-I am doing fibye how are you
-I am doing muchtake cbye latersunnneed there
-hi nicmuchhow are you
-I am doing inteneed sthow are you
-I am doing muchdo not sunn'
-     'the' -> 'theneed hi hi how are you
-I am doing nichi need bye
-how are you
-I am doing fiso how are you
-I am doing stbye bye need you too need there
-do not nicmuchintemuch
-you are need sthow are you
-I am doing for fisunn'
-     'how' -> 'howneed hi hi how are you
-I am doing nicfineed bye
-how are you
-I am doing fiso how are you
-I am doing stfifineed help me
-so there
-hi nichave how are you
-I am doing inteneed sthow are you
-I am doing muchfisunn'
-
-   Epoch 317, Step 6010, Loss: 3.6951   Epoch 317, Step 6020, Loss: 3.8184
-   Epoch 317 完成, 平均 Loss: 3.7726, PPL: 43.49
-   Epoch 318, Step 6030, Loss: 3.5842   Epoch 318, Step 6040, Loss: 3.7694
-   Epoch 318 完成, 平均 Loss: 3.7505, PPL: 42.54
-
-   生成示例:
-     'hello' -> 'hellosoon
-soon
-need bye
-need how are you
-I am doing soon
-bye soon
-need bye hearthere
-hearso there
-how are you
-I am doing bye so there
-much
-you are sunnsoon
-need help me
-how are you
-I am doing hello latersunnthere
-'
-     'the' -> 'thehello soon
-bye
-bye
-need how are you
-I am doing soon
-bye soon
-need take chearthere
-for laterthere
-how are you
-I am doing bye so there
-sunnsunnthere
-need hello how are you
-I am doing hello so much
-you are hi '
-     'how' -> 'howhello hello need bye
-need how are you
-I am doing fine take cfine need bye for there
-for laterhello how are you
-I am doing take cso there
-intesunnsoon
-need sunnhow are you
-I am doing hello so much
-you are there
-'
-
-   Epoch 319, Step 6050, Loss: 3.9521   Epoch 319, Step 6060, Loss: 4.3262
-   Epoch 319 完成, 平均 Loss: 4.2809, PPL: 72.31
-   Epoch 320, Step 6070, Loss: 4.2884   Epoch 320, Step 6080, Loss: 5.5587
-   Epoch 320 完成, 平均 Loss: 4.1690, PPL: 64.65
-
-   生成示例:
-     'hello' -> 'hellothere
-how are you
-I am doing stvery need need sahelp me
-fihow are you
-I am doing need get have a there
-muchneed need nicneed stneed nicthere
-sunnsunnhapphelp me
-saneed sa'
-     'the' -> 'thethere
-sunnststneed need very there
-need how are you
-I am doing bye
-need happthere
-happneed bye
-sthearstneed stthere
-sunnsunnnichelp me
-have need have '
-     'how' -> 'howthere
-sunnststneed need enthere
-need how are you
-I am doing saneed nicthere
-nicneed hearstsawneed stthere
-sunnsunnnichelp me
-have need have '
-
-   Epoch 321, Step 6090, Loss: 3.7329
-   Epoch 321 完成, 平均 Loss: 3.8032, PPL: 44.84
-   Epoch 322, Step 6100, Loss: 3.4194   Epoch 322, Step 6110, Loss: 3.6321
-   Epoch 322 完成, 平均 Loss: 3.7132, PPL: 40.98
-
-   生成示例:
-     'hello' -> 'hellohelp me
-need bneed sasthappstneed there
-have a need need sunnthere
-have ahave a need wdo not need sunn cstand sahelp me
-gre'
-     'the' -> 'thehelp me
-need bneed very stand stheardo not saneed hearsunnthere
-very ahave hearbneed need help me
- bstgresahelp me
-en'
-     'how' -> 'howthere
-need bneed enwstwsaget and hearsasunnthere
-and  nicsabneed need help me
-abstenhapphelp me
-en'
-
-   Epoch 323, Step 6120, Loss: 3.4947   Epoch 323, Step 6130, Loss: 3.6078
-   Epoch 323 完成, 平均 Loss: 3.6622, PPL: 38.95
-   Epoch 324, Step 6140, Loss: 3.4549   Epoch 324, Step 6150, Loss: 3.5958
-   Epoch 324 完成, 平均 Loss: 3.6312, PPL: 37.76
-
-   生成示例:
-     'hello' -> 'hellostenneed sunnbbneed help me
-need bhow are you
-I am doing stneed hearneed haneed happneed hasastneed happand need stthere
-need p'
-     'the' -> 'theststneed sunnbbneed help me
-need chow are you
-I am doing stneed need need haneed happthere
-hasastneed happhappneed stthere
-need p'
-     'how' -> 'howststneed sunnbbneed help me
-need chow are you
-I am doing stneed need get haneed happthere
-hasastneed happhappneed stthere
-need p'
-
-   Epoch 325, Step 6160, Loss: 3.4195   Epoch 325, Step 6170, Loss: 3.5773
-   Epoch 325 完成, 平均 Loss: 3.6055, PPL: 36.80
-   Epoch 326, Step 6180, Loss: 3.3849   Epoch 326, Step 6190, Loss: 3.5924
-   Epoch 326 完成, 平均 Loss: 3.5838, PPL: 36.01
-   -> 保存最佳模型 (loss=3.5838)
-
-   生成示例:
-     'hello' -> 'hellonicneed hagresunnneed help me
-stneed ensaststget stneed stthere
-enyhahastneed need need stsunngresa'
-     'the' -> 'thestsapstsunnneed there
-yhearstand wstneed ysastthere
-styhayhasaneed hearstsunngrehapp'
-     'how' -> 'howsthapppstsunnneed there
-haneed sthapphastneed hasastthere
-styhayhahearneed hearstsunnenhapp'
-
-   Epoch 327, Step 6200, Loss: 3.4066   Epoch 327, Step 6210, Loss: 3.5964
-   Epoch 327 完成, 平均 Loss: 3.5752, PPL: 35.70
-   -> 保存最佳模型 (loss=3.5752)
-   Epoch 328, Step 6220, Loss: 3.3773   Epoch 328, Step 6230, Loss: 3.5883
-   Epoch 328 完成, 平均 Loss: 3.5730, PPL: 35.62
-   -> 保存最佳模型 (loss=3.5730)
-
-   生成示例:
-     'hello' -> 'hellothere
-stnicneed hapstnicsunnneed bsunnand have need how are you
-I am doing sastwstbgresasacbhaneed stthere
-'
-     'the' -> 'theget hastneed wpstgresunnneed bsunnand nicneed how are you
-I am doing happstystbgresasacbhaneed stthere
-'
-     'how' -> 'howneed hastneed wpstgresunnneed bsunngrenicneed how are you
-I am doing happstwstbgresasacbhaneed stthere
-'
-
-   Epoch 329, Step 6240, Loss: 3.3879   Epoch 329, Step 6250, Loss: 3.6004
-   Epoch 329 完成, 平均 Loss: 3.5694, PPL: 35.50
-   -> 保存最佳模型 (loss=3.5694)
-   Epoch 330, Step 6260, Loss: 3.4106   Epoch 330, Step 6270, Loss: 4.7623
-   Epoch 330 完成, 平均 Loss: 3.5718, PPL: 35.58
-
-   生成示例:
-     'hello' -> 'hellostsunnneed heargreneed sunnstget grebhelp me
-need wneed stbneed hathere
-ststneed haneed  stneed hearst'
-     'the' -> 'thestsunnneed saenneed there
-stneed enbthere
-sachearstbhearwthere
-hastneed yneed  stneed saha'
-     'how' -> 'howstsunnneed saenneed sunnstneed enbthere
-hearphearstbsaythere
-ststneed yneed  stneed hearha'
-
-   Epoch 331, Step 6280, Loss: 3.4315
-   Epoch 331 完成, 平均 Loss: 3.5825, PPL: 35.96
-   Epoch 332, Step 6290, Loss: 3.1656   Epoch 332, Step 6300, Loss: 3.4906
-   Epoch 332 完成, 平均 Loss: 3.6044, PPL: 36.76
-
-   生成示例:
-     'hello' -> 'hellonichaybneed sunnhow are you
-I am doing yneed need pthere
-ststwysagreststand need please
-st fouand stenha'
-     'the' -> 'thegreywbneed sunnhow are you
-I am doing wneed need pthere
-ststphasagreststgreneed need st fouand stenha'
-     'how' -> 'howenwwbneed sunnhow are you
-I am doing wneed need pthere
-ststpysastststgreneed need st fouand ststha'
-
-   Epoch 333, Step 6310, Loss: 3.3979   Epoch 333, Step 6320, Loss: 3.5664
-   Epoch 333 完成, 平均 Loss: 3.6518, PPL: 38.54
-   Epoch 334, Step 6330, Loss: 3.4930   Epoch 334, Step 6340, Loss: 3.6724
-   Epoch 334 完成, 平均 Loss: 3.7485, PPL: 42.46
-
-   生成示例:
-     'hello' -> 'hellogrestsunnthere
-how are you
-I am doing get gresunnand bwhow are you
-I am doing and aneed sahelp me
-happhearaneed aneed there
-sunnsunnstneed sthow are you
-I am doing '
-     'the' -> 'theststsunnthere
-how are you
-I am doing please
-grethere
-grebwhow are you
-I am doing greahearhappthere
-nicsa need ahearplease
-sunnsunnstneed sthow are you
-I am doing '
-     'how' -> 'howststsunnthere
-how are you
-I am doing please
-grethere
-grebwhow are you
-I am doing greahearhappthere
-nichapp need ahearplease
-sunnsunnstneed sthow are you
-I am doing '
-
-   Epoch 335, Step 6350, Loss: 3.6988   Epoch 335, Step 6360, Loss: 3.8743
-   Epoch 335 完成, 平均 Loss: 3.9318, PPL: 51.00
-   Epoch 336, Step 6370, Loss: 3.9373   Epoch 336, Step 6380, Loss: 4.0954
-   Epoch 336 完成, 平均 Loss: 4.1133, PPL: 61.15
-
-   生成示例:
-     'hello' -> 'hellohappneed ststthere
-how are you
-I am doing aneed grethere
-need happyneed pfouenthere
-need nichappgreneed and need stnicsthearfou'
-     'the' -> 'theand hearststneed how are you
-I am doing aneed enthere
-need happyneed pfouenthere
-need nichappgreneed and need stnicsthearfou'
-     'how' -> 'howand hearststneed how are you
-I am doing aneed stthere
-need nicyneed pfouenthere
-need nicnicgreneed greneed stnicsthearfou'
-
-   Epoch 337, Step 6390, Loss: 4.0604   Epoch 337, Step 6400, Loss: 4.1150
-   Epoch 337 完成, 平均 Loss: 4.0818, PPL: 59.25
-   Epoch 338, Step 6410, Loss: 3.7939   Epoch 338, Step 6420, Loss: 3.9394
-   Epoch 338 完成, 平均 Loss: 3.9129, PPL: 50.05
-
-   生成示例:
-     'hello' -> 'hellohave a there
-stneed hearypythere
-bsthow are you
-I am doing sunnhelp me
-phelp me
-and wsthappstststsathere
-need need there
-sunnen'
-     'the' -> 'theenneed asahappsunngrefousaneed stwstsunnsaneed psunnfoupstpbsunnhappneed please
- eny'
-     'how' -> 'howstneed ahearhappsunngrefouhearneed stwstsunnhappneed psunnfoupstwbsunnhappneed need  eny'
-
-   Epoch 339, Step 6430, Loss: 3.6860   Epoch 339, Step 6440, Loss: 3.8502
-   Epoch 339 完成, 平均 Loss: 3.8135, PPL: 45.31
-   Epoch 340, Step 6450, Loss: 3.6634   Epoch 340, Step 6460, Loss: 5.0680
-   Epoch 340 完成, 平均 Loss: 3.8010, PPL: 44.75
-
-   生成示例:
-     'hello' -> 'helloneed need hearneed and bbthere
-anicdo not need how are you
-I am doing aneed haneed need hearyhearhearysastynicwstneed '
-     'the' -> 'thehappvery nichearstbbthere
-agreneed need how are you
-I am doing ahearyneed need sayhappsaysastyand wstneed '
-     'how' -> 'hownichappand sastabhelp me
-agreneed need how are you
-I am doing asayneed need sawsahearysastyand wstneed '
-
-   Epoch 341, Step 6470, Loss: 3.6697
-   Epoch 341 完成, 平均 Loss: 3.8087, PPL: 45.09
-   Epoch 342, Step 6480, Loss: 3.4136   Epoch 342, Step 6490, Loss: 3.7181
-   Epoch 342 完成, 平均 Loss: 3.7925, PPL: 44.37
-
-   生成示例:
-     'hello' -> 'hellowhapphearneed ststis fihearis very need stget aneed fihow are you
-I am doing need is do not how are you
-I am doing and stsunnwneed need hearw'
-     'the' -> 'theastnicneed is styunderstand
-have a stgreneed stneed aneed fihow are you
-I am doing need yget how are you
-I am doing stysunnphearneed happp'
-     'how' -> 'howastnichearyhawneed very ystneed stneed ahearneed how are you
-I am doing need wneed how are you
-I am doing stysunnpneed need sap'
-
-   Epoch 343, Step 6500, Loss: 3.5501   Epoch 343, Step 6510, Loss: 3.7295
-   Epoch 343 完成, 平均 Loss: 3.7702, PPL: 43.39
-   Epoch 344, Step 6520, Loss: 3.6096   Epoch 344, Step 6530, Loss: 3.7504
-   Epoch 344 完成, 平均 Loss: 3.7781, PPL: 43.73
-
-   生成示例:
-     'hello' -> 'hellohow are you
-I am doing need bye hearsunnunderstand
-understand
-sunnfineed bye
-hi hearneed need sunnneed need need do not need have a happvery bye
-need need how are you
-I am doing need hear'
-     'the' -> 'thehow are you
-I am doing need so hearsunnunderstand
-understand
-sunnfineed bye
-hi hearneed need sunnneed need bye
-there
-need happis stmuchneed bye
-how are you
-I am doing hearhave a '
-     'how' -> 'howhow are you
-I am doing need so hearsunnneed need sunnget need muchdo not have a need need sunnneed need heardo not need very is sthave a need hearhow are you
-I am doing muchhave a '
-
-   Epoch 345, Step 6540, Loss: 3.6266   Epoch 345, Step 6550, Loss: 3.8018
-   Epoch 345 完成, 平均 Loss: 3.8156, PPL: 45.40
-   Epoch 346, Step 6560, Loss: 3.6606   Epoch 346, Step 6570, Loss: 3.8964
-   Epoch 346 完成, 平均 Loss: 3.8748, PPL: 48.17
-
-   生成示例:
-     'hello' -> 'hellobye for do not bye bye
-laterlike bluyou blusurlaterto meet you
-understand
-is it
-it is lateris it
-it is suris it
-it is blulateran bye bye an soon
-an an much
-understand
-'
-     'the' -> 'thelove for do not bye for laterhave a fiyou blusurlike bye to meet you
-is it
-it is laterfor you
-I am surfor you
-I am blulike an blubluis to you too
-to to like blu'
-     'how' -> 'howlove for soon
-bye bye
-lateran bluyou blusurlaterto meet you
-understand
-is it
-it is laterfor you
-I am suris it
-it is blulateran bye bye have a to you too
-an an much
-understand
-'
-
-   Epoch 347, Step 6580, Loss: 3.7837   Epoch 347, Step 6590, Loss: 3.9767
-   Epoch 347 完成, 平均 Loss: 3.9609, PPL: 52.50
-   Epoch 348, Step 6600, Loss: 3.8796   Epoch 348, Step 6610, Loss: 4.1290
-   Epoch 348 完成, 平均 Loss: 4.1392, PPL: 62.76
-
-   生成示例:
-     'hello' -> 'helloyou toof course you
-to you
-wiven you youcooto you to you
-suryouyou
-dto Z3yougoing bluyou youyou xlet going you'
-     'the' -> 'theto you surwito youlet to bluyou
-youyou you
-let going you
-wiyouxyou 3surxyou of course you you you
-you
-'
-     'how' -> 'howto you surwiyou
-youwiyou
-bluyou
-you you you
-let going you
-wiyou xyou 3surxyou of course you you you
-you
-'
-
-   Epoch 349, Step 6620, Loss: 4.1822   Epoch 349, Step 6630, Loss: 4.8633
-   Epoch 349 完成, 平均 Loss: 4.8307, PPL: 125.30
-   Epoch 350, Step 6640, Loss: 6.2103   Epoch 350, Step 6650, Loss: 8.0896
-   Epoch 350 完成, 平均 Loss: 6.0672, PPL: 431.46
-
-   生成示例:
-     'hello' -> 'hellowicoolxcoolsuryou you toyou surbluyou
-you
-bluyou
-to you too
-cooyou youyou you you to you
-xelwiyou Xgoing blugoing '
-     'the' -> 'theow cooldcoolsuryou you toyou surbluyou you to you
-you of course going youxyou you youlet Zbluwiyougoing surgoing '
-     'how' -> 'howwicooldcoolsuryou you toyou surbluyou
-you bluyou
-to you too
-cooyou youyou you you surxelwiyou Xgoing to you
-going '
-
-   Epoch 351, Step 6660, Loss: 6.1555
-   Epoch 351 完成, 平均 Loss: 5.7444, PPL: 312.43
-   Epoch 352, Step 6670, Loss: 5.5819   Epoch 352, Step 6680, Loss: 6.0638
-   Epoch 352 完成, 平均 Loss: 5.8933, PPL: 362.60
-
-   生成示例:
-     'hello' -> 'helloyoulet you
-you
-to going you you wito you
-you you
-to you bluyou you
-you elcooxyouyou
-you of wiyou
-ow of course '
-     'the' -> 'thexloyou
-you
-to going you youto to you you you
-to you bluyouyou you elcooxyouyou you let ow you
-to of course '
-     'how' -> 'howxlet you
-you
-to going you youow to you
-you you
-to you bluyou you
-you blucooxyouyou
-you of wiyou
-to of course '
-
-   Epoch 353, Step 6690, Loss: 5.6501   Epoch 353, Step 6700, Loss: 5.7513
-   Epoch 353 完成, 平均 Loss: 5.5307, PPL: 252.31
-   Epoch 354, Step 6710, Loss: 5.2703   Epoch 354, Step 6720, Loss: 5.0942
-   Epoch 354 完成, 平均 Loss: 4.9553, PPL: 141.93
-
-   生成示例:
-     'hello' -> 'hellodyou it
-you you elexof course you you coolyou
-wiof elit
-you
-dyouyou
-of of course to going you it
-you
-you you
-you'
-     'the' -> 'thedyou exyou you elexof course you you coolyou
-wiof elit
-you
-Xyouyou
-let elto going you it
-you
-you you
-you'
-     'how' -> 'howdyou it
-you you elexof course you you coolyou
-wiof elit
-you
-dyouyou
-let elto going you it
-you
-you you
-you'
-
-   Epoch 355, Step 6730, Loss: 4.5370   Epoch 355, Step 6740, Loss: 4.5571
-   Epoch 355 完成, 平均 Loss: 4.5309, PPL: 92.84
-   Epoch 356, Step 6750, Loss: 4.3788   Epoch 356, Step 6760, Loss: 4.4076
-   Epoch 356 完成, 平均 Loss: 4.3646, PPL: 78.61
-
-   生成示例:
-     'hello' -> 'hellowixwilodyou
-suryou of youyou
-coolyou how can I you dow you you to coolyou xdgoing wiyouyou
-you you'
-     'the' -> 'thewixwilodyou
-you toyou of youyou
-coolyou how can I you dto you youyou
-coolyou xdgoing wiyouyou
-you you'
-     'how' -> 'howwixwilodyou
-you toyou of youyou
-coolyou how can I you dow you you you
-coolyou youdgoing wiyouyou
-you you'
-
-   Epoch 357, Step 6770, Loss: 4.2133   Epoch 357, Step 6780, Loss: 4.2826
-   Epoch 357 完成, 平均 Loss: 4.2415, PPL: 69.51
-   Epoch 358, Step 6790, Loss: 4.1538   Epoch 358, Step 6800, Loss: 4.2205
-   Epoch 358 完成, 平均 Loss: 4.1823, PPL: 65.52
-
-   生成示例:
-     'hello' -> 'hellodyou elyou
-surof course of you
-coolyou
-Xwigoing dyouyou youyou dyou toyou
-you
-you
-of course cooyoudyou '
-     'the' -> 'thedyou elyou
-elhow can I let you
-coolyou
-Xwigoing dyouyou youyou dof you
-you you
-of course cooxdyou '
-     'how' -> 'howdyouyou toyou
-you toof course let you
-coolyou
-dit
-going dyouyou youyou xyou toyou
-you
-you
-of course cooyouxyou '
-
-   Epoch 359, Step 6810, Loss: 4.0015   Epoch 359, Step 6820, Loss: 4.1606
-   Epoch 359 完成, 平均 Loss: 4.1231, PPL: 61.75
-   Epoch 360, Step 6830, Loss: 4.2513   Epoch 360, Step 6840, Loss: 5.6807
-   Epoch 360 完成, 平均 Loss: 4.2605, PPL: 70.85
-
-   生成示例:
-     'hello' -> 'hellodfulyou d3youof course you you toyou
-wiow of let of youdyou
-Zyou you 3dyou
-you Xof you you'
-     'the' -> 'thedfulyou dXyouof course you let you
-wiow of let let youdyou
-Zyou you 3dyou
-you Xof you you'
-     'how' -> 'howdfulyou dXyouof course you of you
-wiow you toof of you dyou
-dyou you 3dyou
-you Zof you you'
-
-   Epoch 361, Step 6850, Loss: 4.1004
-   Epoch 361 完成, 平均 Loss: 4.2982, PPL: 73.57
-   Epoch 362, Step 6860, Loss: 4.9267   Epoch 362, Step 6870, Loss: 5.4731
-   Epoch 362 完成, 平均 Loss: 5.2312, PPL: 187.03
-
-   生成示例:
-     'hello' -> 'hellolet youow how can I of course xof course help of you
-dow elyou help dof course going widhelp youwiyoulet you youyou wiyou'
-     'the' -> 'thehelp youow of course how can I xof course let of you
-dow elyou help dof course going widhelp youwiyoulet you xyou wiyou'
-     'how' -> 'howhelp youow of course how can I xof course fulof you
-dow elyou let dof course going widhelp youwiyoulet you youyou help you'
-
-   Epoch 363, Step 6880, Loss: 4.8586   Epoch 363, Step 6890, Loss: 5.6038
-   Epoch 363 完成, 平均 Loss: 5.7886, PPL: 326.56
-   Epoch 364, Step 6900, Loss: 5.6199   Epoch 364, Step 6910, Loss: 5.2127
-   Epoch 364 完成, 平均 Loss: 5.3417, PPL: 208.87
-
-   生成示例:
-     'hello' -> 'hellowiyou of course it
-wiyou
-of course going you dlet you ow wiyou you
-you going youcoolcoolet ow el3ow you
-coo'
-     'the' -> 'thewiyou elwiwiyou
-of course how can I you dlet you you
-wiyou you
-you going xcoogoing it
-you
-of 3you
-you
-coo'
-     'how' -> 'howwiyou elit
-wiow elof course you xlet you ow wiyou you
-you going youcoolcoolet wiel3wiyou
-coo'
-
-   Epoch 365, Step 6920, Loss: 5.6999   Epoch 365, Step 6930, Loss: 5.6527
-   Epoch 365 完成, 平均 Loss: 5.5077, PPL: 246.58
-   Epoch 366, Step 6940, Loss: 5.1675   Epoch 366, Step 6950, Loss: 5.1275
-   Epoch 366 完成, 平均 Loss: 5.0314, PPL: 153.15
-
-   生成示例:
-     'hello' -> 'helloyouow let you
-going youhow can I elgoing you
-dlet delow you dyou toyouxyou Zof course ellet xxyouyou '
-     'the' -> 'thexyou
-let you
-going youhow can I elgoing you
-dlet delow you dof youdyou Xof course ellet dxyouyou '
-     'how' -> 'howyouow fulyou
-going youhow can I elgoing you
-dlet delow you dyou to3youxyou Zof course elof xyouyouyou '
-
-   Epoch 367, Step 6960, Loss: 4.8239   Epoch 367, Step 6970, Loss: 4.8387
-   Epoch 367 完成, 平均 Loss: 4.7594, PPL: 116.67
-   Epoch 368, Step 6980, Loss: 4.6111   Epoch 368, Step 6990, Loss: 4.6599
-   Epoch 368 完成, 平均 Loss: 4.6016, PPL: 99.65
-
-   生成示例:
-     'hello' -> 'helloyou
-you togoing how can I you
-you
-elcoolyou
-going xyou youyou
-wiyou youyouyou cooldyou elyoudyou
-you ow you'
-     'the' -> 'theyou
-you togoing how can I you
-you
-elcoolyou
-going xyou youyou
-wiyou youyouyou cooldyou elyoudyou you you
-x'
-     'how' -> 'howyou
-you togoing how can I you
-you
-elcoolyou
-going xyou youyou
-wiyou youyouyou cooldyou elyoudyou
-you ow you'
-
-   Epoch 369, Step 7000, Loss: 4.4661   Epoch 369, Step 7010, Loss: 4.5435
-   Epoch 369 完成, 平均 Loss: 4.4868, PPL: 88.84
-   Epoch 370, Step 7020, Loss: 4.3627   Epoch 370, Step 7030, Loss: 5.8603
-   Epoch 370 完成, 平均 Loss: 4.3952, PPL: 81.06
-
-   生成示例:
-     'hello' -> 'hellohelp Xyou of course you you togoing you Xyou
-let you going you
-dZhow can I you
-of course you xyou
-you going ddZyou d'
-     'the' -> 'thewidyou elyou you togoing you Xwilet you going you
-dZhow can I you
-of course you xyou
-you going ddZyou d'
-     'how' -> 'howwiXyou elyou you togoing you Zyou
-let you going you
-dZhow can I you
-of course you xyou
-you going ddZyou d'
-
-   Epoch 371, Step 7040, Loss: 4.2746
-   Epoch 371 完成, 平均 Loss: 4.3147, PPL: 74.79
-   Epoch 372, Step 7050, Loss: 4.0891   Epoch 372, Step 7060, Loss: 4.2278
-   Epoch 372 完成, 平均 Loss: 4.2485, PPL: 70.00
-
-   生成示例:
-     'hello' -> 'helloyouof of you yougoing you
-let coolyou of eldyouyou
-you you you going elof course coodZd3let dxyou
-'
-     'the' -> 'theyouof let you yougoing you
-help coolyou of eldyouyou
-you you you going elof course cooZVd3of dxyou
-'
-     'how' -> 'howyouof let you yougoing you
-let coolyou of eldyouyou
-you you you going elof course cooddd3let dyouyou
-'
-
-   Epoch 373, Step 7070, Loss: 4.0424   Epoch 373, Step 7080, Loss: 4.1817
-   Epoch 373 完成, 平均 Loss: 4.1969, PPL: 66.48
-   Epoch 374, Step 7090, Loss: 3.9983   Epoch 374, Step 7100, Loss: 4.1497
-   Epoch 374 完成, 平均 Loss: 4.1615, PPL: 64.17
-
-   生成示例:
-     'hello' -> 'helloof you you
-dyou
-elyou you help you toyou tocoolyouyou
-Xyou toyou
-coowiyou
-wixyou Vyou
-going you
-you del'
-     'the' -> 'thehelp you you dyou
-elyou you help you toyou tocoolyouyou
-Vyou toyou
-coowiyou widyou Vyou
-going you
-you Xel'
-     'how' -> 'howhelp you you
-dyou
-elyou
-you help you toyou tocoolyouyou
-Xyou toyou
-coowiyou
-wixyou Vyou
-going you
-you del'
-
-   Epoch 375, Step 7110, Loss: 4.0183   Epoch 375, Step 7120, Loss: 4.1986
-   Epoch 375 完成, 平均 Loss: 4.2293, PPL: 68.67
-   Epoch 376, Step 7130, Loss: 4.4923   Epoch 376, Step 7140, Loss: 5.2769
-   Epoch 376 完成, 平均 Loss: 5.3419, PPL: 208.91
-
-   生成示例:
-     'hello' -> 'hellobye
-so lateryou bye need stis it
-it is bye stis it
-it is need pleased bye am soon
-muchsunnsunnneed bye
-pleasam have a sunnpleased muchi bye
-much'
-     'the' -> 'theyou help you delyou
-Xthat you
-Xelyou
-going help 3help youyou tothat wiyou
-you dyouof of course bye
-lateryou
-bye
-'
-     'how' -> 'howyou wiyou dthat you
-dthat you
-dthat you
-going wi3wiyouyou topeyou
-you ddyouof of course youyou
-you you '
-
-   Epoch 377, Step 7150, Loss: 6.0376   Epoch 377, Step 7160, Loss: 5.8750
-   Epoch 377 完成, 平均 Loss: 5.7579, PPL: 316.69
-   Epoch 378, Step 7170, Loss: 5.5888   Epoch 378, Step 7180, Loss: 5.4558
-   Epoch 378 完成, 平均 Loss: 5.3673, PPL: 214.29
-
-   生成示例:
-     'hello' -> 'hellosunnfihi how are you
-I am doing pleashow are you
-I am doing sthow are you
-I am fine how are you
-I am doing how are you
-I am doing how are you
-I am doing muchfor bye
-thank you so bye bye
-sunnneed need soon
-sunntasthappy happneed happsunnbye
-'
-     'the' -> 'thewiof you
-that deldcoolelelelxdyou coolyou
-you that you
-you
-it
-you toyou youyou
-you you
-you let you
-'
-     'how' -> 'howme you toyou
-you todeldcoolelelelxdyou coolyou
-you that you
-you
-it
-you toyou youyou
-you you
-you let you
-'
-
-   Epoch 379, Step 7190, Loss: 5.3460   Epoch 379, Step 7200, Loss: 5.2633
-   Epoch 379 完成, 平均 Loss: 5.1925, PPL: 179.92
-   Epoch 380, Step 7210, Loss: 5.1913   Epoch 380, Step 7220, Loss: 6.7680
-   Epoch 380 完成, 平均 Loss: 5.0760, PPL: 160.13
-
-   生成示例:
-     'hello' -> 'hellosunnfor fisunnhow are you
-I am doing fithere
-bye
-bye
-there
-bye
-hi sunnhappy need pleased i soon
-there
-stmuchstmuchsunnsunnunthere
-muchoon
-bye
-'
-     'the' -> 'theyou todyou
-you toelyou
-you
-you you you
-you you
-let you
-you of course you
-to wiyouyou you you
-you toelyou of you you
-you
-'
-     'how' -> 'howyou todyou
-you toelyou
-you
-you you you
-you you
-of you
-you
-of course you
-you
-wiyouyou you you you toelyou let you you
-you
-'
-
-   Epoch 381, Step 7230, Loss: 5.0731
-   Epoch 381 完成, 平均 Loss: 4.9825, PPL: 145.84
-   Epoch 382, Step 7240, Loss: 5.0022   Epoch 382, Step 7250, Loss: 4.9732
-   Epoch 382 完成, 平均 Loss: 4.8993, PPL: 134.20
-
-   生成示例:
-     'hello' -> 'hellobye
-sunnhow are you
-I am doing sunnthere
-pleasthere
-sunnbye
-how are you
-I am doing bye
-stpleased soon
-bye
-sunnneed how are you
-I am doing sunnstneed stam mucham unmuchbye
-sunnmuch'
-     'the' -> 'theyou to meet you
-fibye there
-stneed soon
-stpleased happstassistant
-there
-muchthat bye
-how are you
-I am doing sunnstneed stam mucham sthappoon
-sunnmuch'
-     'how' -> 'howyou you toof course of to youme let youelyou xcoolit
-you you toyou
-of course of youwiyoudyou dyou you you
-to you
-bye
-'
-
-   Epoch 383, Step 7260, Loss: 4.9327   Epoch 383, Step 7270, Loss: 4.8797
-   Epoch 383 完成, 平均 Loss: 4.8117, PPL: 122.94
-   Epoch 384, Step 7280, Loss: 4.7953   Epoch 384, Step 7290, Loss: 4.7697
-   Epoch 384 完成, 平均 Loss: 4.7096, PPL: 111.01
-
-   生成示例:
-     'hello' -> 'hellohearyou bye
-stbye
-sti pleased how are you
-I am doing tabye
-sunnfor how are you
-I am doing hearlike tathank you so need soon
-muchwawahappassistant
-stneed sunnstst'
-     'the' -> 'theyou welcofor muchbye
-stneed pleased how are you
-I am doing unhearelsthow are you
-I am doing muchlaterbye
-thank you so need sunnmuchwawahapppleased stneed sunnstst'
-     'how' -> 'howyou you xdyou tto coolhow can I you you
-you todof course you it
-you coolyou
-elyou
-of course of course you coolyoulet to you
-bye
-hear'
-
-   Epoch 385, Step 7300, Loss: 4.6398   Epoch 385, Step 7310, Loss: 4.6360
-   Epoch 385 完成, 平均 Loss: 4.5766, PPL: 97.18
-   Epoch 386, Step 7320, Loss: 4.4433   Epoch 386, Step 7330, Loss: 4.4859
-   Epoch 386 完成, 平均 Loss: 4.4206, PPL: 83.15
-
-   生成示例:
-     'hello' -> 'hellohow are you
-I am doing take care
-am am soon
-sunnthere
-muchsunnthank you so thank you so take care
-happsthow are you
-I am doing need sunnsunnneed pleasneed pleashearmuchneed am happmuchassistant
-need '
-     'the' -> 'thecoollet ddlet you tolet you elcoolcoolyou toyou xof course you
-elto meet you
-need stlet you muchyou
-need dyou tagoing help '
-     'how' -> 'howhow can I let ddlet you tolet you elcoolcoolyou toyou xof course you
-elellike you let you you
-you
-like dyou you going help '
-
-   Epoch 387, Step 7340, Loss: 4.2860   Epoch 387, Step 7350, Loss: 4.3524
-   Epoch 387 完成, 平均 Loss: 4.2921, PPL: 73.12
-   Epoch 388, Step 7360, Loss: 4.1488   Epoch 388, Step 7370, Loss: 4.2643
-   Epoch 388 完成, 平均 Loss: 4.2211, PPL: 68.11
-
-   生成示例:
-     'hello' -> 'hellobye
-bye
-take care
-hearpleased there
-soon
-am stbye
-am bye
-how are you
-I am doing muchheargood afternneed muchmuchhow are you
-I am doing pleased need happbye
-stbye
-unsoon
-good afternhow are you
-I am doing '
-     'the' -> 'theyou wigoing for pleased soon
-soon
-stfor bye
-am bye
-how are you
-I am doing hearbye
-how are you
-I am doing happy bye
-hearhow are you
-I am doing pleased bye
-happhearsthearstthere
-sunnhow are you
-I am doing '
-     'how' -> 'howyou you to meet you
-muchcoollet let dxyou dyou
-of course you you
-of course it
-you you
-how are you
-I am doing pleased bye muchhearxyou
-unsoon
-good afternhow are you
-I am doing '
-
-   Epoch 389, Step 7380, Loss: 4.1050   Epoch 389, Step 7390, Loss: 4.2113
-   Epoch 389 完成, 平均 Loss: 4.1673, PPL: 64.54
-   Epoch 390, Step 7400, Loss: 4.0652   Epoch 390, Step 7410, Loss: 5.4802
-   Epoch 390 完成, 平均 Loss: 4.1102, PPL: 60.96
-
-   生成示例:
-     'hello' -> 'hellopleased muchmuch
-bye
-muchhearbye
-bye
-pleased pleassthow are you
-I am doing there
-need how are you
-I am doing sunnpleassoon
-thank you so how are you
-I am doing happbye
-bye
-there
-hearbye
-good afternmuchsoon
-how are you
-I am doing '
-     'the' -> 'thecoolxyouyou you you you you
-coolyouxhow can I help you
-of course you toyoulike coolhow can I you you
-you
-help you you
-elyou let of course '
-     'how' -> 'howcoolxyouyou you you you you
-coolyouxhow can I help you
-of course you toyoulet coolhow can I you you
-you
-help you you
-elyou let of course '
-
-   Epoch 391, Step 7420, Loss: 4.0310
-   Epoch 391 完成, 平均 Loss: 4.0760, PPL: 58.91
-   Epoch 392, Step 7430, Loss: 3.8700   Epoch 392, Step 7440, Loss: 4.0414
-   Epoch 392 完成, 平均 Loss: 4.0626, PPL: 58.12
-
-   生成示例:
-     'hello' -> 'hellofibye bye take care
-am need good afternsunnbye
-how are you
-I am doing sthearfor stsoon
-stsoon
-bye
-laterhow are you
-I am doing bye
-good afternthank you so happpleased how are you
-I am doing bye
-hearhearsunn'
-     'the' -> 'thecoolelit
-of dyou
-elelyou
-of course youyou
-you youelyoulet you
-wiof course you
-of course coolyou going of course you
-you you
-you to'
-     'how' -> 'howcoolof course wiof dyou
-elelyou
-of course youyou
-you youelyoulet you
-wiof course you
-of course coolyou going of course you
-you you
-to you
-'
-
-   Epoch 393, Step 7450, Loss: 3.9337   Epoch 393, Step 7460, Loss: 4.0869
-   Epoch 393 完成, 平均 Loss: 4.1076, PPL: 60.80
-   Epoch 394, Step 7470, Loss: 4.0956   Epoch 394, Step 7480, Loss: 4.2669
-   Epoch 394 完成, 平均 Loss: 4.2926, PPL: 73.15
-
-   生成示例:
-     'hello' -> 'hellocoolcoolyou coolyou you
-to meet you
-coollike you youdyou
-you you going you
-to you it
-you xof course of of course to meet you
-you you blud'
-     'the' -> 'thegoing coolyou coolyou you
-you tocoollike you youdyou
-you you going you
-you
-you wiyou xof course let of course to meet you
-you you blud'
-     'how' -> 'howgoing coolyou coolyou you
-you tocoolhelp you youdyou
-you you going you
-you
-you me you xof course let of course to meet you
-you you to meet you
-I'
-
-   Epoch 395, Step 7490, Loss: 4.3303   Epoch 395, Step 7500, Loss: 4.4114
-   Epoch 395 完成, 平均 Loss: 4.4865, PPL: 88.81
-   Epoch 396, Step 7510, Loss: 4.6878   Epoch 396, Step 7520, Loss: 4.5389
-   Epoch 396 完成, 平均 Loss: 4.4405, PPL: 84.82
-
-   生成示例:
-     'hello' -> 'hellocoolyou of coolxdyou you
-dgoing you to help you
-you elyou
-you of course wiof course coolyou
-you help of of course you it
-cool'
-     'the' -> 'thecoolyou let coolxdyou you
-dgoing you to it
-you
-you elyou
-you of course me of course coolyou
-you it
-let of course you it
-cool'
-     'how' -> 'howcoolyou let coolxdyou you
-dgoing you to help you
-you elyou
-you of course me of course coolyou
-you it
-let of course you it
-cool'
-
-   Epoch 397, Step 7530, Loss: 4.3882   Epoch 397, Step 7540, Loss: 4.3381
-   Epoch 397 完成, 平均 Loss: 4.2592, PPL: 70.75
-   Epoch 398, Step 7550, Loss: 3.9522   Epoch 398, Step 7560, Loss: 4.0648
-   Epoch 398 完成, 平均 Loss: 4.0271, PPL: 56.10
-
-   生成示例:
-     'hello' -> 'hellocoolof course of course you toyou of course to meet you
-dyou you you let you let you let like elyou you you let you bluyou
-like of coolyou
-you '
-     'the' -> 'thehow can I of course of course of you of course to meet you
-dyou you you let you let you let let elyou you you let you bluyou
-like of coolyou
-you '
-     'how' -> 'howhow can I of course of course of you of course you todyou you you like you like you like like elyou you you let you to meet you
-you
-like of coolyou
-you '
-
-   Epoch 399, Step 7570, Loss: 3.8844   Epoch 399, Step 7580, Loss: 4.0155
-   Epoch 399 完成, 平均 Loss: 3.9724, PPL: 53.11
-   Epoch 400, Step 7590, Loss: 3.8806   Epoch 400, Step 7600, Loss: 5.2858
-   Epoch 400 完成, 平均 Loss: 3.9643, PPL: 52.68
-
-   生成示例:
-     'hello' -> 'hellocoolyouyou you toyouxyou
-you
-you dyou let how can I ellet wiyou let suryouhow can I like you
-how can I let it
-you
-youyou you '
-     'the' -> 'thecoolxyou let youxyou
-you
-you dyou like of course ellet wiyou like you toyou of course help you
-of course let it
-you
-youyou you '
-     'how' -> 'howcoolxyou let youxyou
-you
-you dyou like how can I ellet me you like you toyou how can I help you
-of course let it
-you
-youyou you '
-
-   Epoch 401, Step 7610, Loss: 3.8794
-   Epoch 401 完成, 平均 Loss: 3.9557, PPL: 52.23
-   Epoch 402, Step 7620, Loss: 3.7660   Epoch 402, Step 7630, Loss: 3.8823
-   Epoch 402 完成, 平均 Loss: 3.9277, PPL: 50.79
-
-   生成示例:
-     'hello' -> 'helloyouyou you of you
-you togoing elyouyou you like like coolyouyou
-you how can I you youlike wiyou
-dyou
-to you
-let coollike '
-     'the' -> 'thexyou you let you
-you togoing elyouyou you like like coolyou you
-you of course you youlike me you
-dyou
-to you
-let coolhelp '
-     'how' -> 'howxyou you let you
-of going elyouyou you like help coolyou you
-you of course you youlike to you
-dyou
-you
-you
-let coolhelp '
-
-   Epoch 403, Step 7640, Loss: 3.7339   Epoch 403, Step 7650, Loss: 3.8642
-   Epoch 403 完成, 平均 Loss: 3.8925, PPL: 49.04
-   Epoch 404, Step 7660, Loss: 3.6887   Epoch 404, Step 7670, Loss: 3.8392
-   Epoch 404 完成, 平均 Loss: 3.8603, PPL: 47.48
-
-   生成示例:
-     'hello' -> 'hellodyou
-you
-going you like you
-you
-you youto meet you
-to meet you
-suryou you to meet you
-going you
-let you how can I you you wibluhow can I you coolyou you
-'
-     'the' -> 'thedyou
-you
-how can I you like you
-you
-you youto meet you
-to you
-you toyou you to you
-coolyou
-like you how can I you you wito meet you
-how can I you coolyou
-you
-'
-     'how' -> 'howdyou
-you
-how can I you help you
-you
-you youto meet you
-to you
-you toyou youto you
-going you
-like you how can I you you you
-to meet you
-how can I you
-going you
-you
-'
-
-   Epoch 405, Step 7680, Loss: 3.7071   Epoch 405, Step 7690, Loss: 3.8234
-   Epoch 405 完成, 平均 Loss: 3.8328, PPL: 46.19
-   Epoch 406, Step 7700, Loss: 3.7061   Epoch 406, Step 7710, Loss: 3.8302
-   Epoch 406 完成, 平均 Loss: 3.8104, PPL: 45.17
-
-   生成示例:
-     'hello' -> 'helloit
-you you you
-you
-you coolyou
-you toyou
-you you how can I you youlet you
-you you to you
-you let of course help you
-you coolit
-youto meet you
-'
-     'the' -> 'thehelp you you you
-you
-you coolyou
-of you
-you you how can I you youlike you
-you you to you
-you let of course like you
-you
-going it
-youto meet you
-'
-     'how' -> 'howit
-you you you
-you
-you coolyou
-of you
-you you how can I you youlike you
-you you to you
-you let of course like you
-you going it
-youto meet you
-'
-
-   Epoch 407, Step 7720, Loss: 3.7238   Epoch 407, Step 7730, Loss: 3.8276
-   Epoch 407 完成, 平均 Loss: 3.7927, PPL: 44.38
-   Epoch 408, Step 7740, Loss: 3.6624   Epoch 408, Step 7750, Loss: 3.8081
-   Epoch 408 完成, 平均 Loss: 3.7800, PPL: 43.81
-
-   生成示例:
-     'hello' -> 'helloyou coolyou you
-to you
-you
-youyou tolike you elyou let coolit
-Iwiwisuryou toyou it
-you
-you you you youyou of course sur'
-     'the' -> 'theyou
-of course dlet you you how can I xyou
-you toelyou
-dyou
-xcoolyou you going of course how can I you
-let help of course to you
-bluelcoolx'
-     'how' -> 'howyou
-of course dlet you you how can I xyou
-of of course you
-dyou
-xcoolyou you going of course how can I you
-let help of course to meet you
-to meet you
-elcoolx'
-
-   Epoch 409, Step 7760, Loss: 3.6588   Epoch 409, Step 7770, Loss: 3.8095
-   Epoch 409 完成, 平均 Loss: 3.7723, PPL: 43.48
-   Epoch 410, Step 7780, Loss: 3.6648   Epoch 410, Step 7790, Loss: 5.0277
-   Epoch 410 完成, 平均 Loss: 3.7708, PPL: 43.41
-
-   生成示例:
-     'hello' -> 'helloyouyougoing let coolelcoolgoing you
-coolof course you
-you let to you you like dyou
-you you elyou xyou you
-you
-you cool'
-     'the' -> 'theyouyouhow can I help coolelcoolof course you
-coolelyou
-you let wiyou
-you like Iyou
-youyou elyou xyou you
-you
-you cool'
-     'how' -> 'howxyouhow can I help coolelcoolof course you
-coolof course you
-you let to you
-you like Iyou
-youyou elyou xyou you
-you
-you cool'
-
-   Epoch 411, Step 7800, Loss: 3.6808
-   Epoch 411 完成, 平均 Loss: 3.7771, PPL: 43.69
-   Epoch 412, Step 7810, Loss: 3.5514   Epoch 412, Step 7820, Loss: 3.7380
-   Epoch 412 完成, 平均 Loss: 3.7950, PPL: 44.48
-
-   生成示例:
-     'hello' -> 'hellolike of course elyouyou you
-it
-you suryou you
-elyou
-elyou
-you toyou you
-help of course ellet of course you you let xcooldgoing '
-     'the' -> 'thelet of course elyouyou you
-help you suryou you
-of course you
-elyou
-you toyou you
-help of course of course let of course you you let dcooldhow can I '
-     'how' -> 'howlike of course elyouyou you
-it
-you suryou you
-of course you
-elyou
-you toyou you
-help of course of course let of course you you let xcooldhow can I '
-
-   Epoch 413, Step 7830, Loss: 3.6336   Epoch 413, Step 7840, Loss: 3.7844
-   Epoch 413 完成, 平均 Loss: 3.8295, PPL: 46.04
-   Epoch 414, Step 7850, Loss: 3.7134   Epoch 414, Step 7860, Loss: 3.8388
-   Epoch 414 完成, 平均 Loss: 3.8832, PPL: 48.58
-
-   生成示例:
-     'hello' -> 'hellowiyou
-it
-you
-youyou you
-coolcoolxyou
-dyou
-dyou
-wiyou
-you
-you
-you
-like of course you you let xof course to you
-you
-you to'
-     'the' -> 'theit
-you
-to you
-dyou
-you
-coolcooltyou
-dyou
-dyou
-wiyou
-you
-you
-you
-like of course you you let xof course suryou
-let '
-     'how' -> 'howwiyou
-wiyou
-dyou
-you
-coolcoolxyou
-Iyou
-dyou
-wiyou
-you
-you
-you
-like of course you you let xof course suryou
-you to'
-
-   Epoch 415, Step 7870, Loss: 3.8362   Epoch 415, Step 7880, Loss: 3.9254
-   Epoch 415 完成, 平均 Loss: 3.9452, PPL: 51.69
-   Epoch 416, Step 7890, Loss: 3.9612   Epoch 416, Step 7900, Loss: 4.0284
-   Epoch 416 完成, 平均 Loss: 3.9856, PPL: 53.82
-
-   生成示例:
-     'hello' -> 'hellolike you you
-elyou to you elyou
-to meet you
-coolyou
-you you you
-you
-youyou toyou
-Iof course you elyou
-of course coolIof course you let '
-     'the' -> 'thelike you you
-elyou to youelyou
-to meet you
-coolyou
-you you you
-you
-youyou toyou
-Ielyou bluyou
-of course coolIof course you like '
-     'how' -> 'howlike you you
-elyou you
-youof course you
-blucoolyou
-you you you
-you
-youyou toyou
-Ielyou elyou
-of course coolIof course you like '
-
-   Epoch 417, Step 7910, Loss: 3.9147   Epoch 417, Step 7920, Loss: 3.9868
-   Epoch 417 完成, 平均 Loss: 3.9404, PPL: 51.44
-   Epoch 418, Step 7930, Loss: 3.6731   Epoch 418, Step 7940, Loss: 3.8228
-   Epoch 418 完成, 平均 Loss: 3.8012, PPL: 44.76
-
-   生成示例:
-     'hello' -> 'hellowigoing you you youhow can I youto help you dhelp elyou
-going questionelelyou like like to help going questiongoing of course like xyou
-'
-     'the' -> 'thewiof course you youyouof course xto it
-you Ilike elyou
-of course finelelyou like like to like of course to meet you
-how can I of course let xyou
-'
-     'how' -> 'howme how can I you youxof course dyou
-help you Ihelp elyou
-how can I finelelyou like like you
-help of course surhow can I of course like xyou
-'
-
-   Epoch 419, Step 7950, Loss: 3.5416   Epoch 419, Step 7960, Loss: 3.7319
-   Epoch 419 完成, 平均 Loss: 3.6970, PPL: 40.33
-   Epoch 420, Step 7970, Loss: 3.5100   Epoch 420, Step 7980, Loss: 4.8697
-   Epoch 420 完成, 平均 Loss: 3.6523, PPL: 38.56
-
-   生成示例:
-     'hello' -> 'helloyou you it
-youyou youhelp going you
-you
-you
-you dxyou
-you you youyou you of course you
-you toIyou
-of course coollet to meet you
-you '
-     'the' -> 'theyouyouto xyou
-xhelp going you
-you
-you
-youdxyou
-you you
-youyou youelyou
-you toIyou
-elcoollet to meet you
-you '
-     'how' -> 'howyouyoume xyou xit
-going you
-you
-you
-youdtyou
-you you
-youyou youelyou
-you toIyou
-elcoollet to meet you
-you
-'
-
-   Epoch 421, Step 7990, Loss: 3.5074
-   Epoch 421 完成, 平均 Loss: 3.6412, PPL: 38.14
-   Epoch 422, Step 8000, Loss: 3.2509   Epoch 422, Step 8010, Loss: 3.5561
-   Epoch 422 完成, 平均 Loss: 3.6467, PPL: 38.35
-
-   生成示例:
-     'hello' -> 'helloyou toyou you
-wilet you you toto meet you
-coolhelp you
-youyou you you
-you
-you
-how can I you
-it
-wiof course of course help you to meet you
-you bluyouyou '
-     'the' -> 'thelet you
-you
-you
-like you let to meet you
-coolhelp you
-youyou you you
-you
-you
-of course you
-help it
-elelhelp you to meet you
-you elyouyou '
-     'how' -> 'howxelyou you
-youcoolto it
-you toyou xyou toyou you toyou
-coolwiyou youyou like help to Iyou
-finyou Iyou it
-'
-
-   Epoch 423, Step 8020, Loss: 3.3944   Epoch 423, Step 8030, Loss: 3.5936
-   Epoch 423 完成, 平均 Loss: 3.6590, PPL: 38.82
-   Epoch 424, Step 8040, Loss: 3.4565   Epoch 424, Step 8050, Loss: 3.6239
-   Epoch 424 完成, 平均 Loss: 3.6715, PPL: 39.31
-
-   生成示例:
-     'hello' -> 'hellolet you
-you tobluyou
-it
-help Iyou coolwiyou toelgoing you you
-youyou
-you suryou
-youyou youyouyou you
-help you
-it
-'
-     'the' -> 'thehelp you
-like to meet you
-you
-it
-like Iyou coolto you toelgoing you you
-youyou
-you you toyou
-youyou youyouyou you
-help you
-you
-'
-     'how' -> 'howhelp you
-like to meet you
-you
-help like Iyou coolwiyou toelgoing you you
-youyou
-you suryou
-youyou youyouyou you
-help you
-it
-'
-
-   Epoch 425, Step 8060, Loss: 3.4912   Epoch 425, Step 8070, Loss: 3.6500
-   Epoch 425 完成, 平均 Loss: 3.6791, PPL: 39.61
-   Epoch 426, Step 8080, Loss: 3.5087   Epoch 426, Step 8090, Loss: 3.6915
-   Epoch 426 完成, 平均 Loss: 3.6777, PPL: 39.56
-
-   生成示例:
-     'hello' -> 'helloyou you let to meet you
-to meet you
-you to meet you
-be let you you you help you of course to meet you
-you toto meet you
-you bluit
-Iyou you blulet it
-to you
-you cool'
-     'the' -> 'theyou you like to meet you
-you toyou finof course help you you you wiyouto meet you
-to meet you
-you tofinyou to you
-help Iyou you to meet you
-you tohelp you toyou cool'
-     'how' -> 'howyou you it
-to meet you
-you toyou finof course help you you you to youto meet you
-to meet you
-you tosuryou to you
-let Iyou you blulet help you toyou cool'
-
-   Epoch 427, Step 8100, Loss: 3.5130   Epoch 427, Step 8110, Loss: 3.6896
-   Epoch 427 完成, 平均 Loss: 3.6651, PPL: 39.06
-   Epoch 428, Step 8120, Loss: 3.4633   Epoch 428, Step 8130, Loss: 3.6607
-   Epoch 428 完成, 平均 Loss: 3.6424, PPL: 38.18
-
-   生成示例:
-     'hello' -> 'helloyou toyou
-bluyougoing you let you
-you to it
-you let you you youyou
-you you
-how can I of course you youyou you wiyou
-you
-help you '
-     'the' -> 'thehelp you
-to meet you
-yougoing you let you
-you to help you
-help you you youyou
-you you
-of course bluyou youyou you to you
-you
-help you '
-     'how' -> 'howhelp you
-to meet you
-yougoing you let you
-you to help you
-like you you youyou
-you you
-of course elyou youyou you wiyou
-you
-help you '
-
-   Epoch 429, Step 8140, Loss: 3.4390   Epoch 429, Step 8150, Loss: 3.6482
-   Epoch 429 完成, 平均 Loss: 3.6146, PPL: 37.14
-   Epoch 430, Step 8160, Loss: 3.4353   Epoch 430, Step 8170, Loss: 4.7832
-   Epoch 430 完成, 平均 Loss: 3.5874, PPL: 36.14
-
-   生成示例:
-     'hello' -> 'helloto meet you
-you tosuryou
-to you
-you you going surto meet you
-you you you going surcoolyou
-you help you
-you you you you what is the you
-Iyouyou to meet you
-'
-     'the' -> 'theyou toit
-like you
-you toyou you going let to meet you
-you you
-you
-going you tocoolyou
-youto you
-youyouyou you of course you
-IIyou
-let '
-     'how' -> 'howyou toit
-let you
-let you you coollet to meet you
-you you
-you
-going you tocoolyou
-youto you
-youyouyou you of course you
-IIyou
-you to'
-
-   Epoch 431, Step 8180, Loss: 3.4298
-   Epoch 431 完成, 平均 Loss: 3.5644, PPL: 35.32
-   -> 保存最佳模型 (loss=3.5644)
-   Epoch 432, Step 8190, Loss: 3.1448   Epoch 432, Step 8200, Loss: 3.4693
-   Epoch 432 完成, 平均 Loss: 3.5473, PPL: 34.72
-   -> 保存最佳模型 (loss=3.5473)
-
-   生成示例:
-     'hello' -> 'hellohow can I what is the you tocoolit
-coolelblume you
-let elyou
-to you elyou
-you
-help you
-to meet you
-Iyou you
-yougoing you you let wi'
-     'the' -> 'thebluof course wicoolyou
-coolbluyou toit
-you
-let elyou
-to you bluyou
-you
-help you
-surIyou you
-xgoing you you let it
-'
-     'how' -> 'howhelp you you
-to meet you
-coolof you let you
-you you you
-coolit
-you tobluhelp help elyou
-you
-bluyou
-blusurhow can I you
-bluyou you
-'
-
-   Epoch 433, Step 8210, Loss: 3.2671   Epoch 433, Step 8220, Loss: 3.4913
-   Epoch 433 完成, 平均 Loss: 3.5369, PPL: 34.36
-   -> 保存最佳模型 (loss=3.5369)
-   Epoch 434, Step 8230, Loss: 3.3158   Epoch 434, Step 8240, Loss: 3.5002
-   Epoch 434 完成, 平均 Loss: 3.5337, PPL: 34.25
-   -> 保存最佳模型 (loss=3.5337)
-
-   生成示例:
-     'hello' -> 'helloyou you toyou blubluyou you youyou you
-to meet you
-Iyou tobluyou you to meet you
-going you
-Iyou you you togoing coolyou Iyou
-it
-what is the '
-     'the' -> 'theyou it
-you
-to you
-to meet you
-you
-you Iyou
-you
-surIlet to meet you
-you you can I going you
-Iyou you let how is it coolyou
-Iyou
-it
-how can I '
-     'how' -> 'howyou you
-you you toyou toyou
-you Iyou
-you
-you toIhelp you toyou you let going you
-Iyouyou it
-going coolyou Iyou
-wihow can I '
-
-   Epoch 435, Step 8250, Loss: 3.3417   Epoch 435, Step 8260, Loss: 3.5161
-   Epoch 435 完成, 平均 Loss: 3.5389, PPL: 34.43
-   Epoch 436, Step 8270, Loss: 3.3702   Epoch 436, Step 8280, Loss: 3.5721
-   Epoch 436 完成, 平均 Loss: 3.5542, PPL: 34.96
-
-   生成示例:
-     'hello' -> 'hellobe you you bluyou you you
-what is the to meet you
-you bluyou
-what is the you
-you let you of course it
-Iyou you you Iyou you can I what you bye
-'
-     'the' -> 'thebluyou you let youdyou
-of course you toyou you toyou
-elyou
-you to you you toyou
-Iyou you you Iyou you help you
-you
-you '
-     'how' -> 'howelyou you of youIyou
-how can I you toyou you toyou
-how can I you
-you wiyou finyou
-Iyou you you Iyou you let you
-you you '
-
-   Epoch 437, Step 8290, Loss: 3.4167   Epoch 437, Step 8300, Loss: 3.6072
-   Epoch 437 完成, 平均 Loss: 3.5822, PPL: 35.95
-   Epoch 438, Step 8310, Loss: 3.4361   Epoch 438, Step 8320, Loss: 3.6457
-   Epoch 438 完成, 平均 Loss: 3.6265, PPL: 37.58
-
-   生成示例:
-     'hello' -> 'hellohow can I going can I can I what is the beautifulwhat is the you you you you you you toyou you it
-coolwhat is the you
-bluto meet you
-are you
-I am Iyou toyou you can I you how can I to meet you
-'
-     'the' -> 'theyou togoing you
-you
-to meet you
-what is the of course you IIyou you you
-you you you
-coolbluyou you tohelp you
-Iwiyou you you
-you can I it
-'
-     'how' -> 'howyou tocoolyou
-you
-to meet you
-what is the bluyouIdyou you you
-you you you
-coolbluyou you tohelp you
-Ito you you you
-you surit
-'
-
-   Epoch 439, Step 8330, Loss: 3.4926   Epoch 439, Step 8340, Loss: 3.7413
-   Epoch 439 完成, 平均 Loss: 3.7048, PPL: 40.64
-   Epoch 440, Step 8350, Loss: 3.6387   Epoch 440, Step 8360, Loss: 5.2546
-   Epoch 440 完成, 平均 Loss: 3.9410, PPL: 51.47
-
-   生成示例:
-     'hello' -> 'hellolaterbye
-goodbye see you bye have a nice day
-bye bye laterlatersee you what is your day is bye
-laterlatergoodbye see you laterbye bye bye
-bye bye
-bye
-latergood afternpleased '
-     'the' -> 'theyou what goodbye blusee you would you bye bye bye
-laterwhat is your day is stay bye
-laterlaterbye goodwhat is your laterfiwhat is your for day is bye
-bye
-latergood evenyes I can '
-     'how' -> 'howyou you you
-it
-to meet you
-what is your how is it are you
-I am you toyou how bye bye bye bye
-bye
-bye bye laterbye laterbye bye bye
-bye bye
-bye
-latergood evenpleased '
-
-   Epoch 441, Step 8370, Loss: 4.4841
-   Epoch 441 完成, 平均 Loss: 4.7958, PPL: 121.00
-   Epoch 442, Step 8380, Loss: 5.7711   Epoch 442, Step 8390, Loss: 5.6966
-   Epoch 442 完成, 平均 Loss: 5.4631, PPL: 235.83
-
-   生成示例:
-     'hello' -> 'hellobye
-pleased bye
-time is it
-it is pleased bye
-bye
-day is bye
-bye
-bye
-bye
-bye
-thank you so hello bye
-hello bye
-thank you so bye
-glagood afternbye
-fai day is how are you
-I am doing thank you so bye
-later'
-     'the' -> 'thebye
-would you bye
-thank you
-that is thank you
-that is bye
-bye
-day is bye
-bye
-bye
-bye
-bye
-thank you so day is bye
-day is bye
-thank you so bye
-glathanks bye
-fai day is how are you
-I am doing thank you so bye
-i '
-     'how' -> 'howwould you thanks bye
-bye
-good afternbye
-bye
-bye
-bye
-bye
-would you day is stay are you
-I am hello day is bye
-bye
-day is fabye
-sure I bye
-see you day is bye
-thank you so day is pleased fa'
-
-   Epoch 443, Step 8400, Loss: 5.4288   Epoch 443, Step 8410, Loss: 5.5524
-   Epoch 443 完成, 平均 Loss: 5.3439, PPL: 209.33
-   Epoch 444, Step 8420, Loss: 4.8442   Epoch 444, Step 8430, Loss: 4.7545
-   Epoch 444 完成, 平均 Loss: 4.6956, PPL: 109.46
-
-   生成示例:
-     'hello' -> 'hellobye
-bye
-bye
-bye
-bye
-bye
-bye
-bye
-bye
-bye
-would you latersure I day is i laterpleased thank you so bye
-bye
-bye
-pleased bye
-day is thank you so laterbye
-faday is good aftern'
-     'the' -> 'thelet me yes can I day is bye
-bye
-bye
-bye
-bye
-bye
-day is bye
-sure I day is bye
-bye
-thank you
-that is thank you so bye
-bye
-bye
-pleased bye
-see you pleased bye
-bye
-good afterni day is '
-     'how' -> 'howcan I how what is your see you bye
-bye
-bye
-bye
-bye
-bye
-good afternbye
-sure I day is laterlaterhow are you
-I am doing thank you so bye
-bye
-bye
-pleased bye
-day is pleased bye
-bye
-faday is day is '
-
-   Epoch 445, Step 8440, Loss: 4.6784   Epoch 445, Step 8450, Loss: 4.6408
-   Epoch 445 完成, 平均 Loss: 4.5816, PPL: 97.67
-   Epoch 446, Step 8460, Loss: 4.4992   Epoch 446, Step 8470, Loss: 4.5014
-   Epoch 446 完成, 平均 Loss: 4.4390, PPL: 84.69
-
-   生成示例:
-     'hello' -> 'hellobye
-bye
-day is bye
-bye
-bye
-bye
-day is bye
-bye
-time is it
-it is bye
-hi bye
-bye
-pleased bye
-bye
-fathanks bye
-fabye
-bye
-bye
-thank you so bye
-pleased thank you so bye
-'
-     'the' -> 'thelet me bye
-thank you
-that is no bye
-bye
-bye
-day is bye
-bye
-thank you
-that is bye
-bye
-bye
-bye
-pleased bye
-bye
-thank you
-that is day is bye
-thanks bye
-bye
-bye
-thank you so bye
-pleased pleased bye
-'
-     'how' -> 'howcan I let me thank you
-that is no bye
-can I bye
-day is bye
-bye
-time is it
-it is bye
-hi bye
-bye
-pleased bye
-bye
-thank you
-that is day is bye
-thank you
-that is bye
-bye
-bye
-thank you so bye
-pleased pleased bye
-'
-
-   Epoch 447, Step 8480, Loss: 4.3497   Epoch 447, Step 8490, Loss: 4.3662
-   Epoch 447 完成, 平均 Loss: 4.3068, PPL: 74.21
-   Epoch 448, Step 8500, Loss: 4.1810   Epoch 448, Step 8510, Loss: 4.2321

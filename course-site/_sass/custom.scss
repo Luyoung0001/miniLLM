@@ -71,12 +71,12 @@
 }
 
 .course-topbar__brand-title {
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 700;
 }
 
 .course-topbar__brand-subtitle {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: #6b7280;
   white-space: nowrap;
   overflow: hidden;
@@ -94,7 +94,7 @@
   padding: 0.55rem 0.8rem;
   border-radius: 6px;
   color: #4b5563;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.18s ease, background-color 0.18s ease;
@@ -125,7 +125,7 @@
   border-radius: 8px;
   background: #ffffff;
   color: #374151;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   transition: border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
 }
 
@@ -180,7 +180,7 @@
 .course-article__title {
   margin: 0;
   color: #111827;
-  font-size: 2.2rem;
+  font-size: 1.95rem;
   line-height: 1.2;
   font-weight: 750;
 }
@@ -201,7 +201,7 @@
   border-radius: 8px;
   background: #f8fafc;
   color: #374151;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
 }
 
 .course-article__meta-item strong {
@@ -214,8 +214,8 @@
 }
 
 .course-article__content {
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: 0.94rem;
+  line-height: 1.78;
 }
 
 .course-article__content > :first-child {
@@ -237,19 +237,19 @@
   margin-bottom: 1rem;
   padding-bottom: 0.55rem;
   border-bottom: 1px solid #e5e7eb;
-  font-size: 1.65rem;
+  font-size: 1.46rem;
 }
 
 .course-article__content h3 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  font-size: 1.26rem;
+  font-size: 1.16rem;
 }
 
 .course-article__content h4 {
   margin-top: 1.4rem;
   margin-bottom: 0.5rem;
-  font-size: 1.08rem;
+  font-size: 1rem;
 }
 
 .course-article__content p,
@@ -368,7 +368,7 @@
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #e5e7eb;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
 }
 
 .course-article__footer a {
@@ -414,12 +414,12 @@
 .pagination-nav__label {
   margin-bottom: 0.25rem;
   color: #6b7280;
-  font-size: 0.86rem;
+  font-size: 0.8rem;
 }
 
 .pagination-nav__title {
   color: #111827;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   font-weight: 650;
 }
 
@@ -437,7 +437,7 @@
   margin: 0 auto;
   padding: 1rem 1.5rem 1.2rem;
   color: #6b7280;
-  font-size: 0.9rem;
+  font-size: 0.84rem;
 }
 
 .course-footer__inner a {
@@ -505,7 +505,7 @@
 .nav__sub-title {
   display: block;
   color: #111827;
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 700;
 }
 
@@ -524,8 +524,8 @@
   padding: 0.38rem 0.7rem;
   border-radius: 6px;
   color: #4b5563;
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.84rem;
+  line-height: 1.38;
   text-decoration: none;
 }
 
@@ -602,7 +602,7 @@
   }
 
   .course-article__title {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -614,7 +614,7 @@
   }
 
   .course-article__title {
-    font-size: 1.6rem;
+    font-size: 1.48rem;
   }
 
   .course-article__meta {
