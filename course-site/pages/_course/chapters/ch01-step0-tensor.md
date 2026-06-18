@@ -15,13 +15,13 @@ next_page:
 source_path: 'course/chapters/ch01-step0-tensor.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab01-step0/`](/course/practice/labs/lab01-step0/)  
-> **主要修改文件**：`course/practice/labs/lab01-step0/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab01-step0/`](/course/practice/labs/lab01-step0/)
+> **主要修改文件**：`minillm_lab/labs/lab01-step0/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到这一章，课程才算真正进入代码。
 
-在 `Chapter 0` 里，你已经完成了一件非常重要但又容易被忽略的事：确认自己接下来真正要改的是 lab 里的实验代码，而不是项目里已经写好的那套实现。你已经看到过 `Lab01` 的初始输出是“3 个 FAIL + 1 个 PASS”。这意味着练习边界已经准备好了，接下来就该真正填第一批代码。
+在 `Chapter 0` 里，你已经完成了一件非常重要但又容易被忽略的事：确认自己接下来真正要改的是 lab 仓库里的实验代码。你已经看到过 `Lab01` 的初始输出是“3 个 FAIL + 1 个 PASS”。这意味着练习边界已经准备好了，接下来就该真正填第一批代码。
 
 本章之所以从张量开始，不是因为张量“理论上最基础”，而是因为 miniLLM 的后面所有模块，本质上都在反复做同一件事：对一块连续的浮点内存，按照某个 shape 和 stride 规则去读、写、重排、相乘、归一化。只要你对这一层没有建立直觉，后面的 embedding、attention、FFN、甚至训练和缓存，看起来都会像不同风格的魔法；但一旦这一层清楚了，后面的复杂模块就会开始显得“不过是更大一点的张量操作组合”。
 
@@ -47,12 +47,12 @@ source_path: 'course/chapters/ch01-step0-tensor.md'
 
 正式进入概念之前，先把实践边界说清楚。
 
-这一章不要去改 `step0/src/tensor.c`，也不要去改根目录 `step0/src/math_ops.c`。那些文件是项目里现成的实现，不是你本章的主工作区。
+这一章不要在 lab 仓库里到处改文件。当前练习已经把范围收窄到一个目录、一个主要文件，先把这条小路径跑通。
 
 你这章真正应该进入的是：
 
 ```text
-course/practice/labs/lab01-step0/
+minillm_lab/labs/lab01-step0/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -86,7 +86,7 @@ course/practice/labs/lab01-step0/
 
 这就是 `Tensor` 结构体存在的理由。
 
-看一下参考接口 `step0/src/tensor.h`，你会发现它的核心字段并不神秘：
+看一下 lab 框架里暴露给你的 `Tensor` 接口，你会发现它的核心字段并不神秘：
 
 ```c
 typedef struct {
@@ -224,7 +224,7 @@ softmax(x_i) = exp(x_i) / sum_j exp(x_j)
 
 ## 1.8 先看一眼验证器，它到底在检查什么
 
-在动手之前，建议你读一遍 `course/practice/labs/lab01-step0/framework/verify.c`。不需要逐行背，但要知道它在验证哪些事实。
+在动手之前，建议你读一遍 `minillm_lab/labs/lab01-step0/framework/verify.c`。不需要逐行背，但要知道它在验证哪些事实。
 
 当前 Lab01 的四个测试大致在检查：
 
@@ -246,7 +246,7 @@ softmax(x_i) = exp(x_i) / sum_j exp(x_j)
 进入实践目录：
 
 ```bash
-cd course/practice/labs/lab01-step0
+cd labs/lab01-step0
 make clean && make test
 ```
 
@@ -264,7 +264,7 @@ make clean && make test
 打开：
 
 ```text
-course/practice/labs/lab01-step0/framework/student.c
+minillm_lab/labs/lab01-step0/framework/student.c
 ```
 
 找到：

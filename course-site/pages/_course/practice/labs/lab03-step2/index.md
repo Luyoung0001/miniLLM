@@ -10,7 +10,7 @@ source_path: 'course/practice/labs/lab03-step2/TASK.md'
 ---
 
 
-> **实验编号** Lab03 **预计耗时** 2h **对应 step** [step2](https://github.com/Luyoung0001/miniLLM/tree/main/step2) **本节产出** 补完本章 TODO，并让验证输出相对当前实验基线继续转绿
+> **实验编号** Lab03 **预计耗时** 2h **本节产出** 补完本章 TODO，并让验证输出相对当前实验基线继续转绿
 
 ## 实验目的
 
@@ -93,7 +93,7 @@ source_path: 'course/practice/labs/lab03-step2/TASK.md'
 ### 1.5.4 跑 `make test` 看 [PASS]
 
 ```bash
-cd course/practice/labs/lab03-step2
+cd labs/lab03-step2
 make clean && make test
 ```
 

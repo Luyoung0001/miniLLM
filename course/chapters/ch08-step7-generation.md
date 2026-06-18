@@ -8,8 +8,8 @@ deliverable: Lab08 全部测试通过
 
 # Chapter 8：step7 — 文本生成
 
-> **对应实践**：[`course/practice/labs/lab08-step7/`](../practice/labs/lab08-step7/TASK.md)  
-> **主要修改文件**：`course/practice/labs/lab08-step7/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab08-step7/`](../practice/labs/lab08-step7/TASK.md)
+> **主要修改文件**：`minillm_lab/labs/lab08-step7/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到了这里，模型已经具备了一个重要前提：  
@@ -68,7 +68,7 @@ deliverable: Lab08 全部测试通过
 本章实践目录是：
 
 ```text
-course/practice/labs/lab08-step7/
+minillm_lab/labs/lab08-step7/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -177,7 +177,7 @@ top-k 的思路就是先粗暴地做一层裁剪：
 进入：
 
 ```bash
-cd course/practice/labs/lab08-step7
+cd labs/lab08-step7
 ```
 
 建议先读：

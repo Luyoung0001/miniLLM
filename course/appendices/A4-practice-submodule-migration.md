@@ -89,7 +89,7 @@ miniLLM-practice/
 下面给的是维护者视角的推荐操作顺序。假设你最终的 practice repo 远端地址叫：
 
 ```text
-git@github.com:<owner>/miniLLM-practice.git
+https://github.com/<owner>/miniLLM-practice.git
 ```
 
 请把它替换成你真实准备使用的地址。
@@ -105,7 +105,7 @@ cd /tmp/miniLLM-practice
 git init
 git add .
 git commit -m "Initialize miniLLM practice scaffold"
-git remote add origin git@github.com:<owner>/miniLLM-practice.git
+git remote add origin https://github.com/<owner>/miniLLM-practice.git
 git branch -M main
 git push -u origin main
 ```
@@ -119,7 +119,7 @@ git push -u origin main
 ```bash
 cd /path/to/miniLLM
 rm -rf course/practice
-git submodule add -b main git@github.com:<owner>/miniLLM-practice.git course/practice
+git submodule add -b main https://github.com/<owner>/miniLLM-practice.git course/practice
 git add .gitmodules course/practice
 git commit -m "Add practice scaffold as submodule"
 ```
@@ -143,7 +143,7 @@ bash course/practice/scripts/check.sh --dry-run
 迁移完成后，给学员的最小工作流应明确写成下面这样：
 
 ```bash
-git clone --recurse-submodules git@github.com:<owner>/miniLLM.git
+git clone --recurse-submodules https://github.com/<owner>/miniLLM.git
 cd miniLLM
 git submodule update --init --recursive
 cd course/practice

@@ -15,6 +15,24 @@ source_path: 'course/practice/README.md'
 
 如果你把这门课想成“先看讲义，再做实验”，这里就是实验区的总入口。
 
+## 先把 lab 仓库拉到本地
+
+读课程网页时，你只需要拉取这个 lab 仓库：
+
+```bash
+git clone https://github.com/Luyoung0001/minillm_lab.git
+cd minillm_lab
+bash scripts/bootstrap-practice.sh
+```
+
+后面所有需要你修改的代码，都在这个仓库里。课程网页会用 `labs/...` 描述实验位置；这些路径都以 `minillm_lab` 仓库根目录为起点。
+
+lab 仓库地址是：
+
+```text
+https://github.com/Luyoung0001/minillm_lab.git
+```
+
 ## 你应该怎样使用这里
 
 最推荐的节奏非常固定：
@@ -28,7 +46,7 @@ source_path: 'course/practice/README.md'
 
 ## 目录长什么样
 
-在 `course/practice/` 下面，最重要的是 `labs/`：
+在 lab 仓库下面，最重要的是 `labs/`：
 
 ```text
 labs/
@@ -65,7 +83,7 @@ lab01-step0/
 如果你刚完成 `Chapter 0`，那么第一站就是：
 
 ```bash
-cd course/practice/labs/lab01-step0
+cd labs/lab01-step0
 make clean && make test
 ```
 

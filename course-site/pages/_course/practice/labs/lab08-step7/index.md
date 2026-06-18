@@ -9,7 +9,7 @@ deliverable: '完成三种采样策略 TODO，并用验证命令检查结果'
 source_path: 'course/practice/labs/lab08-step7/TASK.md'
 ---
 
-> **实验编号** Lab08 **预计耗时** 2h **对应 step** [step7](https://github.com/Luyoung0001/miniLLM/tree/main/step7) **本节产出** 补完 greedy、temperature、top-k 三个采样函数，并让验证输出相对当前实验基线继续转绿
+> **实验编号** Lab08 **预计耗时** 2h **本节产出** 补完 greedy、temperature、top-k 三个采样函数，并让验证输出相对当前实验基线继续转绿
 
 
 ## 实验目的
@@ -52,7 +52,7 @@ labs/lab08-step7/
     └── verify.h
 ```
 
-可调用的 framework API（声明在 `course/practice/framework/*.h`）：
+可调用的 framework API（声明在 `minillm_lab/framework/*.h`）：
 
 - `tensor.h`：`tensor_create_1d()` / `tensor_zeros()` / `tensor_set_flat()` / `tensor_get_flat()` / `tensor_free()` / `tensor_argmax()`
 - `math_ops.h`：`softmax()` / `softmax_inplace()` / `tensor_mul_scalar()` / `tensor_max()` / `tensor_argmax()`
@@ -61,7 +61,7 @@ labs/lab08-step7/
 命令：
 
 ```bash
-cd course/practice/labs/lab08-step7
+cd labs/lab08-step7
 make clean && make test
 ```
 

@@ -15,8 +15,8 @@ next_page:
 source_path: 'course/chapters/ch10-step9-http.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab10-step9/`](/course/practice/labs/lab10-step9/)  
-> **主要修改文件**：`course/practice/labs/lab10-step9/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab10-step9/`](/course/practice/labs/lab10-step9/)
+> **主要修改文件**：`minillm_lab/labs/lab10-step9/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到上一章为止，课程已经把“多轮对话”里的字符串协议拆清楚了。  
@@ -72,7 +72,7 @@ source_path: 'course/chapters/ch10-step9-http.md'
 本章实践目录是：
 
 ```text
-course/practice/labs/lab10-step9/
+minillm_lab/labs/lab10-step9/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -155,7 +155,7 @@ GET /health HTTP/1.1
 进入：
 
 ```bash
-cd course/practice/labs/lab10-step9
+cd labs/lab10-step9
 ```
 
 建议先读：

@@ -10,7 +10,7 @@ source_path: 'course/practice/labs/lab11-step10/TASK.md'
 ---
 
 
-> **实验编号** Lab11 **预计耗时** 3h **对应 step** [step10](https://github.com/Luyoung0001/miniLLM/tree/main/step10) **本节产出** 补完 KV Cache 分配与追加接口，并让验证输出相对当前实验基线继续转绿
+> **实验编号** Lab11 **预计耗时** 3h **本节产出** 补完 KV Cache 分配与追加接口，并让验证输出相对当前实验基线继续转绿
 
 ## 实验目的
 
@@ -113,7 +113,7 @@ make clean && make test
 ### 完成本章 TODO 后的目标输出
 
 ```
-$ cd course/practice/labs/lab11-step10
+$ cd labs/lab11-step10
 $ make clean && make test
 rm -rf build student
 mkdir -p build

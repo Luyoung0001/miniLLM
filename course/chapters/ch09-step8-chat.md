@@ -8,8 +8,8 @@ deliverable: Lab09 全部测试通过
 
 # Chapter 9：step8 — 多轮对话
 
-> **对应实践**：[`course/practice/labs/lab09-step8/`](../practice/labs/lab09-step8/TASK.md)  
-> **主要修改文件**：`course/practice/labs/lab09-step8/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab09-step8/`](../practice/labs/lab09-step8/TASK.md)
+> **主要修改文件**：`minillm_lab/labs/lab09-step8/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到了上一章，模型已经会做一件重要的事：  
@@ -73,7 +73,7 @@ deliverable: Lab09 全部测试通过
 本章实践目录是：
 
 ```text
-course/practice/labs/lab09-step8/
+minillm_lab/labs/lab09-step8/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -184,7 +184,7 @@ course/practice/labs/lab09-step8/
 进入：
 
 ```bash
-cd course/practice/labs/lab09-step8
+cd labs/lab09-step8
 ```
 
 建议先读：

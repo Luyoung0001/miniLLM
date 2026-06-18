@@ -10,7 +10,7 @@ source_path: 'course/practice/labs/lab01-step0/TASK.md'
 ---
 
 
-> **实验编号** Lab01 &nbsp;&nbsp; **预计耗时** 3h &nbsp;&nbsp; **对应 step** [step0](https://github.com/Luyoung0001/miniLLM/tree/main/step0) &nbsp;&nbsp; **本节产出** 补完本章 TODO，并让验证输出相对当前实验基线继续转绿
+> **实验编号** Lab01 &nbsp;&nbsp; **预计耗时** 3h &nbsp;&nbsp; &nbsp;&nbsp; **本节产出** 补完本章 TODO，并让验证输出相对当前实验基线继续转绿
 
 ## 实验目的
 

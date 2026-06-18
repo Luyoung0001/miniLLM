@@ -88,13 +88,6 @@
 
             {% include course_nav.html %}
 
-            {% if page.source_path and page.source_path contains 'course/' %}
-              <footer class="course-article__footer">
-                <a href="https://github.com/{{ site.repository }}/blob/main/{{ page.source_path }}" target="_blank" rel="noopener noreferrer">
-                  查看仓库源文件
-                </a>
-              </footer>
-            {% endif %}
           </article>
         </main>
       </div>

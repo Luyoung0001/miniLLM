@@ -31,9 +31,12 @@ source_path: 'course/README.md'
 
 第一次进入课程时，不要急着跳到后面的章节。按这个顺序走：
 
-1. 先读 [Chapter 0](/course/00-orientation/)，把环境和第一轮 smoke test 跑通。
-2. 再读 [Chapter 1](/course/chapters/ch01-step0-tensor/)，进入正式课程。
-3. 读完一章，就去对应 lab 完成这一章的代码。
+1. 先读 [Chapter 0](/course/00-orientation/)，完成工具检查并拉取 lab 仓库。
+2. 在本地 clone `https://github.com/Luyoung0001/minillm_lab.git`，运行第一次 smoke test。
+3. 再读 [Chapter 1](/course/chapters/ch01-step0-tensor/)，进入正式课程。
+4. 读完一章，就去 `minillm_lab/labs/...` 里的对应 lab 完成这一章的代码。
+
+讲义在网页上阅读，代码在 `minillm_lab` 仓库里完成。你后面可以在这个 lab 仓库里持续提交自己的实现。
 
 如果你只想记一句最短路径，那就是：
 
@@ -73,5 +76,6 @@ Chapter 0 -> Chapter 1 -> Lab01 -> Chapter 2 -> Lab02 -> ...
 如果你已经准备打开第一章，那么下一步就是：
 
 1. 进入 [Chapter 0](/course/00-orientation/)
-2. 跑通里面的 smoke test
-3. 继续进入 [Chapter 1](/course/chapters/ch01-step0-tensor/)
+2. 确认 `minillm_lab` 已经拉取完成
+3. 跑通 lab 仓库里的 smoke test
+4. 继续进入 [Chapter 1](/course/chapters/ch01-step0-tensor/)

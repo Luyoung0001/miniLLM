@@ -8,8 +8,8 @@ deliverable: Lab12 全部测试通过
 
 # Chapter 12：step11 — BPE 分词
 
-> **对应实践**：[`course/practice/labs/lab12-step11/`](../practice/labs/lab12-step11/TASK.md)  
-> **主要修改文件**：`course/practice/labs/lab12-step11/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab12-step11/`](../practice/labs/lab12-step11/TASK.md)
+> **主要修改文件**：`minillm_lab/labs/lab12-step11/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 前面的课程一直默认在一个比较小、比较稳定的字符级词表上工作。  
@@ -69,7 +69,7 @@ BPE 的出发点正是：
 本章实践目录是：
 
 ```text
-course/practice/labs/lab12-step11/
+minillm_lab/labs/lab12-step11/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -163,7 +163,7 @@ ababab
 进入：
 
 ```bash
-cd course/practice/labs/lab12-step11
+cd labs/lab12-step11
 ```
 
 建议先读：

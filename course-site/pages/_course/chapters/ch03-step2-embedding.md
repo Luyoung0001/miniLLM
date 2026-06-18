@@ -15,8 +15,8 @@ next_page:
 source_path: 'course/chapters/ch03-step2-embedding.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab03-step2/`](/course/practice/labs/lab03-step2/)  
-> **主要修改文件**：`course/practice/labs/lab03-step2/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab03-step2/`](/course/practice/labs/lab03-step2/)
+> **主要修改文件**：`minillm_lab/labs/lab03-step2/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 前两章里，输入已经经历了两次关键翻译。
@@ -47,12 +47,12 @@ source_path: 'course/chapters/ch03-step2-embedding.md'
 
 ## 3.2 先看 practice target：这章改哪里
 
-本章的主工作区仍然在本章 lab 目录里，而不是在 `step2/src/embedding.c`。
+本章的主工作区仍然在本章 lab 目录里。
 
 你应该进入：
 
 ```text
-course/practice/labs/lab03-step2/
+minillm_lab/labs/lab03-step2/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -187,7 +187,7 @@ output[pos, d] = token_embedding[token_id, d] + student_pe_sinusoidal(pos, d, hi
 进入：
 
 ```bash
-cd course/practice/labs/lab03-step2
+cd labs/lab03-step2
 ```
 
 先读三份文件：

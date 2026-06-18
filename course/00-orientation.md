@@ -16,11 +16,12 @@ title: Chapter 0 — 出发前的准备
 本章完成时，你应当同时满足下面四条：
 
 1. 你的机器上有可用的 `gcc` 和 `make`。
-2. 你能进入 `course/practice/labs/lab01-step0/`。
-3. 你能执行 `make clean && make test`。
-4. 你知道第一次看到 `3 FAIL + 1 PASS` 是正常现象，不是环境损坏。
+2. 你已经把 `minillm_lab` 拉取到本地。
+3. 你能进入 `minillm_lab/labs/lab01-step0/`。
+4. 你能执行 `make clean && make test`。
+5. 你知道第一次看到 `3 FAIL + 1 PASS` 是正常现象，不是环境损坏。
 
-这四条里，最后一条尤其重要。因为这门课不是让你一上来运行一个已经写完的程序，而是让你从一个可编译、可验证、但尚未完成的骨架出发，逐章把项目做出来。
+这里最后一条尤其重要。因为这门课不是让你一上来运行一个已经写完的程序，而是让你从一个可编译、可验证、但尚未完成的骨架出发，逐章把项目做出来。
 
 ## 0.2 你现在还不需要懂什么
 
@@ -55,32 +56,36 @@ make --version
 
 你不需要在这一章深入理解编译器原理。此刻只要记住一件事：后面的每个 lab 都建立在“`make` 能驱动 `gcc` 编译这些 `.c` 文件”的前提上。
 
-## 0.4 进入课程目录
+## 0.4 拉取 lab 仓库
 
-从仓库根目录开始，执行：
+课程网页负责讲解，lab 仓库负责让你写代码。现在打开一个你准备用来放实验的目录，执行：
+
+```bash
+git clone https://github.com/Luyoung0001/minillm_lab.git
+cd minillm_lab
+```
+
+完成后检查一下：
 
 ```bash
 pwd
 ls
 ```
 
-你应该能看到仓库根下的 `course/` 目录。继续进入：
+你应该能看到 `labs/`、`framework/`、`scripts/`。继续确认第一章实验已经存在：
 
 ```bash
-cd course
-ls
+ls labs
+ls labs/lab01-step0
 ```
 
-这里你会看到主线章节、附录，以及接下来要进入的 lab 目录。
-
-到这一步为止，还只是“进入课程”。真正的起点在下面这一步：跑第一次 smoke test。
+到这一步为止，还只是把实验骨架放到了本地。真正的起点在下面这一步：跑第一次 smoke test。
 
 ## 0.5 运行第一次 smoke test
 
 请直接执行：
 
 ```bash
-cd practice
 bash scripts/bootstrap-practice.sh
 ```
 
@@ -125,7 +130,7 @@ make clean && make test
 | --- | --- |
 | `gcc: command not found` | 编译器没有装好 |
 | `make: command not found` | 构建工具没有装好 |
-| `No such file or directory` | 当前目录不对 |
+| `No such file or directory` | 当前目录不对，先确认自己位于 `minillm_lab` 仓库根目录 |
 | `make` 阶段失败 | 先回看编译输出，确认是编译错误还是链接错误 |
 | 输出和预期差很多 | 先执行 `git status --short`，确认工作区是不是已经被改过 |
 
@@ -138,6 +143,7 @@ make clean && make test
 现在你已经知道：
 
 - 机器可以运行这门课的 lab；
+- lab 仓库是你后面持续写代码的地方；
 - 第一章对应的实验目录在哪里；
 - smoke test 的正常起始现象是什么；
 - 接下来应该去哪里写第一批代码。

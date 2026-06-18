@@ -189,7 +189,7 @@ pt->ndim = 2;
 如果你怀疑自己在某个 lab 里把所有权搞混了，不要只看当前一行代码。最有效的做法是从分配点开始往后追：
 
 ```bash
-git grep -n "malloc\\|calloc\\|realloc" course/practice/framework course/practice/labs
+git grep -n "malloc\\|calloc\\|realloc" minillm_lab/framework minillm_lab/labs
 ```
 
 看见一次分配，就问一句：谁最终会负责把它收回去？
@@ -256,7 +256,7 @@ char c = (char)tokens[i];
 
 真正值得养成的是两个习惯，而不是多背几条命令。
 
-第一，**每次切目录后都用 `pwd` 看一眼**。这不是啰嗦，而是成本最低的防错动作。miniLLM 里有很多命名相似的目录，`step10`、`lab10-step9`、`course/practice/framework` 一旦靠记忆切换，很容易弄混。
+第一，**每次切目录后都用 `pwd` 看一眼**。这不是啰嗦，而是成本最低的防错动作。miniLLM 里有很多命名相似的目录，`step10`、`lab10-step9`、`minillm_lab/framework` 一旦靠记忆切换，很容易弄混。
 
 第二，**遇到错误先把第一行完整读完**。编译错误最有信息量的地方，经常不是你盯住的 `^` 符号，而是它上面那一整行文件路径和报错类型。
 

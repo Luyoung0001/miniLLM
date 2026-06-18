@@ -8,8 +8,8 @@ deliverable: Lab06 全部测试通过
 
 # Chapter 6：step5 — 完整 GPT 模型
 
-> **对应实践**：[`course/practice/labs/lab06-step5/`](../practice/labs/lab06-step5/TASK.md)  
-> **主要修改文件**：`course/practice/labs/lab06-step5/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab06-step5/`](../practice/labs/lab06-step5/TASK.md)
+> **主要修改文件**：`minillm_lab/labs/lab06-step5/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到上一章为止，你已经做出了一个能独立工作的 Transformer block。它已经具备了非常核心的结构能力：先归一化，再读上下文，再做残差保留，再做逐位置的非线性加工。  
@@ -58,7 +58,7 @@ deliverable: Lab06 全部测试通过
 本章的实践目录是：
 
 ```text
-course/practice/labs/lab06-step5/
+minillm_lab/labs/lab06-step5/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -193,7 +193,7 @@ miniLLM 在这章里采用的是一个非常教学化的最小格式：
 进入：
 
 ```bash
-cd course/practice/labs/lab06-step5
+cd labs/lab06-step5
 ```
 
 建议先读：

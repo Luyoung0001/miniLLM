@@ -15,8 +15,8 @@ next_page:
 source_path: 'course/chapters/ch02-step1-tokenizer.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab02-step1/`](/course/practice/labs/lab02-step1/)  
-> **主要修改文件**：`course/practice/labs/lab02-step1/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab02-step1/`](/course/practice/labs/lab02-step1/)
+> **主要修改文件**：`minillm_lab/labs/lab02-step1/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 在 Chapter 1 里，你第一次建立了一个很底层但非常关键的认识：神经网络代码最终都要落实成“怎么从内存里把数取出来，再按规则写回去”。那一章解决的是“数字如何在张量里存在”的问题。
@@ -44,10 +44,10 @@ source_path: 'course/chapters/ch02-step1-tokenizer.md'
 
 ## 2.2 先看 practice target：这一章改哪里
 
-这一章的工作区同样不在 `step1/src/tokenizer.c` 里，而在本章 lab 目录中：
+这一章的工作区同样只在本章 lab 目录中：
 
 ```text
-course/practice/labs/lab02-step1/
+minillm_lab/labs/lab02-step1/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -217,7 +217,7 @@ embedding 从来不是直接作用在字符上，而是作用在 token ID 上。
 进入 practice 目录：
 
 ```bash
-cd course/practice/labs/lab02-step1
+cd labs/lab02-step1
 ```
 
 先读：

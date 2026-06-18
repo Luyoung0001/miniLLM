@@ -15,8 +15,8 @@ next_page:
 source_path: 'course/chapters/ch09-step8-chat.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab09-step8/`](/course/practice/labs/lab09-step8/)  
-> **主要修改文件**：`course/practice/labs/lab09-step8/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab09-step8/`](/course/practice/labs/lab09-step8/)
+> **主要修改文件**：`minillm_lab/labs/lab09-step8/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到了上一章，模型已经会做一件重要的事：  
@@ -80,7 +80,7 @@ source_path: 'course/chapters/ch09-step8-chat.md'
 本章实践目录是：
 
 ```text
-course/practice/labs/lab09-step8/
+minillm_lab/labs/lab09-step8/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -191,7 +191,7 @@ course/practice/labs/lab09-step8/
 进入：
 
 ```bash
-cd course/practice/labs/lab09-step8
+cd labs/lab09-step8
 ```
 
 建议先读：

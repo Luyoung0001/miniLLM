@@ -10,7 +10,7 @@ source_path: 'course/practice/labs/lab12-step11/TASK.md'
 ---
 
 
-> **实验编号** Lab12 **预计耗时** 3h **对应 step** [step11](https://github.com/Luyoung0001/miniLLM/tree/main/step11) **本节产出** 补完 BPE pair 统计与 merge 两个接口，并让验证输出相对当前实验基线继续转绿
+> **实验编号** Lab12 **预计耗时** 3h **本节产出** 补完 BPE pair 统计与 merge 两个接口，并让验证输出相对当前实验基线继续转绿
 
 ## 实验目的
 
@@ -78,7 +78,7 @@ source_path: 'course/practice/labs/lab12-step11/TASK.md'
 跑：
 
 ```bash
-cd course/practice/labs/lab12-step11
+cd labs/lab12-step11
 make clean && make test
 ```
 
@@ -135,7 +135,7 @@ make clean && make test
 ### 完成本章 TODO 后的目标输出
 
 ```
-$ cd course/practice/labs/lab12-step11
+$ cd labs/lab12-step11
 $ make clean && make test
 mkdir -p build
 gcc -Wall -Wextra -O2 -std=c99 -I../../framework -c framework/student.c -o build/student.o

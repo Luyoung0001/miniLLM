@@ -8,8 +8,8 @@ deliverable: Lab13 全部测试通过
 
 # Chapter 13：BPE 对话整合
 
-> **对应实践**：[`course/practice/labs/lab13-end-to-end/`](../practice/labs/lab13-end-to-end/TASK.md)  
-> **主要修改文件**：`course/practice/labs/lab13-end-to-end/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab13-end-to-end/`](../practice/labs/lab13-end-to-end/TASK.md)
+> **主要修改文件**：`minillm_lab/labs/lab13-end-to-end/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 到了这里，课程已经把后半段需要的几个关键部件都讲过了：
@@ -70,7 +70,7 @@ Chapter 13 的任务就是解决这件事。
 本章实践目录是：
 
 ```text
-course/practice/labs/lab13-end-to-end/
+minillm_lab/labs/lab13-end-to-end/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -163,7 +163,7 @@ course/practice/labs/lab13-end-to-end/
 进入：
 
 ```bash
-cd course/practice/labs/lab13-end-to-end
+cd labs/lab13-end-to-end
 ```
 
 建议先读：

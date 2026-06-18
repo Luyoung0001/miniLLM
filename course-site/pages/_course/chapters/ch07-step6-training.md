@@ -15,8 +15,8 @@ next_page:
 source_path: 'course/chapters/ch07-step6-training.md'
 ---
 
-> **对应实践**：[`course/practice/labs/lab07-step6/`](/course/practice/labs/lab07-step6/)  
-> **主要修改文件**：`course/practice/labs/lab07-step6/framework/student.c`  
+> **对应实践**：[`minillm_lab/labs/lab07-step6/`](/course/practice/labs/lab07-step6/)
+> **主要修改文件**：`minillm_lab/labs/lab07-step6/framework/student.c`
 > **验证命令**：`make clean && make test`
 
 上一章你已经把完整 GPT 模型装起来了。  
@@ -78,7 +78,7 @@ source_path: 'course/chapters/ch07-step6-training.md'
 本章的实践目录是：
 
 ```text
-course/practice/labs/lab07-step6/
+minillm_lab/labs/lab07-step6/
 ├── TASK.md
 ├── Makefile
 └── framework/
@@ -196,7 +196,7 @@ grad[i] = softmax(logits)[i] - (i == target ? 1 : 0)
 进入：
 
 ```bash
-cd course/practice/labs/lab07-step6
+cd labs/lab07-step6
 ```
 
 建议先读：

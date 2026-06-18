@@ -43,19 +43,20 @@ source_path: 'course/appendices/A2-pitfalls.md'
 
 这一阶段的问题，通常不是模型逻辑问题，而是课程入口、目录和工具链还没对上。也就是说，你还没真正进入“做题”，先不要上来就怀疑 `student.c`。
 
-### A2.1.1 `course/practice/` 目录是空的 / `bootstrap-practice.sh` 不存在
+### A2.1.1 `minillm_lab/` 不存在 / `bootstrap-practice.sh` 不存在
 
-- **症状**：你已经 clone 了课程仓库，但 `course/practice/` 下面是空的，或者只有一个 gitlink；运行 `bash course/practice/scripts/bootstrap-practice.sh` 直接报 `No such file or directory`。
-- **原因**：这通常不是课程损坏，而是仓库内容不完整、目录没切对，或者你拿到的工作区本身就不是课程默认状态。
+- **症状**：运行 `bash scripts/bootstrap-practice.sh` 时直接报 `No such file or directory`，或者你找不到 `labs/lab01-step0/`。
+- **原因**：这通常不是课程损坏，而是还没有 clone lab 仓库，或者当前终端不在 `minillm_lab` 仓库根目录。
 - **解决**：
 
   ```bash
-  cd /path/to/miniLLM
-  ls course/practice
-  bash course/practice/scripts/bootstrap-practice.sh
+  git clone https://github.com/Luyoung0001/minillm_lab.git
+  cd minillm_lab
+  ls labs
+  bash scripts/bootstrap-practice.sh
   ```
 
-  如果 `course/practice/` 本身就不存在或明显不完整，先重新确认你拿到的是完整仓库，再继续执行后面的步骤。
+  如果你已经 clone 过 `minillm_lab`，先用 `pwd` 确认当前目录，再重新执行脚本。
 
 这里真正要记住的不是某一条 Git 命令，而是一个判断：目录缺失时，先确认工作区是否完整，不要先猜课程脚本写错了。
 

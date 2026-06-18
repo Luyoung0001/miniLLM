@@ -1,0 +1,3 @@
+[submodule "course/practice"]
+	path = course/practice
+	url = https://github.com/Luyoung0001/minillm_lab.git
