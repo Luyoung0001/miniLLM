@@ -1,6 +1,6 @@
 # miniLLM Course Site
 
-这是 `miniLLM` 课程的独立文档站点工程。课程源在上一级 `course/`，这里负责把课程内容同步成可浏览网站，并发布到 Cloudflare Pages。
+这是 `miniLLM` 课程的独立文档站点工程。课程源在上一级 `course/`，这里负责把课程内容同步成可浏览网站。
 
 ## 本地预览
 
@@ -12,34 +12,24 @@ bundle exec jekyll build
 python3 -m http.server 4003 -d _site
 ```
 
-## Cloudflare Pages 部署
+## GitHub Actions
 
 仓库内已经带好 GitHub Actions 工作流：`.github/workflows/deploy-course-site.yml`。
+它只做一件事：校验课程站点能否成功同步并编译。
 
-默认约定：
+执行内容：
 
-- Pages project name: `minillm-course`
-- production branch: `main`
-- build source dir: `course-site/`
-- deploy output dir: `course-site/_site/`
+- `python3 _scripts/sync_course.py`
+- `bundle exec jekyll build`
 
-第一次接 Cloudflare 时，需要在 GitHub 仓库 secrets 中配置：
+## Cloudflare Pages 手动配置
 
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
+如果你在 Cloudflare Pages 面板里直接接 GitHub 仓库，建议这样填：
 
-推荐 token 权限至少覆盖：
+- Root directory: `course-site`
+- Build command: `python3 _scripts/sync_course.py && bundle exec jekyll build`
+- Build output directory: `_site`
 
-- Cloudflare Pages: Edit
-- Account: Read
-
-如果要先在本地创建 Pages project，可用：
-
-```bash
-export CLOUDFLARE_API_TOKEN=...
-export CLOUDFLARE_ACCOUNT_ID=...
-./scripts/create-cloudflare-pages-project.sh minillm-course main
-```
 
 `course-site/` 是 `miniLLM` 课程讲义的静态网站外壳。
 

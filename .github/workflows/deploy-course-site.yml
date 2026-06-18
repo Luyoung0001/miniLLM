@@ -1,4 +1,4 @@
-name: Deploy miniLLM Course Site
+name: Build miniLLM Course Site
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,31 +33,3 @@ jobs:
       - name: Build Jekyll site
         working-directory: course-site
         run: bundle exec jekyll build
-
-      - name: Check Cloudflare configuration
-        id: cloudflare
-        env:
-          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          if [[ -n "${CF_API_TOKEN}" && -n "${CF_ACCOUNT_ID}" ]]; then
-            echo "configured=true" >> "${GITHUB_OUTPUT}"
-          else
-            echo "configured=false" >> "${GITHUB_OUTPUT}"
-          fi
-
-      - name: Skip deploy when Cloudflare secrets are missing
-        if: steps.cloudflare.outputs.configured != 'true'
-        run: echo "::notice::Cloudflare secrets are not configured. Skipping Pages deployment."
-
-      - name: Deploy to Cloudflare Pages
-        if: steps.cloudflare.outputs.configured == 'true'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          npx wrangler pages deploy course-site/_site \
-            --project-name minillm-course \
-            --branch "${GITHUB_REF_NAME}" \
-            --commit-hash "${GITHUB_SHA}" \
-            --commit-message "${{ github.event.head_commit.message || github.sha }}"
