@@ -1,0 +1,46 @@
+name: Deploy miniLLM Course Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "course/**"
+      - "course-site/**"
+      - ".github/workflows/deploy-course-site.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+          working-directory: course-site
+
+      - name: Sync generated course pages
+        working-directory: course-site
+        run: python3 _scripts/sync_course.py
+
+      - name: Build Jekyll site
+        working-directory: course-site
+        run: bundle exec jekyll build
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy course-site/_site \
+            --project-name minillm-course \
+            --branch "${GITHUB_REF_NAME}" \
+            --commit-hash "${GITHUB_SHA}" \
+            --commit-message "${{ github.event.head_commit.message || github.sha }}"

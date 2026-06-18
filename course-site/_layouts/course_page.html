@@ -1,0 +1,188 @@
+---
+---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale -%}
+<!doctype html>
+{% include copyright.html %}
+<html lang="{{ locale | replace: '_', '-' | default: 'en' }}" class="no-js">
+  <head>
+    {% include head.html locale=locale %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--course_page{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
+    {% include_cached skip-links.html locale=locale %}
+
+    <div class="course-site">
+      <header class="course-topbar">
+        <div class="course-topbar__inner">
+          <a class="course-topbar__brand" href="{{ '/course/' | relative_url }}">
+            <span class="course-topbar__brand-mark" aria-hidden="true">
+              <img class="course-topbar__brand-icon" src="{{ '/assets/icons/site-mark.svg' | relative_url }}" alt="">
+            </span>
+            <span class="course-topbar__brand-copy">
+              <span class="course-topbar__brand-title">{{ site.title }}</span>
+              <span class="course-topbar__brand-subtitle">{{ site.description }}</span>
+            </span>
+          </a>
+
+          <nav class="course-topbar__nav" aria-label="Primary navigation">
+            {% assign page_url = page.url | relative_url %}
+            {% for item in site.data.navigation.main %}
+              {% assign item_url = item.url | relative_url %}
+              {% assign is_active = false %}
+              {% if item_url == page_url %}
+                {% assign is_active = true %}
+              {% elsif item_url != '/' and item_url != '/course/' and page_url != item_url and page_url contains item_url %}
+                {% assign is_active = true %}
+              {% endif %}
+              <a href="{{ item_url }}" class="course-topbar__link{% if is_active %} is-active{% endif %}"{% if is_active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+            {% endfor %}
+          </nav>
+
+          <div class="course-topbar__actions">
+            {% if site.search == true %}
+              <button class="course-topbar__icon search__toggle" type="button" aria-label="打开搜索">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
+            {% endif %}
+            <button class="course-topbar__menu" type="button" data-course-sidebar-toggle aria-controls="course-sidebar" aria-expanded="false">
+              目录
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="course-shell">
+        <aside id="course-sidebar" class="course-shell__sidebar" aria-label="课程目录">
+          {% include sidebar.html locale=locale %}
+        </aside>
+
+        <main id="main" class="course-shell__main" role="main">
+          <article class="course-article" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+            {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+            {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+            {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+            {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+            <header class="course-article__header">
+              {% if page.title %}
+                <h1 id="page-title" class="course-article__title p-name" itemprop="headline">
+                  {{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+                </h1>
+              {% endif %}
+
+              {% if page.lab or page.step or page.hours or page.deliverable or page.type %}
+                <div class="course-article__meta">
+                  {% if page.lab %}<span class="course-article__meta-item"><strong>Lab</strong><span>{{ page.lab }}</span></span>{% endif %}
+                  {% if page.step %}<span class="course-article__meta-item"><strong>Step</strong><span>{{ page.step }}</span></span>{% endif %}
+                  {% if page.hours %}<span class="course-article__meta-item"><strong>建议时长</strong><span>{{ page.hours }}</span></span>{% endif %}
+                  {% if page.type %}<span class="course-article__meta-item"><strong>类型</strong><span>{{ page.type }}</span></span>{% endif %}
+                  {% if page.deliverable %}<span class="course-article__meta-item course-article__meta-item--wide"><strong>本章产出</strong><span>{{ page.deliverable }}</span></span>{% endif %}
+                </div>
+              {% endif %}
+            </header>
+
+            <section class="page__content course-article__content e-content" itemprop="text">
+              {{ content }}
+            </section>
+
+            {% include course_nav.html %}
+
+            {% if page.source_path and page.source_path contains 'course/' %}
+              <footer class="course-article__footer">
+                <a href="https://github.com/{{ site.repository }}/blob/main/{{ page.source_path }}" target="_blank" rel="noopener noreferrer">
+                  查看仓库源文件
+                </a>
+              </footer>
+            {% endif %}
+          </article>
+        </main>
+      </div>
+
+      <footer id="footer" class="course-footer">
+        <div class="course-footer__inner">
+          <span>{{ site.title }}</span>
+          <a href="{{ '/course/' | relative_url }}">课程首页</a>
+          <a href="{{ '/course/continuous/' | relative_url }}">连续阅读</a>
+          <a href="{{ '/course/practice/' | relative_url }}">实践入口</a>
+        </div>
+      </footer>
+
+      <button class="back-to-top" type="button" aria-label="回到顶部" data-back-to-top>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html locale=locale %}
+      </div>
+    {% endif %}
+
+    {% include scripts.html locale=locale %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const site = document.querySelector('.course-site');
+        const sidebar = document.getElementById('course-sidebar');
+        const toggle = document.querySelector('[data-course-sidebar-toggle]');
+        const backToTop = document.querySelector('[data-back-to-top]');
+
+        if (site && sidebar && toggle) {
+          const closeSidebar = function() {
+            site.classList.remove('course-site--sidebar-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          };
+
+          toggle.addEventListener('click', function() {
+            const isOpen = site.classList.toggle('course-site--sidebar-open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          sidebar.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+              if (window.innerWidth <= 960) {
+                closeSidebar();
+              }
+            });
+          });
+
+          window.addEventListener('resize', function() {
+            if (window.innerWidth > 960) {
+              closeSidebar();
+            }
+          });
+        }
+
+        if (backToTop) {
+          const updateBackToTop = function() {
+            if (window.scrollY > 320) {
+              backToTop.classList.add('is-visible');
+            } else {
+              backToTop.classList.remove('is-visible');
+            }
+          };
+
+          backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+
+          window.addEventListener('scroll', updateBackToTop, { passive: true });
+          updateBackToTop();
+        }
+
+        document.querySelectorAll('.course-article__content h2[id], .course-article__content h3[id], .course-article__content h4[id]').forEach(function(heading) {
+          if (heading.querySelector('.header-anchor')) {
+            return;
+          }
+          const anchor = document.createElement('a');
+          anchor.className = 'header-anchor';
+          anchor.href = '#' + heading.id;
+          anchor.setAttribute('aria-label', '链接到这一节');
+          anchor.textContent = '#';
+          heading.appendChild(anchor);
+        });
+      });
+    </script>
+  </body>
+</html>

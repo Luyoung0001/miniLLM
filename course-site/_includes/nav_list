@@ -1,0 +1,45 @@
+{% assign locale = include.locale | default: site.locale %}
+{% assign current_url = page.url | relative_url %}
+<nav class="nav__list">
+  {% if page.sidebar.title %}<h3 class="nav__title">{{ page.sidebar.title }}</h3>{% endif %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+    {% for navname in include.nav %}
+      {% assign navigation = site.data.navigation[navname] %}
+      {% for nav in navigation %}
+        <li>
+          {% if nav.url %}
+            {% assign nav_url = nav.url | relative_url %}
+            {% assign nav_active = false %}
+            {% if nav_url == current_url %}
+              {% assign nav_active = true %}
+            {% elsif nav_url != '/' and nav_url != '/course/' and current_url != nav_url and current_url contains nav_url %}
+              {% assign nav_active = true %}
+            {% endif %}
+            <a href="{{ nav_url }}" class="{% if nav_active %}active{% endif %}"{% if nav_active %} aria-current="page"{% endif %}>
+              <span class="nav__sub-title">{{ nav.title }}</span>
+            </a>
+          {% else %}
+            <span class="nav__sub-title">{{ nav.title }}</span>
+          {% endif %}
+
+          {% if nav.children != null %}
+            <ul>
+              {% for child in nav.children %}
+                {% assign child_url = child.url | relative_url %}
+                {% assign child_active = false %}
+                {% if child_url == current_url %}
+                  {% assign child_active = true %}
+                {% elsif child_url != '/' and child_url != '/course/' and current_url != child_url and current_url contains child_url %}
+                  {% assign child_active = true %}
+                {% endif %}
+                <li><a href="{{ child_url }}"{% if child_active %} class="active" aria-current="page"{% endif %}>{{ child.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</nav>

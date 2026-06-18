@@ -1,0 +1,17 @@
+{% if page.prev_page or page.next_page %}
+<nav class="pagination-nav" aria-label="页面切换">
+  {% if page.prev_page %}
+    <a href="{{ page.prev_page.url }}" class="pagination-nav__link pagination-nav__link--prev">
+      <div class="pagination-nav__label">上一页</div>
+      <div class="pagination-nav__title">{{ page.prev_page.title }}</div>
+    </a>
+  {% endif %}
+
+  {% if page.next_page %}
+    <a href="{{ page.next_page.url }}" class="pagination-nav__link pagination-nav__link--next">
+      <div class="pagination-nav__label">下一页</div>
+      <div class="pagination-nav__title">{{ page.next_page.title }}</div>
+    </a>
+  {% endif %}
+</nav>
+{% endif %}

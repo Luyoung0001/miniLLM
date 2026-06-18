@@ -1,0 +1,5 @@
+.bundle-user/
+course-site/.bundle-user/
+course/practice/labs/**/framework/*.o
+course/practice/labs/**/tmp_*
+course/practice/labs/**/lab*

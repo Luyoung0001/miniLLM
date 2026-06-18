@@ -1,0 +1,87 @@
+theme: "minimal-mistakes-jekyll"
+
+locale: "zh-CN"
+title: "miniLLM Course"
+name: "miniLLM Course"
+description: "从零写一个能聊天的迷你语言模型"
+theme_color: "#0f766e"
+url: ""
+baseurl: ""
+repository: "Luyoung0001/miniLLM"
+breadcrumbs: false
+words_per_minute: 350
+enable_copy_code_button: true
+
+search: true
+search_full_content: true
+search_provider: lunr
+
+author:
+  name: "miniLLM Course"
+
+footer:
+  links:
+    - label: "课程首页"
+      url: /course/
+    - label: "连续阅读"
+      url: /course/continuous/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
+  - _scripts
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..6
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+timezone: "Asia/Shanghai"
+
+collections_dir: pages
+collections:
+  course:
+    output: true
+    permalink: /:collection/:path/
+
+relative_links:
+  collections: true
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+optional_front_matter:
+  remove_originals: true
+
+defaults:
+  - scope:
+      path: ""
+      type: course
+    values:
+      layout: course_page
+      excerpt: false
+      share: false
+      related: false
+      author_profile: false
+      toc: false
+      classes: wide
+      sidebar:
+        nav: course
